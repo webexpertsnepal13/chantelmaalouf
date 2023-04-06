@@ -97,7 +97,7 @@ wp-content/plugins/*
 
 # ignore specific themes
 wp-content/themes/*
-!wp-content/themes/themarketingco
+!wp-content/themes/the-marketing-co
 
 # ignore node/grunt dependency directories
 node_modules/
