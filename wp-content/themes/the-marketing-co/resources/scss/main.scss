@@ -12,6 +12,7 @@
 // @import 'base/reset';
 @import 'base/fonts';
 @import 'base/base';
+@import 'base/buttons';
 
 
 // layout (everything that takes part in laying out the site)
@@ -20,7 +21,9 @@
 
 // component (for smaller components like buttons, carousel, widgets, loader)
 @import "components/wp-classes";
+@import "components/header";
 @import "components/navigation";
+@import "components/footer";
 
 
 //page (page-specific styles)

@@ -1,0 +1,20 @@
+.btn-cm {
+    
+}
+.btn-book-now {    
+    line-height: 1.43;
+    font-family: $font_jost;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: 2px solid $color_primary;
+    color: $white;
+    background: $color_primary;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    font-weight: 600;
+    @include transition(0.4s background, 0.4s color);
+    &:hover {
+        background: transparent;
+        color: $color_primary;
+    }
+}

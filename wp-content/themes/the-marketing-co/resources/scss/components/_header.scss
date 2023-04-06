@@ -1,0 +1,42 @@
+.site-header {
+    background: $color_secondary;
+
+    .header-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 28px 0;
+        .site-branding {
+            flex: 0 1 25%;
+            .custom-logo-link {
+                img {
+                    width: 186px;
+                    height: auto;
+                }
+            }
+        }
+        
+        .main-navigation {
+            flex: 0 1 50%;
+        }
+        
+        .header-right {
+            flex: 0 1 25%;
+            .header-right-inner {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                .button-wrap {
+
+                }
+                .header-cart {
+                    margin-left: 42px;
+                    img {
+                        width: 22px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

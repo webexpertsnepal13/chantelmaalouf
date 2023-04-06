@@ -26,34 +26,48 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'the-marketing-co' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$the_marketing_co_description = get_bloginfo( 'description', 'display' );
-			if ( $the_marketing_co_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $the_marketing_co_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+		<div class="container">
+			<div class="header-wrap">
+				<div class="site-branding">
+					<?php
+					the_custom_logo();
+					if ( is_front_page() && is_home() ) :
+						?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<?php
+					else :
+						?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<?php
+					endif;
+					$the_marketing_co_description = get_bloginfo( 'description', 'display' );
+					if ( $the_marketing_co_description || is_customize_preview() ) :
+						?>
+						<p class="site-description"><?php echo $the_marketing_co_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+					<?php endif; ?>
+				</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'the-marketing-co' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+				<nav id="site-navigation" class="main-navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'the-marketing-co' ); ?></button>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						)
+					);
+					?>
+				</nav><!-- #site-navigation -->
+				<div class="header-right">
+					<div class="header-right-inner">
+						<div class="button-wrap">
+							<a href="#" class="btn-book-now">Book Now</a>
+						</div><!-- button-wrap -->
+						<div class="header-cart">
+							<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/shopping-bag.png" alt=""></a>
+						</div><!-- header-cart -->
+					</div><!-- header-right-inner -->
+				</div><!-- header-right -->
+			</div><!-- header-wrap -->
+		</div><!-- container -->
 	</header><!-- #masthead -->
