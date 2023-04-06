@@ -20,6 +20,8 @@
 //@import 'layout/layout';
 @import 'layout/common';
 @import 'layout/section-service';
+@import 'layout/section-about-cm';
+@import 'layout/section-info-block';
 
 // component (for smaller components like buttons, carousel, widgets, loader)
 @import "components/wp-classes";
@@ -31,8 +33,6 @@
 //page (page-specific styles)
 @import "pages/home";
 @import "pages/about";
-
-
 
 
 //themes

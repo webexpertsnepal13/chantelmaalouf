@@ -1,3 +1,6 @@
+.site {
+    overflow: hidden;
+}
 .container {
     max-width: 1286px;
 }
@@ -31,6 +34,16 @@
                     background-image: url('../../images/title-brush.svg');
                     background-size: contain;
                     background-repeat: no-repeat;
+                }
+            }
+        }
+        &.brush-2x {
+            h1, h2, h3, h4 {
+                span {
+                    &:after {
+                        width: 262px;
+                        height: 34px;
+                    }
                 }
             }
         }
