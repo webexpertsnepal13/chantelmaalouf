@@ -1,0 +1,48 @@
+.about-section {
+    background-color: rgba($color-secondary, 0.6);
+    padding: 100px 0;
+    margin: 0 0 100px;
+
+    .row {
+        margin: 0 -30px;
+        align-items: center;
+
+        @media (max-width: 1368px){
+            margin: 0 -15px;
+        }
+    }
+
+    .cols {
+        padding: 0 30px;
+    }
+
+    .about-thumbnail {
+        width: 365px;
+        max-width: 100%;
+        margin-left: auto;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content-inner-wrapper {
+        margin-left: 24px;
+        @include breakpoint(wide){
+            margin-left: 0;
+        }
+    }
+
+    .about-title{
+        margin: 0 0 27px;
+    }
+
+    .about-content {
+        p {
+            font-size: 18px;
+            line-height: 2.2;
+            font-family: $font_nantes;
+        }
+    }
+}

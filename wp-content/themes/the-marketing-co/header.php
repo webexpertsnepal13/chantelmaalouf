@@ -60,11 +60,26 @@
 				</nav><!-- #site-navigation -->
 				<div class="header-right">
 					<div class="header-right-inner">
+						<?php $link = get_field( 'book_now_title', 'options' ); ?>
 						<div class="button-wrap">
-							<a href="#" class="btn-book-now">Book Now</a>
+							<?php
+							if ( $link ) :
+								$link_url = $link['url'];
+								$link_title = $link['title'];
+								$link_target = $link['target'] ? $link['target'] : '_self';
+								?>
+								<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="btn-book-now"><?php echo esc_html( $link_title ); ?></a>
+							<?php endif; ?>
 						</div><!-- button-wrap -->
 						<div class="header-cart">
-							<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/shopping-bag.png" alt=""></a>
+							<?php
+							$cart_url = "";
+							//wc_get_cart_url();
+
+							if ( $cart_url ) {
+							?>
+								<a href="<?php echo esc_url( $cart_url ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/shopping-bag.png" alt=""></a>
+							<?php } ?>
 						</div><!-- header-cart -->
 					</div><!-- header-right-inner -->
 				</div><!-- header-right -->
