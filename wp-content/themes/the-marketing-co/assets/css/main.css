@@ -10574,6 +10574,10 @@ h4 {
   background-size: contain;
   background-repeat: no-repeat;
 }
+.title.w-brush.brush-2x h1 span:after, .title.w-brush.brush-2x h2 span:after, .title.w-brush.brush-2x h3 span:after, .title.w-brush.brush-2x h4 span:after {
+  width: 262px;
+  height: 34px;
+}
 
 .section-services {
   padding-top: 137px;
@@ -10738,6 +10742,10 @@ h4 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.section-products {
+  padding: 72px 0;
 }
 
 /**

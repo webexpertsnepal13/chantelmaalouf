@@ -37,5 +37,15 @@
                 }
             }
         }
+        &.brush-2x {
+            h1, h2, h3, h4 {
+                span {
+                    &:after {
+                        width: 262px;
+                        height: 34px;
+                    }
+                }
+            }
+        }
     }
 }

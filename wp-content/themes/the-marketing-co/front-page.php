@@ -129,6 +129,13 @@ get_header();
             </div><!-- section-wrapper -->
         </div><!-- container -->
     </section><!-- section-image-w-content -->
+    <section class="section-products">
+        <div class="container">
+            <div class="title w-brush brush-2x text-center">
+                <h2>Shop <span>Chantel Maalouf</span> products below</h2>
+            </div><!-- title -->
+        </div><!-- container -->
+    </section><!-- section-products -->
     <section class="section-info-w-image">
         <div class="section-wrapper">
             <div class="info-block-left">
