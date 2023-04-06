@@ -1,0 +1,27 @@
+.section-services {
+    padding-top: 137px;
+    padding-bottom: 102px;
+}
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    .service-card {
+        padding: 0 15px;
+        flex: 0 1 33.33%;
+        margin: 0 0 30px;
+        .card-inner {
+            .card-image {
+                margin: 0 0 20px;
+                img {
+                    height: 273px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .button-wrap {
+
+            }
+        }
+    }
+}
