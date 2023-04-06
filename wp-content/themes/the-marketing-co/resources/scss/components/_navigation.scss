@@ -16,22 +16,43 @@
                 text-transform: uppercase;
                 color: $black;
                 text-decoration: none;
+                @include transition(0.4s color);
+            }
+            &:hover {
+                > a {
+                    color: $color_primary;
+                }
             }
         }
         > li {
+            &:not(:last-child) {
+                margin-right: 33px;
+            }
             &.menu-item-has-children {
                 > a {
                     padding-right: 17px;
+                    position: relative;
                     &:after {
                         content: '';
                         position: absolute;
-                        top: 0;
+                        top: 9px;
                         right: 0;
-                        height: 6px;
+                        height: 7px;
                         width: 12px;
                         background-image: url('../../images/arrow-down.svg');
                         background-size: contain;
                         background-repeat: no-repeat;
+                        @include transition(0.4s);
+                    }
+                }
+                ul.sub-menu {
+                    display: none;
+                }
+                &:hover {
+                    > a {
+                        &:after {
+                            background-image: url('../../images/arrow-down-primary.svg');
+                        }
                     }
                 }
             }

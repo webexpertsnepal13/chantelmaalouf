@@ -18,6 +18,8 @@
 // layout (everything that takes part in laying out the site)
 
 //@import 'layout/layout';
+@import 'layout/common';
+@import 'layout/section-service';
 
 // component (for smaller components like buttons, carousel, widgets, loader)
 @import "components/wp-classes";
@@ -27,7 +29,11 @@
 
 
 //page (page-specific styles)
+<<<<<<< HEAD
 @import "pages/about";
+=======
+@import "pages/home";
+>>>>>>> e744c72a158715671858f76df53850ccefd60371
 
 
 //themes

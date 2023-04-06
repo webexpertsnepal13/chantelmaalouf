@@ -10475,6 +10475,24 @@ h4 {
   color: #C58383;
 }
 
+.container {
+  max-width: 1286px;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.bg-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /**
  * WordPress Generated Classes
  * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
@@ -10527,8 +10545,8 @@ h4 {
 }
 .site-header .header-wrap .site-branding {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 25%;
-          flex: 0 1 25%;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
 }
 .site-header .header-wrap .site-branding .custom-logo-link img {
   width: 186px;
@@ -10536,13 +10554,13 @@ h4 {
 }
 .site-header .header-wrap .main-navigation {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
 }
 .site-header .header-wrap .header-right {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 25%;
-          flex: 0 1 25%;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
 }
 .site-header .header-wrap .header-right .header-right-inner {
   display: -webkit-box;
@@ -10553,6 +10571,9 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .site-header .header-wrap .header-right .header-right-inner .header-cart {
   margin-left: 42px;
@@ -10586,19 +10607,53 @@ h4 {
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
+  -webkit-transition: 0.4s color;
+  transition: 0.4s color;
+}
+@media (prefers-reduced-motion: reduce) {
+  .main-navigation .menu li a {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.main-navigation .menu li:hover > a {
+  color: #C58383;
+}
+.main-navigation .menu > li:not(:last-child) {
+  margin-right: 33px;
 }
 .main-navigation .menu > li.menu-item-has-children > a {
   padding-right: 17px;
+  position: relative;
 }
 .main-navigation .menu > li.menu-item-has-children > a:after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 9px;
   right: 0;
-  height: 6px;
+  height: 7px;
   width: 12px;
   background-image: url("../../images/arrow-down.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .main-navigation .menu > li.menu-item-has-children > a:after {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.main-navigation .menu > li.menu-item-has-children ul.sub-menu {
+  display: none;
+}
+.main-navigation .menu > li.menu-item-has-children:hover > a:after {
+  background-image: url("../../images/arrow-down-primary.svg");
+}
+
+.section-hero-banner {
+  position: relative;
+  height: 646px;
 }
 /*# sourceMappingURL=maps/main.css.map */

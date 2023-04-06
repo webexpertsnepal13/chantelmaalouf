@@ -25,7 +25,23 @@ get_header();
     endif;
 
     ?>
+    <section class="section-hero-banner">
+        <div class="bg-image">
+            <img src="<?php echo home_url(); ?>/wp-content/uploads/2023/04/eye-liner.jpg" alt="">
+        </div><!-- bg-image -->
+    </section><!-- section-hero-banner -->
 
+    <section class="section-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="title">
+                        <h3>Our services.</h3>
+                    </div><!-- title -->
+                </div><!-- col-md-3 -->
+            </div>
+        </div>
+    </section>
 </main><!-- #main -->
 <?php
 get_footer();
