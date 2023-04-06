@@ -18,5 +18,23 @@
                 text-decoration: none;
             }
         }
+        > li {
+            &.menu-item-has-children {
+                > a {
+                    padding-right: 17px;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        height: 6px;
+                        width: 12px;
+                        background-image: url('../../images/arrow-down.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
     }
 }

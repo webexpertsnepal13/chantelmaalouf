@@ -10415,7 +10415,7 @@ video {
 body {
   word-wrap: break-word;
   font-size: 16px;
-  font-weight: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #000000;
   font-weight: 400;
 }
@@ -10586,5 +10586,19 @@ h4 {
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
+}
+.main-navigation .menu > li.menu-item-has-children > a {
+  padding-right: 17px;
+}
+.main-navigation .menu > li.menu-item-has-children > a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 6px;
+  width: 12px;
+  background-image: url("../../images/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=maps/main.css.map */
