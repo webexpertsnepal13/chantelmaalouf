@@ -106,6 +106,44 @@ get_header();
             </div><!-- row -->
         </div><!-- container -->
     </section><!-- section-services -->
+    <section class="section-about-cm">
+        <div class="bg-logo">
+            <img src="<?php echo home_url(); ?>/wp-content/uploads/2023/04/Chantel_Maalouf_Logo_updated.png" alt="">
+        </div><!-- bg-logo -->
+        <div class="container">
+            <div class="section-wrapper">
+                <div class="image-left">
+                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2023/04/women-w-whitedress.jpg" alt="">
+                </div><!-- image-left -->
+                <div class="content-right">
+                    <div class="content-inner">
+                        <h2>Meet Chantel Maalouf.</h2>
+                        <p>
+                            Chantel has worked for many luxury brands including Chanel and has been involved in the glam team backstage for many fashion shows. She has a wealth of knowledge and experience when it comes to all thing’s hair, skin and beauty
+                        </p>
+                        <div class="button-wrap">
+                            <a href="#" class="btn-cm btn-outline btn-fill-white">Learn More</a>
+                        </div><!-- button-wrap -->
+                    </div><!-- content-inner -->
+                </div><!-- content-right -->
+            </div><!-- section-wrapper -->
+        </div><!-- container -->
+    </section><!-- section-image-w-content -->
+    <section class="section-info-w-image">
+        <div class="section-wrapper">
+            <div class="info-block-left">
+                <div class="info-block">
+                    <h1>Every <span>shade</span>.<br> For <span>every look.</span></h1>
+                    <div class="bg-logo">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2023/04/Chantel_Maalouf_Logo_updated.png" alt="">
+                    </div><!-- bg-logo -->
+                </div>
+            </div><!-- info-block-left -->
+            <div class="image-right">
+                <img src="<?php echo home_url(); ?>/wp-content/uploads/2023/04/arms-w-colors.jpg" alt="">
+            </div><!-- iamge-right -->
+        </div><!-- section-wrapper -->
+    </section><!-- section-info-w-image -->
 </main><!-- #main -->
 <?php
 get_footer();
