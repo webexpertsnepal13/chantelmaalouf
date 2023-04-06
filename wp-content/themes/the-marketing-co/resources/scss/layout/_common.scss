@@ -13,3 +13,26 @@
         object-fit: cover;
     }
 }
+
+.title {
+    &.w-brush {
+        h1, h2, h3, h4 {
+            span {
+                display: inline-block;
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 23px;
+                    width: 174px;
+                    background-image: url('../../images/title-brush.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
