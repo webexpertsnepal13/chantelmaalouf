@@ -214,3 +214,8 @@ if ( class_exists( 'WooCommerce' ) ) {
  */
 require get_template_directory() . '/inc/custom-post-type.php';
 
+/**
+ * ACF options page
+ */
+require get_template_directory() . '/inc/acf-options-page.php';
+
