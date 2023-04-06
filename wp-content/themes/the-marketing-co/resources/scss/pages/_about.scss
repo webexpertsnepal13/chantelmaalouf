@@ -1,5 +1,5 @@
 .about-section {
-    background-color: rgba($color-secondary, 0.6);
+    background-color: rgba($color_tertiary, 0.2);
     padding: 100px 0;
     margin: 0 0 100px;
 
@@ -7,19 +7,28 @@
         margin: 0 -30px;
         align-items: center;
 
-        @media (max-width: 1368px){
+        @media (max-width: 1368px) {
             margin: 0 -15px;
         }
     }
 
     .cols {
         padding: 0 30px;
+
+        @include breakpoint (medium) {
+            padding: 0 15px;
+        }
     }
 
     .about-thumbnail {
         width: 365px;
         max-width: 100%;
         margin-left: auto;
+
+        @include breakpoint (small) {
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
 
         img {
             width: 100%;
@@ -29,20 +38,99 @@
 
     .content-inner-wrapper {
         margin-left: 24px;
-        @include breakpoint(wide){
+
+        @include breakpoint(wide) {
             margin-left: 0;
         }
     }
 
-    .about-title{
+    .about-title {
         margin: 0 0 27px;
+
+        h3 {
+            font-size: 36px;
+            color: $color_primary;
+        }
     }
 
     .about-content {
         p {
-            font-size: 18px;
-            line-height: 2.2;
+            line-height: 1.5;
             font-family: $font_nantes;
+        }
+    }
+}
+
+.sip-learn-section {
+    background-color: $color-secondary;
+    padding: 15px 0 97px 0;
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    .sip-learn-wrapper {
+        padding-left: calc((100% - 1286px) / 2);
+    }
+
+    .row {
+        margin: 0;
+        align-items: flex-end;
+
+        @include breakpoint (small) {
+            flex-direction: column-reverse;
+        }
+
+        .cols {
+            padding: 0;
+        }
+    }
+
+    .sip-learn-content-wrap {
+        padding-right: 80px;
+        @media (max-width: 1360px){
+            padding-left: 15px;
+        }
+
+        @include breakpoint (wide) {
+            padding-right: 30px;
+        }
+
+        h2 {
+            color: $color_primary;
+            margin: 0 0 30px;
+        }
+
+        p {
+            line-height: 1.5;
+            font-family: $font_nantes;
+        }
+
+        ul {
+            margin: 0;
+
+            li {
+                line-height: 1.5;
+                font-family: $font_nantes;
+
+                &::marker {
+                    color: $color_primary;
+                }
+            }
+        }
+    }
+
+    .sip-learn-thumbnail {
+        height: 469px;
+
+        @include breakpoint (small) {
+            margin: 0 0 50px;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
     }
 }
