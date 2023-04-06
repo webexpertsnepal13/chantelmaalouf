@@ -10450,6 +10450,62 @@ h4 {
   line-height: 1.5;
 }
 
+.btn-cm {
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 42px;
+  text-decoration: none !important;
+  -webkit-transition: 0.4s background, 0.4s color;
+  transition: 0.4s background, 0.4s color;
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-cm {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.btn-cm.btn-outline {
+  border: 2px solid #C58383;
+  border-radius: 50px;
+  padding: 6px 20px;
+  padding-right: 80px;
+}
+.btn-cm.btn-outline:before, .btn-cm.btn-outline:after {
+  content: "";
+  position: absolute;
+  background: #D3A2A2;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.btn-cm.btn-outline:before {
+  height: 2px;
+  width: 33px;
+  left: calc(100% - 13px);
+}
+.btn-cm.btn-outline:after {
+  left: calc(100% + 12px);
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+}
+.btn-cm.btn-outline:hover {
+  background: #C58383;
+  color: #ffffff;
+}
+
 .btn-book-now {
   line-height: 1.43;
   font-family: "Jost", sans-serif;
@@ -10493,6 +10549,53 @@ h4 {
      object-fit: cover;
 }
 
+.title.w-brush h1 span, .title.w-brush h2 span, .title.w-brush h3 span, .title.w-brush h4 span {
+  display: inline-block;
+  position: relative;
+}
+.title.w-brush h1 span:after, .title.w-brush h2 span:after, .title.w-brush h3 span:after, .title.w-brush h4 span:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 23px;
+  width: 174px;
+  background-image: url("../../images/title-brush.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.section-services {
+  padding-top: 137px;
+  padding-bottom: 102px;
+}
+
+.services-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.services-grid .service-card {
+  padding: 0 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.33%;
+          flex: 0 1 33.33%;
+  margin: 0 0 30px;
+}
+.services-grid .service-card .card-inner .card-image {
+  margin: 0 0 20px;
+}
+.services-grid .service-card .card-inner .card-image img {
+  height: 273px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 /**
  * WordPress Generated Classes
  * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
@@ -10655,5 +10758,51 @@ h4 {
 .section-hero-banner {
   position: relative;
   height: 646px;
+}
+.about-section {
+  background-color: rgba(242, 223, 210, 0.6);
+  padding: 100px 0;
+  margin: 0 0 100px;
+}
+.about-section .row {
+  margin: 0 -30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 1368px) {
+  .about-section .row {
+    margin: 0 -15px;
+  }
+}
+.about-section .cols {
+  padding: 0 30px;
+}
+.about-section .about-thumbnail {
+  width: 365px;
+  max-width: 100%;
+  margin-left: auto;
+}
+.about-section .about-thumbnail img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-section .content-inner-wrapper {
+  margin-left: 24px;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 1199px) {
+  .about-section .content-inner-wrapper {
+    margin-left: 0;
+  }
+}
+.about-section .about-title {
+  margin: 0 0 27px;
+}
+.about-section .about-content p {
+  font-size: 18px;
+  line-height: 2.2;
+  font-family: "Nantes";
 }
 /*# sourceMappingURL=maps/main.css.map */
