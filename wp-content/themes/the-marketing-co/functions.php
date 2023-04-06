@@ -138,6 +138,32 @@ add_action( 'widgets_init', 'the_marketing_co_widgets_init' );
  * Enqueue scripts and styles.
  */
 function the_marketing_co_scripts() {
+
+	$min = ( SCRIPT_DEBUG === false )  ?  ''  :  '.min';
+	$ver = wp_get_theme()->get( 'Version' );
+
+	$main_css  = 'assets/css/main' . $min . '.css';
+	$main_js   = 'assets/js/main' . $min . '.js';
+	$vendor_js = 'assets/js/vendor' . $min . '.js';
+
+
+   //Google Fonts
+	
+   	wp_enqueue_style( 'the-marketing-co-style', get_stylesheet_uri(), array(), $ver );
+	wp_style_add_data( 'the-marketing-co-style', 'rtl', 'replace' );
+
+	// the-marketing-co Main Style
+	wp_register_style( 'the-marketing-co-main-style', get_template_directory_uri() . '/' . $main_css, '', $ver );
+	wp_enqueue_style( 'the-marketing-co-main-style' );
+
+	/* Vendor JS */
+	wp_register_script( 'the-marketing-co-vendor-script', get_template_directory_uri() . '/' . $vendor_js, array( 'jquery' ), $ver, true );
+	wp_enqueue_script( 'the-marketing-co-vendor-script' );
+
+	// the-marketing-co Main JS
+	wp_register_script( 'the-marketing-co-main-js', get_template_directory_uri() . '/' . $main_js, array( 'jquery' ), $ver, true );
+	wp_enqueue_script( 'the-marketing-co-main-js' );
+
 	wp_enqueue_style( 'the-marketing-co-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'the-marketing-co-style', 'rtl', 'replace' );
 
