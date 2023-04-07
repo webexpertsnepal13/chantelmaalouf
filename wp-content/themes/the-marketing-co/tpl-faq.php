@@ -18,21 +18,22 @@ get_header();
 <section class="faq-section">
     <div class="container">
         <div class="faq-wrapper">
+            <!-- <h2 class="faq-title">Faq's</h2> -->
             <div class="content-inner">
                 <div class="inner">
                     <div class="title">
-                        <h3>What types of companies does Fortress work with?</h3>
+                        <h3>Do you offer Bridal Trials? How does it work?</h3>
                     </div>
                     <div class="content">
-                        <p>Our portfolio reflects a diverse clientele in terms of size, services, and industry. We’ve worked with billion-dollar corporations, smaller upstart businesses, and medium-sized companies.</p>
+                        <p>Yes absolutely! Bridal trials are available Monday to Thursday evenings. Due to our busy schedules with weddings and other campaigns, we recommend you book this in at least 3 months in advance to ensure we're able to match your preferred date as close as possible.</p>
                     </div>
                 </div>
                 <div class="inner">
                     <div class="title">
-                        <h3>How Long Will it Take for my Website to be Built?</h3>
+                        <h3>Do I need to prepare anything leading up to the wedding?</h3>
                     </div>
                     <div class="content">
-                        <p>Our timelines are determined by the size and scope of each individual project. After a kickoff meeting, these details will be set in stone and communicated to the client clearly. Efficiency is a two-way street, so we expect that our clients will provide us with the necessary assets we need in order to keep our deliverables on track.</p>
+                        <p>You'l l receive a comprehensive guide to prepare everything for your wedding day once you've booked your wedding day with us. This guide includes recommendations from skin, hair, to your diet and will be sent out to you closer to your special day.</p>
                     </div>
                 </div>
                 <div class="inner">
@@ -45,42 +46,42 @@ get_header();
                 </div>
                 <div class="inner">
                     <div class="title">
-                        <h3>What Are Fortress’ Core Services?</h3>
+                        <h3>Do you provide a mobile makeup service on the wedding day?</h3>
                     </div>
                     <div class="content">
-                        <p>We are proud to offer a broad range of services. These services, ranging from social media to SEO to logo design and many more, can be placed into three core phases or categories. These are branding, web, and marketing.</p>
+                        <p>Yes of course! On your wedding day your Bridal Makeup will be done in the comfort of your own home, or hotel or any other location, if you choose to pamper yourself.</p>
                     </div>
                 </div>
                 <div class="inner">
                     <div class="title">
-                        <h3>Where is Fortress Based?</h3>
+                        <h3>I want to book, what should I do next?</h3>
                     </div>
                     <div class="content">
-                        <p>The Fortress headquarters is located in Chicago, but we have clients across the country. We see our office as the best place for internal and external collaboration to happen, so we have a large percentage of Chicago-based clients. However, we are happy to work with organizations from all over the map.  </p>
+                        <p>We' ve made your booking process with us as easy as possible by doing everything online. Email our friendly team to confirm we are still available on your wedding day at the time you require. Once this is confirmed, you can simply follow the prompts in the ema il link we sen d you to proceed with your booking. Please ensure you check all your booking details so we can make sure everything is as per your request from the start.</p>
                     </div>
                 </div>
                 <div class="inner">
                     <div class="title">
-                        <h3>What Makes Fortress Different?</h3>
+                        <h3>What makeup brands do you use?</h3>
                     </div>
                     <div class="content">
-                        <p>Fortress is client-success obsessed; relentlessly creative; always adaptable; and we have adopted a family-first mentality with everything we do. Additionally, we are a multicultural, multigenerational agency and this layered diversity is a key strength of ours. </p>
+                        <p>I use a wide range of products from many different b rands including Chanel, MAC and Tom Ford. I do not solely use one Makeup brand company as I believe each company has a distinct product that they pride themselves on or that I find to favor in most companies. Only high quality and high performing products are in my kit to ensure your makeup is flawless on camera. All products are tested for performance prior to making it into my collection. Please contact me with any questions regarding allergies in your party.</p>
                     </div>
                 </div>
                 <div class="inner">
                     <div class="title">
-                        <h3>Who are Fortress’ Partners?</h3>
+                        <h3>Will my makeup last all night?</h3>
                     </div>
                     <div class="content">
-                        <p>We’ve been able to partner with several organizations that help us strategically advance our mission of changing our clients’ lives by transforming their brands. A few of these are Google, Hubspot, WordPress, and AWS. </p>
+                        <p>Absolutely. A true professional makeup application will last the full duration of your event. Not only are the eyes and skin prepared with the proper skin care and priming products, but you will be set and finished with professional powders and sprays that seal in and h elp fix the makeup in place. All the products in between the prepping and sealing are chosen for their longevity and high performance in all tear/sweat and weather conditions.</p>
                     </div>
                 </div>
                 <div class="inner">
                     <div class="title">
-                        <h3>Does Fortress Only Offer Digital Marketing?</h3>
+                        <h3>How far do you travel?</h3>
                     </div>
                     <div class="content">
-                        <p>Fortress is a digital-focused agency, but we’ve orchestrated award-winning ad campaigns in a variety of mediums, from TV ads, to billboard design, and more.</p>
+                        <p>As far as you need me! My travel fee is based on location and distance.</p>
                     </div>
                 </div>
             </div>

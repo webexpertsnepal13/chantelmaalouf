@@ -38,10 +38,10 @@ get_header();
     <div class="container-fluid">
         <div class="sip-learn-wrapper">
             <div class="row">
-                <div class="col-md-6 col-lg-4 cols">
+                <div class="col-md-6 col-lg-5 col-xl-4 cols">
                     <div class="sip-learn-content-wrap">
                         <div class="title">
-                            <h2>Sip&Learn</h2>
+                            <h2>Sip & Learn</h2>
                         </div>
                         <div class="inner">
                             <p>Join us for a glass of Champagne (alcoholic and non-alcoholic) and the secrets revealed of two timeless makeup looks. <br>
@@ -52,7 +52,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-8 cols">
+                <div class="col-md-6 col-lg-7 col-xl-8 cols">
                     <div class="sip-learn-thumbnail">
                         <img src="<?php echo get_home_url(); ?>/wp-content/uploads/2023/04/armpit.jpg" alt="sip-learn-image">
                     </div>
