@@ -1,3 +1,9 @@
+.section-products {
+    padding: 72px 0 42px;
+    .title {
+        margin: 0 0 83px;
+    }
+}
 .cm-product-wrapper {
     .products {
         display: flex;
@@ -30,6 +36,7 @@
                     font-family: $font_poppins;
                     font-weight: 400;
                     color: $black;
+                    text-align: left;
                 }
 
                 .woocommerce-loop-product__title {
@@ -88,6 +95,29 @@
     @include transition(0.4s background, 0.4s color, 0.4s border);
     display: block;
     text-align: center;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        height: 24px;
+        width: 24px;
+        background-image: url('../../images/spinner.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0;
+        pointer-events: none;
+    }
+    &.loading {
+        pointer-events: none;
+        background: $black;
+        color: $white;
+        &:after {
+            opacity: 1;
+        }
+    }
 }
 
 .custom-breadcrumb {
