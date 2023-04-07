@@ -57,6 +57,13 @@
             color: $color_primary;
         }
     }
+
+    .about-content{
+        p{
+            font-family: $font_nantes;
+            margin: 0 0 25px;
+        }
+    }
 }
 
 .sip-learn-section {
@@ -97,12 +104,14 @@
             color: $color_primary;
             margin: 0 0 30px;
         }
+        p{
+            font-family: $font_nantes;
+        }
 
         ul {
             margin: 0;
 
             li {
-                line-height: 1.5;
                 font-family: $font_nantes;
 
                 &::marker {
