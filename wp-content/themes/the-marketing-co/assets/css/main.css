@@ -11475,7 +11475,7 @@ body.woocommerce-shop .woocommerce-result-count {
 }
 
 .gform_wrapper.gravity-theme .gform-body {
-  margin: 0 0 15px;
+  margin: 0 0 34px;
 }
 .gform_wrapper.gravity-theme .gform_required_legend {
   display: none;
@@ -11537,6 +11537,12 @@ body.woocommerce-shop .woocommerce-result-count {
 }
 .gform_wrapper.gravity-theme .gform_button {
   margin-left: auto;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 991px) {
+  .gform_wrapper.gravity-theme .gform_button {
+    margin: 0 auto;
+  }
 }
 
 .section-hero-banner {
@@ -11769,6 +11775,12 @@ body.woocommerce-shop .woocommerce-result-count {
   text-transform: capitalize;
   color: #C58383;
   margin: 0 0 15px;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .contact-section h3 {
+    margin: 0 0 9px;
+  }
 }
 .contact-section p {
   font-size: 16px;
@@ -11875,12 +11887,12 @@ body.woocommerce-shop .woocommerce-result-count {
 .contact-section .form-container {
   position: relative;
   padding-right: 30px;
-  padding: 100px 0;
+  padding: 100px 0 76px;
   /* Large Devices, Wide Screens */
 }
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .contact-section .form-container {
-    padding: 60px 0px;
+    padding: 60px 0px 36px;
   }
 }
 .contact-section .form-container::before {
@@ -11908,6 +11920,12 @@ body.woocommerce-shop .woocommerce-result-count {
 }
 .contact-section .info-cols {
   margin: 0 0 30px;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .contact-section .info-cols {
+    margin: 0 0 20px;
+  }
 }
 .contact-section .info-container {
   position: relative;
@@ -11916,15 +11934,21 @@ body.woocommerce-shop .woocommerce-result-count {
   padding-bottom: 100px;
   /* Large Devices, Wide Screens */
   /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
 }
 @media (max-width: 1199px) {
   .contact-section .info-container {
-    padding-left: 40px;
+    padding: 60px 0px 30px 40px;
   }
 }
 @media (max-width: 991px) {
   .contact-section .info-container {
-    padding: 60px 0px 30px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .contact-section .info-container {
+    padding-bottom: 40px;
   }
 }
 .contact-section .info-container::after {
