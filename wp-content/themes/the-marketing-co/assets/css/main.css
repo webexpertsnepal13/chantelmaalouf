@@ -10445,7 +10445,7 @@ h4 {
   line-height: 1.23;
 }
 
-h4 {
+h5 {
   font-size: 18px;
   line-height: 1.5;
 }
@@ -10907,6 +10907,13 @@ h4 {
   background-image: url("../../images/arrow-down-primary.svg");
 }
 
+.site-footer .footer-top {
+  padding-top: 54px;
+}
+.site-footer .footer-top .footer-block .widget .widget-title h4 {
+  text-transform: uppercase;
+}
+
 .section-hero-banner {
   position: relative;
   height: 646px;
@@ -10992,7 +10999,6 @@ h4 {
   padding-left: calc((100% - 1286px) / 2);
 }
 .sip-learn-section .row {
-  margin: 0;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -11006,21 +11012,18 @@ h4 {
             flex-direction: column-reverse;
   }
 }
-.sip-learn-section .row .cols {
-  padding: 0;
-}
 .sip-learn-section .sip-learn-content-wrap {
-  padding-right: 80px;
+  padding-right: 65px;
   /* Large Devices, Wide Screens */
 }
-@media (max-width: 1360px) {
+@media (max-width: 1368px) {
   .sip-learn-section .sip-learn-content-wrap {
     padding-left: 15px;
   }
 }
 @media (max-width: 1199px) {
   .sip-learn-section .sip-learn-content-wrap {
-    padding-right: 30px;
+    padding-right: 15px;
   }
 }
 .sip-learn-section .sip-learn-content-wrap h2 {

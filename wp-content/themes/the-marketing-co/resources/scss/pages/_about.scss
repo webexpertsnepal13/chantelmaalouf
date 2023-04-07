@@ -79,26 +79,25 @@
     }
 
     .row {
-        margin: 0;
         align-items: flex-end;
 
         @include breakpoint (small) {
             flex-direction: column-reverse;
         }
 
-        .cols {
-            padding: 0;
-        }
+        // .cols {
+        //     padding: 0;
+        // }
     }
 
     .sip-learn-content-wrap {
-        padding-right: 80px;
-        @media (max-width: 1360px){
+        padding-right: 65px;
+        @media (max-width: 1368px){
             padding-left: 15px;
         }
 
         @include breakpoint (wide) {
-            padding-right: 30px;
+            padding-right: 15px;
         }
 
         h2 {
