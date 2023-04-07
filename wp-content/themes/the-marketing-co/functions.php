@@ -50,6 +50,8 @@ function the_marketing_co_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'the-marketing-co' ),
+			'menu-2' => esc_html__( 'Footer Menu-1', 'the-marketing-co' ),
+			'menu-3' => esc_html__( 'Footer Menu-2', 'the-marketing-co' ),
 		)
 	);
 
@@ -121,7 +123,7 @@ add_action( 'after_setup_theme', 'the_marketing_co_content_width', 0 );
  */
 function the_marketing_co_widgets_init() {
 	register_sidebar(
-		array(
+		array( 
 			'name'          => esc_html__( 'Sidebar', 'the-marketing-co' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'the-marketing-co' ),
@@ -131,6 +133,55 @@ function the_marketing_co_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Footer Menu 1', 'the-marketing-co'),
+			'id'            => 'footer-sidebar-2',
+			'before_widget'	=> '<div class="widget widget_text" id="%1$s">',
+			'after_widget'	=> '</div>',
+			'before_title'	=> '<h5 class="widget-title">',
+			'after_title' 	=> '</h5>',
+			'description'   => esc_html__('Add footer menu-1 here.', 'the-marketing-co'),			
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Social Media Icons', 'the-marketing-co'),
+			'id'            => 'footer-sidebar-3',
+			'before_widget'	=> '<div class="widget widget_text" id="%1$s">',
+			'after_widget'	=> '</div>',
+			'before_title'	=> '<h5 class="widget-title">',
+			'after_title' 	=> '</h5>',
+			'description'   => esc_html__('Add Social Media Icons & links here.', 'the-marketing-co'),			
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Footer Menu 2', 'the-marketing-co'),
+			'id'            => 'footer-sidebar-4',
+			'before_widget'	=> '<div class="widget widget_text" id="%1$s">',
+			'after_widget'	=> '</div>',
+			'before_title'	=> '<h5 class="widget-title">',
+			'after_title' 	=> '</h5>',
+			'description'   => esc_html__('Add footer menu-2 here.', 'the-marketing-co'),			
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Payments Icons', 'the-marketing-co'),
+			'id'            => 'footer-sidebar-5',
+			'before_widget'	=> '<div class="widget widget_text" id="%1$s">',
+			'after_widget'	=> '</div>',
+			'before_title'	=> '<h5 class="widget-title">',
+			'after_title' 	=> '</h5>',
+			'description'   => esc_html__('Add Social payment Icons & links here.', 'the-marketing-co'),			
+		)
+	);
+	
 }
 add_action( 'widgets_init', 'the_marketing_co_widgets_init' );
 
