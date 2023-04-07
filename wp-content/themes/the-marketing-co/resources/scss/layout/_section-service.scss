@@ -2,25 +2,56 @@
     padding-top: 137px;
     padding-bottom: 102px;
 }
+
 .services-grid {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+
     .service-card {
         padding: 0 15px;
         flex: 0 1 33.33%;
         margin: 0 0 30px;
+
         .card-inner {
             .card-image {
                 margin: 0 0 20px;
+
+                a {
+                    display: block;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        opacity: 0;
+                        background: rgba($color_primary, 0.5);
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 1;
+                        @include transition(0.4s opacity);
+                        pointer-events: none;
+                    }
+                }
+
                 img {
                     height: 273px;
                     width: 100%;
                     object-fit: cover;
                 }
             }
-            .button-wrap {
 
+            .button-wrap {}
+            &:hover {
+                .card-image {
+                    a {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                }
             }
         }
     }

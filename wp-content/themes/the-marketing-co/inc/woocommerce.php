@@ -241,14 +241,14 @@ add_filter( 'woocommerce_result_count', '__return_false' );
 // Remove sorting
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 
-// Remove breadcrumb
-remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
-
-// Change the text for the dropdown options to "View colors"
-add_filter( 'woocommerce_dropdown_variation_attribute_options_args', 'custom_text_dropdown', 10 );
-function custom_text_dropdown( $args ) {
-    $args['show_option_none'] = __('View colors', 'woocommerce'); // Update the text for the "Select Options" default value
-    return $args;
+// Change the "Select Option" text to "View Colors" for variable products on the shop page
+add_filter( 'woocommerce_loop_add_to_cart_link', 'custom_variable_product_message', 10, 2 );
+function custom_variable_product_message( $button, $product ) {
+    if( $product->is_type('variable') ) {
+        $button_text = __("View Colors", "woocommerce");
+        $button = '<a class="button" href="' . esc_url( $product->get_permalink() ) . '">' . $button_text . '</a>';
+    }
+    return $button;
 }
 
 // Change the text for the add to cart button to "Add to Bag"
@@ -259,3 +259,20 @@ function custom_cart_button_text( $text ) {
     $text = __('Add to Bag', 'woocommerce'); // Update the text for the add to cart button
     return $text;
 }
+
+// Remove SKU from product page
+add_filter( 'wc_product_sku_enabled', '__return_false' );
+
+// Remove product categories from product page
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+// Remove additional information and review tab from product page
+add_filter( 'woocommerce_product_tabs', 'remove_product_tabs', 98 );
+function remove_product_tabs( $tabs ) {
+    unset( $tabs['additional_information'] );
+	unset( $tabs['reviews'] );
+    return $tabs;
+}
+
+// Remove related products from product page
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );

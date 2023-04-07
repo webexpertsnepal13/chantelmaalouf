@@ -10603,12 +10603,40 @@ h5 {
 .services-grid .service-card .card-inner .card-image {
   margin: 0 0 20px;
 }
+.services-grid .service-card .card-inner .card-image a {
+  display: block;
+  position: relative;
+}
+.services-grid .service-card .card-inner .card-image a:before {
+  content: "";
+  opacity: 0;
+  background: rgba(197, 131, 131, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: 0.4s opacity;
+  transition: 0.4s opacity;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .services-grid .service-card .card-inner .card-image a:before {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
 .services-grid .service-card .card-inner .card-image img {
   height: 273px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+.services-grid .service-card .card-inner:hover .card-image a:before {
+  opacity: 1;
+}
+
 .section-about-cm {
   background: #F2DFD2;
   position: relative;
@@ -10769,6 +10797,127 @@ h5 {
 .inner-banner-section .inner-banner-title h1 {
   color: #C58383;
   margin: 0;
+}
+
+.cm-product-wrapper .products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 -15px;
+}
+.cm-product-wrapper .products .product {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  padding: 0 15px;
+  margin: 0 0 30px;
+  text-align: center;
+}
+.cm-product-wrapper .products .product a {
+  text-decoration: none;
+}
+.cm-product-wrapper .products .product > a {
+  display: block;
+}
+.cm-product-wrapper .products .product > a img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.cm-product-wrapper .products .product > a .woocommerce-loop-product__title,
+.cm-product-wrapper .products .product > a .price {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+.cm-product-wrapper .products .product > a .woocommerce-loop-product__title {
+  margin: 24px 0 0;
+  -webkit-transition: 0.4s color;
+  transition: 0.4s color;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cm-product-wrapper .products .product > a .woocommerce-loop-product__title {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.cm-product-wrapper .products .product > a .price {
+  display: block;
+  margin: 0 0 28px;
+}
+.cm-product-wrapper .products .product > a:hover .woocommerce-loop-product__title {
+  color: #C58383;
+}
+.cm-product-wrapper .products .product .cart-button-wrap {
+  text-align: center;
+}
+.cm-product-wrapper .products .product .cart-button-wrap a.button {
+  width: 100%;
+  border: 2px solid #000000;
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  padding: 20px 30px;
+  -webkit-transition: 0.4s background, 0.4s color;
+  transition: 0.4s background, 0.4s color;
+  display: block;
+  text-align: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cm-product-wrapper .products .product .cart-button-wrap a.button {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.cm-product-wrapper .products .product .cart-button-wrap a.button:hover {
+  color: #F2DFD2;
+  background: #000000;
+}
+.cm-product-wrapper .products .product .cart-button-wrap .added_to_cart {
+  color: #000000;
+  display: inline-block;
+  margin: 4px 0 0;
+  font-size: 16px;
+  -webkit-transition: 0.4s color;
+  transition: 0.4s color;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cm-product-wrapper .products .product .cart-button-wrap .added_to_cart {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.cm-product-wrapper .products .product .cart-button-wrap .added_to_cart:hover {
+  color: #C58383;
+}
+
+.woocommerce-breadcrumb {
+  padding: 0 15px;
+  max-width: 1286px;
+  margin: 0 auto 23px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Avenir LT Pro";
+  color: #000000;
+}
+.woocommerce-breadcrumb a {
+  color: #C2C7CA;
+  font-family: "Poppins", sans-serif;
+}
+
+body.woocommerce-shop .woocommerce-breadcrumb,
+body.woocommerce-shop .woocommerce-result-count {
+  display: none;
+}
+body.single.single-product .site-main {
+  padding-top: 65px;
 }
 
 /**
