@@ -11648,12 +11648,6 @@ body.woocommerce-shop .woocommerce-result-count {
     padding-bottom: 60px;
   }
 }
-.sip-learn-section .container-fluid, .sip-learn-section .container-sm, .sip-learn-section .container-md, .sip-learn-section .container-lg, .sip-learn-section .container-xl {
-  padding: 0;
-}
-.sip-learn-section .sip-learn-wrapper {
-  padding-left: calc((100% - 1286px) / 2);
-}
 .sip-learn-section .row {
   /* Large Devices, Wide Screens */
 }
@@ -11675,12 +11669,6 @@ body.woocommerce-shop .woocommerce-result-count {
 .sip-learn-section .sip-learn-content-wrap {
   padding-right: 65px;
   /* Large Devices, Wide Screens */
-}
-@media (max-width: 1368px) {
-  .sip-learn-section .sip-learn-content-wrap {
-    padding-left: 15px;
-    padding-right: 20px;
-  }
 }
 @media (max-width: 1199px) {
   .sip-learn-section .sip-learn-content-wrap {

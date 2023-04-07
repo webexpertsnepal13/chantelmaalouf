@@ -73,13 +73,13 @@
         padding-bottom: 60px;
     }
 
-    .container-fluid {
-        padding: 0;
-    }
+    // .container-fluid {
+    //     padding: 0;
+    // }
 
-    .sip-learn-wrapper {
-        padding-left: calc((100% - 1286px) / 2);
-    }
+    // .sip-learn-wrapper {
+    //     padding-left: calc((100% - 1286px) / 2);
+    // }
 
     .row {
         @media (min-width: 768px) {
@@ -97,11 +97,6 @@
 
     .sip-learn-content-wrap {
         padding-right: 65px;
-
-        @media (max-width: 1368px) {
-            padding-left: 15px;
-            padding-right: 20px;
-        }
 
         @include breakpoint (wide) {
             padding-right: 15px;
