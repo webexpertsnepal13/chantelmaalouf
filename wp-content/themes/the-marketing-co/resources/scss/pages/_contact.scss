@@ -1,0 +1,16 @@
+.title-content-section{
+    padding: 100px 0;
+    .row{
+        margin: 0 -30px;
+        align-items: center;
+    }
+    .cols{
+        padding: 0 30px;
+    }
+    .title{
+        h3{
+            font-size: 36px;
+            color: $color-secondary;
+        }
+    }
+}
