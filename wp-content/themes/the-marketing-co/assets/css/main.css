@@ -10931,11 +10931,221 @@ h5 {
   background-image: url("../../images/arrow-down-primary.svg");
 }
 
-.site-footer .footer-top {
-  padding-top: 54px;
+.site-footer {
+  background: #F2DFD2;
 }
-.site-footer .footer-top .footer-block .widget .widget-title h4 {
+.site-footer .footer-top .foo-top-wrap {
+  padding-top: 54px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #000000;
+}
+.site-footer .footer-top .foo-top-wrap .footer-block .widget .widget-title {
+  font-weight: 700;
+}
+.site-footer .footer-top .foo-top-wrap .footer-block .widget ul {
+  margin: 0;
+  padding: 0;
+}
+.site-footer .footer-top .foo-top-wrap .footer-block .widget ul li {
+  list-style: none;
+}
+.site-footer .footer-top .foo-top-wrap .footer-block .widget ul li a {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000000;
+  -webkit-transition: 0.4s color;
+  transition: 0.4s color;
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-footer .footer-top .foo-top-wrap .footer-block .widget ul li a {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.site-footer .footer-top .foo-top-wrap .footer-block .widget ul li a:hover {
+  color: #C58383;
+}
+.site-footer .footer-top .foo-top-wrap .footer-block.footer-mid {
+  text-align: center;
+  max-width: 230px;
+  margin: 0 auto;
+}
+.site-footer .footer-top .foo-top-wrap .footer-block.footer-mid .custom-logo-link {
+  margin: 0 0 40px;
+  display: inline-block;
+}
+.site-footer .footer-top .foo-top-wrap .footer-block.footer-mid .custom-logo-link img {
+  width: 186px;
+  height: auto;
+}
+.site-footer .footer-top .foo-top-wrap .footer-block.footer-mid .widget .wp-block-heading {
+  margin: 0 0 13px;
+}
+.site-footer .footer-top .foo-top-wrap .footer-block.footer-mid .widget .wp-block-gallery.has-nested-images {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0 15px;
+}
+.site-footer .footer-top .foo-top-wrap .footer-block.footer-mid .widget .wp-block-gallery.has-nested-images figure {
+  display: block;
+  -webkit-box-flex: unset;
+      -ms-flex: unset;
+          flex: unset;
+  width: 39px !important;
+  height: 39px !important;
+}
+.site-footer .footer-top .foo-top-wrap .footer-block.footer-right {
+  max-width: 170px;
+  margin: 0 0 0 auto;
+}
+.site-footer .footer-top .foo-payment-back-top {
+  position: relative;
+  padding-top: 26px;
+  padding-bottom: 37px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.site-footer .footer-top .foo-payment-back-top .widget .wp-block-heading {
+  margin: 0 0 16px;
+  text-transform: unset;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.36;
+  font-weight: 500;
+  font-family: "Avenir LT Pro";
+}
+.site-footer .footer-top .foo-payment-back-top .widget .wp-block-gallery.has-nested-images {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+.site-footer .footer-top .foo-payment-back-top .widget .wp-block-gallery.has-nested-images figure {
+  display: block;
+  -webkit-box-flex: unset;
+      -ms-flex: unset;
+          flex: unset;
+  width: unset !important;
+}
+.site-footer .footer-top .foo-payment-back-top .widget .wp-block-gallery.has-nested-images figure img {
+  height: unset !important;
+  width: unset !important;
+  -o-object-fit: unset !important;
+     object-fit: unset !important;
+}
+.site-footer .footer-top .foo-payment-back-top .back-to-top {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+}
+.site-footer .footer-top .foo-payment-back-top .back-to-top a {
+  text-decoration: none;
+}
+.site-footer .footer-top .foo-payment-back-top .back-to-top a svg,
+.site-footer .footer-top .foo-payment-back-top .back-to-top a img {
+  height: 22px;
+  width: 22px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 5px;
+  padding: 4px 6px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-footer .footer-top .foo-payment-back-top .back-to-top a svg,
+  .site-footer .footer-top .foo-payment-back-top .back-to-top a img {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.site-footer .footer-top .foo-payment-back-top .back-to-top a svg path,
+.site-footer .footer-top .foo-payment-back-top .back-to-top a img path {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-footer .footer-top .foo-payment-back-top .back-to-top a svg path,
+  .site-footer .footer-top .foo-payment-back-top .back-to-top a img path {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.site-footer .footer-top .foo-payment-back-top .back-to-top a span {
+  display: block;
+  font-size: 17px;
+  text-align: center;
+  color: #000000;
+  font-family: "Avenir LT Pro";
+  -webkit-transition: 0.4s color;
+  transition: 0.4s color;
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-footer .footer-top .foo-payment-back-top .back-to-top a span {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.site-footer .footer-top .foo-payment-back-top .back-to-top a:hover img,
+.site-footer .footer-top .foo-payment-back-top .back-to-top a:hover svg {
+  background: #C58383;
+  border-color: #C58383;
+}
+.site-footer .footer-top .foo-payment-back-top .back-to-top a:hover img path,
+.site-footer .footer-top .foo-payment-back-top .back-to-top a:hover svg path {
+  fill: #ffffff;
+}
+.site-footer .footer-top .foo-payment-back-top .back-to-top a:hover span {
+  color: #C58383;
+}
+.site-footer .footer-bottom {
+  background: #000000;
+  padding: 24px 0;
+}
+.site-footer .footer-bottom .copyright p,
+.site-footer .footer-bottom .designed-by p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.site-footer .footer-bottom .designed-by p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 16px;
+  line-height: 1.37;
+  font-family: "Avenir LT Pro";
+}
+.site-footer .footer-bottom .designed-by p span {
+  display: inline-block;
+  margin-right: 8px;
+}
+.site-footer .footer-bottom .designed-by p img {
+  max-width: 96px;
+}
+
+.widget .widget-title,
+.widget .wp-block-heading {
   text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 16px;
 }
 
 .section-hero-banner {
