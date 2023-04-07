@@ -225,3 +225,54 @@ if ( ! function_exists( 'the_marketing_co_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+
+/**
+ * Move the short description below the cart
+ */
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 35 );
+
+// Remove shop page title
+add_filter( 'woocommerce_show_page_title', '__return_false' );
+
+// Remove showing the single result text
+add_filter( 'woocommerce_result_count', '__return_false' );
+
+// Remove sorting
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+// Change the "Select Option" text to "View Colors" for variable products on the shop page
+add_filter( 'woocommerce_loop_add_to_cart_link', 'custom_variable_product_message', 10, 2 );
+function custom_variable_product_message( $button, $product ) {
+    if( $product->is_type('variable') ) {
+        $button_text = __("View Colors", "woocommerce");
+        $button = '<a class="button" href="' . esc_url( $product->get_permalink() ) . '">' . $button_text . '</a>';
+    }
+    return $button;
+}
+
+// Change the text for the add to cart button to "Add to Bag"
+add_filter( 'woocommerce_product_add_to_cart_text', 'custom_cart_button_text' );
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'custom_cart_button_text' );
+add_filter( 'woocommerce_product_variation_add_to_cart_text', 'custom_cart_button_text' );
+function custom_cart_button_text( $text ) {
+    $text = __('Add to Bag', 'woocommerce'); // Update the text for the add to cart button
+    return $text;
+}
+
+// Remove SKU from product page
+add_filter( 'wc_product_sku_enabled', '__return_false' );
+
+// Remove product categories from product page
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+// Remove additional information and review tab from product page
+add_filter( 'woocommerce_product_tabs', 'remove_product_tabs', 98 );
+function remove_product_tabs( $tabs ) {
+    unset( $tabs['additional_information'] );
+	unset( $tabs['reviews'] );
+    return $tabs;
+}
+
+// Remove related products from product page
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
