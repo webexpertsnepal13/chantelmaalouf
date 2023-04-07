@@ -300,3 +300,7 @@ function wcc_change_breadcrumb_home_text( $defaults ) {
 	$defaults['after'] = '</li>';
 	return $defaults;
 }
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+
+add_action( 'woocommerce_before_single_product', 'woocommerce_breadcrumb', 10 );
