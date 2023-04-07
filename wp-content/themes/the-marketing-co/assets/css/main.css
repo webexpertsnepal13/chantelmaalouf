@@ -11294,6 +11294,12 @@ h5 {
 
 .title-content-section {
   padding: 100px 0;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .title-content-section {
+    padding: 80px 0;
+  }
 }
 .title-content-section .row {
   margin: 0 -30px;
@@ -11328,7 +11334,13 @@ h5 {
 }
 
 .contact-section {
-  margin-top: 100px;
+  padding: 100px 0;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .contact-section {
+    padding: 80px 0;
+  }
 }
 .contact-section h3 {
   font-size: 32px;
@@ -11380,12 +11392,12 @@ h5 {
   /* Large Devices, Wide Screens */
   /* Large Devices, Wide Screens */
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .contact-section .row .contact-cols {
     top: unset;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .contact-section .row .contact-cols {
     background: #F2DFD2;
   }
@@ -11401,7 +11413,7 @@ h5 {
   content: "";
   /* Large Devices, Wide Screens */
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .contact-section .row .contact-cols::before {
     content: none;
   }
@@ -11410,7 +11422,7 @@ h5 {
   top: unset;
   /* Large Devices, Wide Screens */
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .contact-section .row .contact-cols.right-col {
     background: rgba(242, 223, 210, 0.4);
   }
@@ -11460,10 +11472,16 @@ h5 {
   padding-top: 70px;
   padding-bottom: 100px;
   /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
 }
 @media (max-width: 1199px) {
   .contact-section .info-container {
     padding-left: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-section .info-container {
+    padding: 80px;
   }
 }
 .contact-section .info-container::after {
