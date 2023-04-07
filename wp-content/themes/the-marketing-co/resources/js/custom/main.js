@@ -34,4 +34,12 @@
 		COMMON.init();
 		mainNavigation.init();
 	});
+
+	// back to top on button click
+	$('.back-to-top a').on('click', function (e) {
+		e.preventDefault();
+		$("html, body").animate({
+			scrollTop: 0
+		}, 800);
+	});
 })(jQuery);
