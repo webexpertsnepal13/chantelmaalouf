@@ -14,3 +14,7 @@ $product_title = get_sub_field( 'product_title' );
         </div><!-- title -->
     </div><!-- container -->
 </section><!-- section-products -->
+
+
+
+<?php echo do_shortcode( '[products]' ); ?>
