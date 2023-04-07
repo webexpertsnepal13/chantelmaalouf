@@ -24,7 +24,7 @@ $service_posts = get_sub_field( 'services_list' );
                                 <div class="service-card">
                                     <div class="card-inner">
                                         <div class="card-image">
-                                            <?php  the_post_thumbnail_url(); ?>
+                                            <?php  the_post_thumbnail(); ?>
                                         </div><!-- card-image -->
                                         <div class="button-wrap">
                                             <a href="<?php the_permalink(); ?>" class="btn-cm btn-outline"><?php the_title(); ?></a>
