@@ -289,13 +289,14 @@ function remove_product_tabs($tabs)
 
 // Remove related products from product page
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
-remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 
-
-add_action('woocommerce_before_single_product', 'woocommerce_custom_breadcrumb', 20);
-function woocommerce_custom_breadcrumb()
-{
-	echo '<div class="custom-breadcrumb">';
-	woocommerce_breadcrumb();
-	echo '</div>';
+add_filter( 'woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_home_text' );
+function wcc_change_breadcrumb_home_text( $defaults ) {
+    // Change the breadcrumb home text from 'Home' to 'Apartment'
+	$defaults['delimiter'] = '';
+	$defaults['wrap_before'] = '<div class="custom-breadcrumb"><nav class="woocommerce-breadcrumb"><ul>';
+	$defaults['wrap_after'] = '</ul></nav></div>';
+	$defaults['before'] = '<li>';
+	$defaults['after'] = '</li>';
+	return $defaults;
 }
