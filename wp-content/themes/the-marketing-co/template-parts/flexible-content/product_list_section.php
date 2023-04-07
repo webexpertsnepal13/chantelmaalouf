@@ -12,9 +12,8 @@ $product_title = get_sub_field( 'product_title' );
                 <h2><?php echo $product_title; ?></h2>
             <?php } ?>
         </div><!-- title -->
+        <div class="product-wrapper">
+            <?php echo do_shortcode( '[products]' ); ?>
+        </div><!-- product-wrapper -->
     </div><!-- container -->
 </section><!-- section-products -->
-
-
-
-<?php echo do_shortcode( '[products]' ); ?>
