@@ -13,5 +13,9 @@
             color: $color_primary;
             margin: 0;
         }
+
+        &:has(+ .button-wrap){
+            margin: 0 0 24px;
+        }
     }
 }

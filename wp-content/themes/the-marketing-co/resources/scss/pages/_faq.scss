@@ -1,83 +1,43 @@
 .faq-section {
-    padding: 104px 0 46px;
+    padding: 100px 0 40px;
 
     @include breakpoint(small) {
-        padding: 73px 0 25px;
+        padding: 80px 0 36px;
     }
 
-    .container {
-        @include breakpoint (small) {
-            padding: 0 11px;
+    .faq-title{
+        text-align: center;
+        color: $color-primary;
+        margin: 0 0 78px;
+        text-transform: uppercase;
+        @include breakpoint (small){
+            margin: 0 0 58px;
         }
     }
-
-    // .faq-wrapper {
-    //     max-width: 1016px;
-    //     margin: 0 auto;
-    // }
 
     .content-inner {
         .inner {
             margin: 0 0 60px;
+            @include breakpoint (small){
+                margin: 0 0 44px;
+            }
         }
 
-        // h3 {
-        //     font-size: 32px;
-        //     line-height: 1.25;
-        //     font-weight: 300;
-        //     color: $light-black;
-        //     margin: 0 0 28px;
-        //     letter-spacing: normal;
-
-        //     @include breakpoint (small) {
-        //         text-align: center;
-        //     }
-        // }
-
-        .content {
-            position: relative;
-
-            // &::before {
-            //     content: '';
-            //     height: 115%;
-            //     width: 1px;
-            //     background-color: #BF1917;
-            //     position: absolute;
-            //     left: 0;
-            //     top: -6px;
-
-            //     @include breakpoint (smaller) {
-            //         height: 108%;
-            //     }
-            // }
-
+        h3 {
+            margin: 0 0 16px;
+            color: $color-primary;
         }
 
         p {
-            // font-size: 18px;
-            // line-height: 1.33;
-            // font-weight: 300;
-            // color: $light-black;
-            // padding-left: 80px;
-            // letter-spacing: normal;
-
-            // @include breakpoint (small) {
-            //     padding-left: 32px;
-            // }
-
             a {
                 text-decoration: underline;
                 text-underline-position: under;
                 outline: none;
+                color: $color_tertiary;
                 transition: all 0.4s all;
 
                 &:hover {
                     opacity: 0.6;
-                }
-
-                @include breakpoint (smaller) {
-                    color: #BF1917;
-                    font-weight: 700;
                 }
 
             }
