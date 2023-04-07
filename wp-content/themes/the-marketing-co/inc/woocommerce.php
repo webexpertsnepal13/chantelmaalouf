@@ -227,9 +227,35 @@ if ( ! function_exists( 'the_marketing_co_woocommerce_header_cart' ) ) {
 }
 
 /**
- * Remove woocommerce breadcrumb
+ * Move the short description below the cart
  */
-add_action( 'init', 'remove_wc_breadcrumbs' );
-function remove_wc_breadcrumbs() {
-    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 35 );
+
+// Remove shop page title
+add_filter( 'woocommerce_show_page_title', '__return_false' );
+
+// Remove showing the single result text
+add_filter( 'woocommerce_result_count', '__return_false' );
+
+// Remove sorting
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+// Remove breadcrumb
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+
+// Change the text for the dropdown options to "View colors"
+add_filter( 'woocommerce_dropdown_variation_attribute_options_args', 'custom_text_dropdown', 10 );
+function custom_text_dropdown( $args ) {
+    $args['show_option_none'] = __('View colors', 'woocommerce'); // Update the text for the "Select Options" default value
+    return $args;
+}
+
+// Change the text for the add to cart button to "Add to Bag"
+add_filter( 'woocommerce_product_add_to_cart_text', 'custom_cart_button_text' );
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'custom_cart_button_text' );
+add_filter( 'woocommerce_product_variation_add_to_cart_text', 'custom_cart_button_text' );
+function custom_cart_button_text( $text ) {
+    $text = __('Add to Bag', 'woocommerce'); // Update the text for the add to cart button
+    return $text;
 }
