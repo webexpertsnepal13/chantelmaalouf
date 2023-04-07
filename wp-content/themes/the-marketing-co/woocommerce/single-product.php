@@ -32,6 +32,7 @@ get_header( 'shop' ); ?>
 		<section class="section-product-detail">
 
 			<div class="container">
+
 				<?php while ( have_posts() ) : ?>
 					<?php the_post(); ?>
 
