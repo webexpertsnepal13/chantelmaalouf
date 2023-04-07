@@ -1,0 +1,78 @@
+.gform_wrapper {
+    &.gravity-theme {
+
+        .gform-body{
+            margin: 0 0 15px;
+        }
+
+        .gform_required_legend{
+            display: none;
+        }
+
+        input[type=color],
+        input[type=date],
+        input[type=datetime-local],
+        input[type=datetime],
+        input[type=email],
+        input[type=month],
+        input[type=number],
+        input[type=password],
+        input[type=search],
+        input[type=tel],
+        input[type=text],
+        input[type=time],
+        input[type=url],
+        input[type=week],
+        select,
+        textarea {
+            border: 0;
+            border-bottom: 1px solid $black;
+            padding: 0 0 15px!important;
+            min-height: 3.2rem;
+            background-color: inherit;
+            outline: transparent;
+            outline-color: $color-primary;
+            color: $color-primary;
+        }
+
+        textarea{
+            height: 135px !important;
+        }
+
+        .gform_fields{
+           gap: 32px 30px !important;
+        }
+
+        .gfield{
+            &.is-focused{
+                .gfield_label{
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+
+        .gfield:not(#field_1_6) {
+            position: relative;
+
+            .gfield_label {
+                position: absolute;
+                top: 8px;
+                pointer-events: none;
+                margin-bottom: 0;
+                transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+            }
+        }
+
+        .gfield_label {
+            color: $color-primary;
+            font-weight: 400 !important;
+        }
+        .gform_button{
+            margin-left: auto;
+        }
+
+
+
+    }
+}

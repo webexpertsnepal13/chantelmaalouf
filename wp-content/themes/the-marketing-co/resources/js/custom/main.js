@@ -42,4 +42,19 @@
 			scrollTop: 0
 		}, 800);
 	});
+
+	//form focus and blur 
+	$('.ginput_container input').on('focus', function () {
+		$(this).closest('.gfield').addClass('is-focused');
+	});
+	$('.ginput_container input').on('blur', function () {
+		var value = $(this).val();
+		console.log(value)
+		// $(this).closest('.gfield').removeClass('is-focused');
+		if (value.length) {
+			$(this).closest('.gfield').addClass('is-focused');
+		}else {
+			$(this).closest('.gfield').removeClass('is-focused');
+		}
+	});
 })(jQuery);

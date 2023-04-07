@@ -1,0 +1,87 @@
+.faq-section {
+    padding: 104px 0 46px;
+
+    @include breakpoint(small) {
+        padding: 73px 0 25px;
+    }
+
+    .container {
+        @include breakpoint (small) {
+            padding: 0 11px;
+        }
+    }
+
+    // .faq-wrapper {
+    //     max-width: 1016px;
+    //     margin: 0 auto;
+    // }
+
+    .content-inner {
+        .inner {
+            margin: 0 0 60px;
+        }
+
+        // h3 {
+        //     font-size: 32px;
+        //     line-height: 1.25;
+        //     font-weight: 300;
+        //     color: $light-black;
+        //     margin: 0 0 28px;
+        //     letter-spacing: normal;
+
+        //     @include breakpoint (small) {
+        //         text-align: center;
+        //     }
+        // }
+
+        .content {
+            position: relative;
+
+            // &::before {
+            //     content: '';
+            //     height: 115%;
+            //     width: 1px;
+            //     background-color: #BF1917;
+            //     position: absolute;
+            //     left: 0;
+            //     top: -6px;
+
+            //     @include breakpoint (smaller) {
+            //         height: 108%;
+            //     }
+            // }
+
+        }
+
+        p {
+            // font-size: 18px;
+            // line-height: 1.33;
+            // font-weight: 300;
+            // color: $light-black;
+            // padding-left: 80px;
+            // letter-spacing: normal;
+
+            // @include breakpoint (small) {
+            //     padding-left: 32px;
+            // }
+
+            a {
+                text-decoration: underline;
+                text-underline-position: under;
+                outline: none;
+                transition: all 0.4s all;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+
+                @include breakpoint (smaller) {
+                    color: #BF1917;
+                    font-weight: 700;
+                }
+
+            }
+        }
+
+    }
+}
