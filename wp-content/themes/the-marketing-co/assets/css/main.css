@@ -11532,6 +11532,21 @@ body.woocommerce-shop .woocommerce-result-count {
     margin: 0 auto;
   }
 }
+.gform_wrapper.gravity-theme .gform_footer {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 20px !important;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 991px) {
+  .gform_wrapper.gravity-theme .gform_footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 0 !important;
+  }
+}
 
 .section-hero-banner {
   position: relative;

@@ -78,6 +78,14 @@
                 margin: 0 auto;
             }
         }
+        .gform_footer{
+            justify-content: flex-end;
+            padding-right: 20px !important;
+            @include breakpoint (medium){
+                justify-content: center;
+                padding-right: 0 !important;
+            }
+        }
 
 
 
