@@ -225,3 +225,11 @@ if ( ! function_exists( 'the_marketing_co_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+
+/**
+ * Remove woocommerce breadcrumb
+ */
+add_action( 'init', 'remove_wc_breadcrumbs' );
+function remove_wc_breadcrumbs() {
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+}
