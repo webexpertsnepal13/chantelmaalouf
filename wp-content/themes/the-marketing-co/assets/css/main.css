@@ -10414,7 +10414,7 @@ video {
 
 body {
   word-wrap: break-word;
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Poppins", sans-serif;
   color: #000000;
   font-weight: 400;
@@ -10511,6 +10511,7 @@ h5 {
 }
 
 .btn-book-now {
+  font-size: 16px;
   line-height: 1.43;
   font-family: "Jost", sans-serif;
   padding: 12px 24px;
@@ -10748,6 +10749,28 @@ h5 {
   padding: 72px 0;
 }
 
+.inner-banner-section {
+  background-color: rgba(211, 162, 162, 0.2);
+}
+.inner-banner-section .inner-banner-wrap {
+  min-height: 420px;
+  padding: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.inner-banner-section .inner-banner-title h1 {
+  color: #C58383;
+  margin: 0;
+}
+
 /**
  * WordPress Generated Classes
  * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
@@ -10857,6 +10880,7 @@ h5 {
   list-style-type: none;
 }
 .main-navigation .menu li a {
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -10983,10 +11007,6 @@ h5 {
   font-size: 36px;
   color: #C58383;
 }
-.about-section .about-content p {
-  line-height: 1.5;
-  font-family: "Nantes";
-}
 
 .sip-learn-section {
   background-color: #F2DFD2;
@@ -11001,8 +11021,7 @@ h5 {
 .sip-learn-section .row {
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: flex-end;
-  /* Large Devices, Wide Screens */
+          align-items: flex-end; /* Large Devices, Wide Screens */
 }
 @media (max-width: 767px) {
   .sip-learn-section .row {
@@ -11030,10 +11049,6 @@ h5 {
   color: #C58383;
   margin: 0 0 30px;
 }
-.sip-learn-section .sip-learn-content-wrap p {
-  line-height: 1.5;
-  font-family: "Nantes";
-}
 .sip-learn-section .sip-learn-content-wrap ul {
   margin: 0;
 }
@@ -11058,5 +11073,22 @@ h5 {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.title-content-section {
+  padding: 100px 0;
+}
+.title-content-section .row {
+  margin: 0 -30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.title-content-section .cols {
+  padding: 0 30px;
+}
+.title-content-section .title h3 {
+  font-size: 36px;
+  color: #F2DFD2;
 }
 /*# sourceMappingURL=maps/main.css.map */

@@ -1,0 +1,17 @@
+.inner-banner-section {
+    background-color: rgba($color_tertiary, 0.2);
+    .inner-banner-wrap {
+        min-height: 420px;
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .inner-banner-title{
+        h1{
+            color: $color_primary;
+            margin: 0;
+        }
+    }
+}

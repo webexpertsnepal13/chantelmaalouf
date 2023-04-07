@@ -22,6 +22,8 @@
 @import 'layout/section-service';
 @import 'layout/section-about-cm';
 @import 'layout/section-info-block';
+@import 'layout/inner-banner';
+
 
 // component (for smaller components like buttons, carousel, widgets, loader)
 @import "components/wp-classes";
@@ -33,6 +35,8 @@
 //page (page-specific styles)
 @import "pages/home";
 @import "pages/about";
+@import "pages/contact";
+
 
 
 //themes
