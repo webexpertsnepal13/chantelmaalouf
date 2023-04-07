@@ -73,8 +73,7 @@
 						</div><!-- button-wrap -->
 						<div class="header-cart">
 							<?php
-							$cart_url = "";
-							//wc_get_cart_url();
+							$cart_url = wc_get_cart_url();
 
 							if ( $cart_url ) {
 							?>
