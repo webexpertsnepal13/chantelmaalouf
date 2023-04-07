@@ -11669,10 +11669,16 @@ body.woocommerce-shop .woocommerce-result-count {
 .sip-learn-section .sip-learn-content-wrap {
   padding-right: 65px;
   /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
 }
 @media (max-width: 1199px) {
   .sip-learn-section .sip-learn-content-wrap {
     padding-right: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .sip-learn-section .sip-learn-content-wrap {
+    padding-right: 0;
   }
 }
 .sip-learn-section .sip-learn-content-wrap h2 {
