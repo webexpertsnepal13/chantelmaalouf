@@ -41,6 +41,10 @@
 
         .gform_fields{
            gap: 32px 30px !important;
+
+           @media (max-width: 640px){
+            gap: 32px 0px !important;
+           }
         }
 
         .gfield{

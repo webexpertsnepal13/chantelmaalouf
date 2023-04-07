@@ -10798,6 +10798,9 @@ h5 {
   color: #C58383;
   margin: 0;
 }
+.inner-banner-section .inner-banner-title:has(+ .button-wrap) {
+  margin: 0 0 24px;
+}
 
 .cm-product-wrapper .products {
   display: -webkit-box;
@@ -11496,6 +11499,11 @@ body.woocommerce-shop .woocommerce-result-count {
 .gform_wrapper.gravity-theme .gform_fields {
   gap: 32px 30px !important;
 }
+@media (max-width: 640px) {
+  .gform_wrapper.gravity-theme .gform_fields {
+    gap: 32px 0px !important;
+  }
+}
 .gform_wrapper.gravity-theme .gfield.is-focused .gfield_label {
   opacity: 0;
   visibility: hidden;
@@ -11529,10 +11537,10 @@ body.woocommerce-shop .woocommerce-result-count {
   margin: 0 0 100px;
   /* Large Devices, Wide Screens */
 }
-@media (max-width: 567px) {
+@media (max-width: 767px) {
   .about-section {
-    margin: 0 0 80px;
-    padding-bottom: 65px;
+    padding-top: 60px 0 35px;
+    margin-bottom: 60px;
   }
 }
 .about-section .row {
@@ -11595,7 +11603,13 @@ body.woocommerce-shop .woocommerce-result-count {
 
 .sip-learn-section {
   background-color: #F2DFD2;
-  padding: 15px 0 97px 0;
+  padding: 15px 0 100px 0;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .sip-learn-section {
+    padding-bottom: 60px;
+  }
 }
 .sip-learn-section .container-fluid, .sip-learn-section .container-sm, .sip-learn-section .container-md, .sip-learn-section .container-lg, .sip-learn-section .container-xl {
   padding: 0;
@@ -11604,10 +11618,14 @@ body.woocommerce-shop .woocommerce-result-count {
   padding-left: calc((100% - 1286px) / 2);
 }
 .sip-learn-section .row {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   /* Large Devices, Wide Screens */
+}
+@media (min-width: 768px) {
+  .sip-learn-section .row {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
 }
 @media (max-width: 767px) {
   .sip-learn-section .row {
@@ -11624,6 +11642,7 @@ body.woocommerce-shop .woocommerce-result-count {
 @media (max-width: 1368px) {
   .sip-learn-section .sip-learn-content-wrap {
     padding-left: 15px;
+    padding-right: 20px;
   }
 }
 @media (max-width: 1199px) {
@@ -11634,9 +11653,16 @@ body.woocommerce-shop .woocommerce-result-count {
 .sip-learn-section .sip-learn-content-wrap h2 {
   color: #C58383;
   margin: 0 0 30px;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .sip-learn-section .sip-learn-content-wrap h2 {
+    margin: 0 0 23px;
+  }
 }
 .sip-learn-section .sip-learn-content-wrap p {
   font-family: "Nantes";
+  margin: 0 0 24px;
 }
 .sip-learn-section .sip-learn-content-wrap ul {
   margin: 0;
@@ -11666,10 +11692,16 @@ body.woocommerce-shop .woocommerce-result-count {
 .title-content-section {
   padding: 100px 0;
   /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 991px) {
+  .title-content-section {
+    padding: 80px 0;
+  }
 }
 @media (max-width: 767px) {
   .title-content-section {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 }
 .title-content-section .row {
@@ -11702,15 +11734,21 @@ body.woocommerce-shop .woocommerce-result-count {
 .title-content-section .title h3 {
   font-size: 36px;
   color: #C58383;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .title-content-section .title h3 {
+    font-size: 32px;
+  }
 }
 
 .contact-section {
   padding: 100px 0;
   /* Large Devices, Wide Screens */
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .contact-section {
-    padding: 80px 0;
+    padding: 0;
   }
 }
 .contact-section h3 {
@@ -11718,6 +11756,7 @@ body.woocommerce-shop .woocommerce-result-count {
   line-height: 1.25;
   text-transform: capitalize;
   color: #C58383;
+  margin: 0 0 15px;
 }
 .contact-section p {
   font-size: 16px;
@@ -11826,16 +11865,10 @@ body.woocommerce-shop .woocommerce-result-count {
   padding-right: 30px;
   padding: 100px 0;
   /* Large Devices, Wide Screens */
-  /* Large Devices, Wide Screens */
 }
 @media (max-width: 991px) {
   .contact-section .form-container {
-    padding: 80px 15px;
-  }
-}
-@media (max-width: 567px) {
-  .contact-section .form-container {
-    padding: 80px 0px;
+    padding: 60px 0px;
   }
 }
 .contact-section .form-container::before {
@@ -11859,8 +11892,6 @@ body.woocommerce-shop .woocommerce-result-count {
   }
 }
 .contact-section .form-container .form-wrapper .form-title h3 {
-  font-size: 32px;
-  color: #C58383;
   margin: 0 0 26px;
 }
 .contact-section .info-cols {
@@ -11869,9 +11900,8 @@ body.woocommerce-shop .woocommerce-result-count {
 .contact-section .info-container {
   position: relative;
   padding-left: 100px;
-  padding-top: 70px;
+  padding-top: 100px;
   padding-bottom: 100px;
-  /* Large Devices, Wide Screens */
   /* Large Devices, Wide Screens */
   /* Large Devices, Wide Screens */
 }
@@ -11882,12 +11912,7 @@ body.woocommerce-shop .woocommerce-result-count {
 }
 @media (max-width: 991px) {
   .contact-section .info-container {
-    padding: 80px 15px;
-  }
-}
-@media (max-width: 567px) {
-  .contact-section .info-container {
-    padding: 80px 0px;
+    padding: 60px 0px 30px;
   }
 }
 .contact-section .info-container::after {
@@ -11901,5 +11926,51 @@ body.woocommerce-shop .woocommerce-result-count {
 }
 .contact-section .info-container .row {
   margin: 0 -15px;
+}
+
+.faq-section {
+  padding: 100px 0 40px;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .faq-section {
+    padding: 80px 0 36px;
+  }
+}
+.faq-section .faq-title {
+  text-align: center;
+  color: #C58383;
+  margin: 0 0 78px;
+  text-transform: uppercase;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .faq-section .faq-title {
+    margin: 0 0 58px;
+  }
+}
+.faq-section .content-inner .inner {
+  margin: 0 0 60px;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .faq-section .content-inner .inner {
+    margin: 0 0 44px;
+  }
+}
+.faq-section .content-inner h3 {
+  margin: 0 0 16px;
+  color: #C58383;
+}
+.faq-section .content-inner p a {
+  text-decoration: underline;
+  text-underline-position: under;
+  outline: none;
+  color: #D3A2A2;
+  -webkit-transition: all 0.4s all;
+  transition: all 0.4s all;
+}
+.faq-section .content-inner p a:hover {
+  opacity: 0.6;
 }
 /*# sourceMappingURL=maps/main.css.map */

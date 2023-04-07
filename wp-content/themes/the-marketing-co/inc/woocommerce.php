@@ -304,3 +304,14 @@ function wcc_change_breadcrumb_home_text( $defaults ) {
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 
 add_action( 'woocommerce_before_single_product', 'woocommerce_breadcrumb', 10 );
+
+
+add_action( 'woocommerce_before_main_content', 'add_custom_wrapper_open_to_main_content', 10 );
+function add_custom_wrapper_open_to_main_content() {
+    echo '<section class="section-products-list">';
+}
+
+add_action( 'woocommerce_after_main_content', 'add_custom_wrapper_close_to_main_content', 15 );
+function add_custom_wrapper_close_to_main_content() {
+    echo '</section>';
+}
