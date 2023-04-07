@@ -1,4 +1,8 @@
 .gform_wrapper {
+    .gfield_validation_message, .validation_message{
+        padding: 9px 10px !important;
+        line-height: 1 !important;
+    }
     &.gravity-theme {
 
         .gform-body{
