@@ -10414,7 +10414,7 @@ video {
 
 body {
   word-wrap: break-word;
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Poppins", sans-serif;
   color: #000000;
   font-weight: 400;
@@ -10511,6 +10511,7 @@ h5 {
 }
 
 .btn-book-now {
+  font-size: 16px;
   line-height: 1.43;
   font-family: "Jost", sans-serif;
   padding: 12px 24px;
@@ -10857,6 +10858,7 @@ h5 {
   list-style-type: none;
 }
 .main-navigation .menu li a {
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.05em;
   text-transform: uppercase;
