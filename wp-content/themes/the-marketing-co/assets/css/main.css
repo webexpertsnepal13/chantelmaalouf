@@ -10798,6 +10798,9 @@ h5 {
   color: #C58383;
   margin: 0;
 }
+.inner-banner-section .inner-banner-title:has(+ .button-wrap) {
+  margin: 0 0 24px;
+}
 
 .cm-product-wrapper .products {
   display: -webkit-box;
