@@ -12,20 +12,50 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'the-marketing-co' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'the-marketing-co' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'the-marketing-co' ), 'the-marketing-co', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="widget">
+							<h4 class="widget-title">Services</h4>
+							<ul>
+								<li><a href="#">Bridal Make up</a></li>
+								<li><a href="#">Event Make up</a></li>
+								<li><a href="#">Hair Styling</a></li>
+								<li><a href="#">Hydrotherapy facial</a></li>
+								<li><a href="#">One on One Make up training</a></li>
+								<li><a href="#">Sip & Learn</a></li>
+								<li><a href="#">Shop</a></li>
+							</ul>
+						</div><!-- footer-block -->
+					</div><!-- col-lg-4 -->
+					<div class="col-lg-4">
+						<div class="footer-block footer-mid">
+							<?php the_custom_logo(); ?>
+							<div class="widget">
+								<h4 class="widget-title">Get Social</h4>
+								<ul>
+									<li></li>
+								</ul>
+							</div>
+						</div><!-- footer-block -->
+					</div><!-- col-lg-4 -->
+					<div class="col-lg-4">
+						<div class="widget">
+							<h4 class="widget-title">Info</h4>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Returns & Exchanges</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div><!-- footer-block -->
+					</div><!-- col-lg-4 -->
+				</div><!-- row -->
+			</div><!-- container -->
+		</div><!-- footer-top -->
+	</footer><!-- site-footer -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
