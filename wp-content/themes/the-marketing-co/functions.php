@@ -270,3 +270,9 @@ require get_template_directory() . '/inc/custom-post-type.php';
  */
 require get_template_directory() . '/inc/acf-options-page.php';
 
+function custom_submit_button( $button, $form ) {
+	$button_text = 'Submit';
+	$button = '<button class="btn-cm btn-outline" id="gform_submit_button_1" type="submit" value="' . $button_text . '">' . $button_text . '</button>';
+	return $button;
+ }
+ add_filter( 'gform_submit_button', 'custom_submit_button', 10, 2 ); 

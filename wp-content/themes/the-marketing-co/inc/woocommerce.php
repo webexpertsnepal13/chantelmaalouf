@@ -241,6 +241,14 @@ if (!function_exists('the_marketing_co_woocommerce_header_cart')) {
  */
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 30 );
+
+function change_product_description_tab( $tabs ) {
+    $tabs['description']['title'] = __( 'Details', 'woocommerce' );
+    return $tabs;
+}
+add_filter( 'woocommerce_product_tabs', 'change_product_description_tab', 10, 1 );
+
+
 // Remove shop page title
 add_filter('woocommerce_show_page_title', '__return_false');
 
