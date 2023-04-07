@@ -20,7 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.
@@ -29,14 +28,19 @@ get_header( 'shop' ); ?>
 		 * @hooked woocommerce_breadcrumb - 20
 		 */
 		do_action( 'woocommerce_before_main_content' );
-	?>
+		?>
+		<section class="section-product-detail">
 
-		<?php while ( have_posts() ) : ?>
-			<?php the_post(); ?>
+			<div class="container">
+				<?php while ( have_posts() ) : ?>
+					<?php the_post(); ?>
 
-			<?php wc_get_template_part( 'content', 'single-product' ); ?>
+					<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
-		<?php endwhile; // end of the loop. ?>
+				<?php endwhile; // end of the loop. ?>
+			</div><!-- container -->
+
+		</section><!-- section-product-detail -->
 
 	<?php
 		/**
