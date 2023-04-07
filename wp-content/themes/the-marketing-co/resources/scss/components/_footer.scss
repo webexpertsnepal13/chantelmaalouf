@@ -1,15 +1,189 @@
 .site-footer {
+    background: $color_secondary;
     .footer-top {
-        padding-top: 54px;
-        .footer-block {
+        .foo-top-wrap {
+            padding-top: 54px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid $black;
+            .footer-block {
+                .widget {
+                    .widget-title {
+                        font-weight: 700;                    
+                    }
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                        li {
+                            list-style: none;
+                            a {
+                                font-size: 14px;
+                                line-height: 1.5;
+                                color: $black;
+                                @include transition(0.4s color);
+                                &:hover {
+                                    color: $color_primary;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.footer-mid {
+                    text-align: center;
+                    max-width: 230px;
+                    margin: 0 auto;
+                    .custom-logo-link {
+                        margin: 0 0 40px;
+                        display: inline-block;
+                        img {
+                            width: 186px;
+                            height: auto;
+                        }
+                    }
+                    .widget {
+                        .wp-block-heading {
+                            margin: 0 0 13px;
+                        }
+                        .wp-block-gallery {
+                            &.has-nested-images {
+                                justify-content: center;
+                                gap: 0 15px;
+                                figure {
+                                    display: block;
+                                    flex: unset;
+                                    width: 39px !important;
+                                    height: 39px !important;
+                                    img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.footer-right {
+                    max-width: 170px;
+                    margin: 0 0 0 auto;
+                }
+            }
+        }
+        .foo-payment-back-top {
+            position: relative;
+            padding-top: 26px;
+            padding-bottom: 37px;
+            max-width: 80%;
+            margin: 0 auto;
             .widget {
-                .widget-title {
-                    h4 {
-                        text-transform: uppercase;
-                        
+                .wp-block-heading {
+                    margin: 0 0 16px;
+                    text-transform: unset;
+                    text-align: center;
+                    font-size: 16px;
+                    line-height: 1.36;
+                    font-weight: 500;
+                    font-family: $font_avenir;
+                }
+                .wp-block-gallery {
+                    &.has-nested-images {
+                        justify-content: center;
+                        gap: 0 15px;
+                        align-items: center;
+                        margin: 0;
+                        figure {
+                            display: block;
+                            flex: unset;
+                            width: unset !important;
+                            img {
+                                height: unset !important;
+                                width: unset !important;
+                                object-fit: unset !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .back-to-top {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                a {
+                    text-decoration: none;
+                    svg,
+                    img {
+                        height: 22px;
+                        width: 22px;
+                        border: 1px solid $black;
+                        border-radius: 50%;                        
+                        display: block;
+                        margin: 0 auto 5px;
+                        padding: 4px 6px;
+                        @include transition(0.4s);
+                        path {
+                            @include transition(0.4s);
+                        }
+
+                    }
+                    span {
+                        display: block;
+                        font-size: 17px;
+                        text-align: center;
+                        color: $black;
+                        font-family: $font_avenir;
+                        @include transition(0.4s color);
+                    }
+                    &:hover {
+                        img,
+                        svg {
+                            background: $color_primary;
+                            border-color: $color_primary;
+                            path {
+                                fill: $white;
+                            }
+                        }
+                        span {
+                            color: $color_primary;
+                        }
                     }
                 }
             }
         }
+    }
+    .footer-bottom {
+        background: $black;
+        padding: 24px 0;
+        .copyright,
+        .designed-by {
+            p {
+                margin: 0;
+                color: $white;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+        .designed-by {
+            p {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: flex-end;
+                font-size: 16px;
+                line-height: 1.37;
+                font-family: $font_avenir;
+                span {
+                    display: inline-block;
+                    margin-right: 8px;
+                }
+                img {
+                    max-width: 96px;
+                }
+            }
+        }
+    }
+}
+.widget {
+    .widget-title,
+    .wp-block-heading {
+        text-transform: uppercase;
+        font-family: $font_poppins;
+        margin: 0 0 16px;
     }
 }
