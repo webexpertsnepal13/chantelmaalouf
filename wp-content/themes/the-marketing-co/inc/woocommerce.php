@@ -239,16 +239,8 @@ if (!function_exists('the_marketing_co_woocommerce_header_cart')) {
 /**
  * Move the short description below the cart
  */
-// Remove the description section from its default location
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
-
-// Add the description section below the add to cart button
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 35 );
-add_filter( 'woocommerce_product_description_heading', '__return_false' );
-
-
-
-
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 30 );
 // Remove shop page title
 add_filter('woocommerce_show_page_title', '__return_false');
 
