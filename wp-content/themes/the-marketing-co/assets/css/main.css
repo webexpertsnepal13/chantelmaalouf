@@ -10445,7 +10445,7 @@ h4 {
   line-height: 1.23;
 }
 
-h4 {
+h5 {
   font-size: 18px;
   line-height: 1.5;
 }
@@ -10905,6 +10905,13 @@ h4 {
 }
 .main-navigation .menu > li.menu-item-has-children:hover > a:after {
   background-image: url("../../images/arrow-down-primary.svg");
+}
+
+.site-footer .footer-top {
+  padding-top: 54px;
+}
+.site-footer .footer-top .footer-block .widget .widget-title h4 {
+  text-transform: uppercase;
 }
 
 .section-hero-banner {

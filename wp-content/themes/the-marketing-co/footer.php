@@ -16,17 +16,19 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4">
-						<div class="widget">
-							<h4 class="widget-title">Services</h4>
-							<ul>
-								<li><a href="#">Bridal Make up</a></li>
-								<li><a href="#">Event Make up</a></li>
-								<li><a href="#">Hair Styling</a></li>
-								<li><a href="#">Hydrotherapy facial</a></li>
-								<li><a href="#">One on One Make up training</a></li>
-								<li><a href="#">Sip & Learn</a></li>
-								<li><a href="#">Shop</a></li>
-							</ul>
+						<div class="footer-block">
+							<div class="widget">
+								<h4 class="widget-title">Services</h4>
+								<ul>
+									<li><a href="#">Bridal Make up</a></li>
+									<li><a href="#">Event Make up</a></li>
+									<li><a href="#">Hair Styling</a></li>
+									<li><a href="#">Hydrotherapy facial</a></li>
+									<li><a href="#">One on One Make up training</a></li>
+									<li><a href="#">Sip & Learn</a></li>
+									<li><a href="#">Shop</a></li>
+								</ul>
+							</div>
 						</div><!-- footer-block -->
 					</div><!-- col-lg-4 -->
 					<div class="col-lg-4">
@@ -41,15 +43,17 @@
 						</div><!-- footer-block -->
 					</div><!-- col-lg-4 -->
 					<div class="col-lg-4">
-						<div class="widget">
-							<h4 class="widget-title">Info</h4>
-							<ul>
-								<li><a href="#">About</a></li>
-								<li><a href="#">Contact</a></li>
-								<li><a href="#">Returns & Exchanges</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-							</ul>
+						<div class="footer-block">
+							<div class="widget">
+								<h4 class="widget-title">Info</h4>
+								<ul>
+									<li><a href="#">About</a></li>
+									<li><a href="#">Contact</a></li>
+									<li><a href="#">Returns & Exchanges</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+								</ul>
+							</div>
 						</div><!-- footer-block -->
 					</div><!-- col-lg-4 -->
 				</div><!-- row -->
