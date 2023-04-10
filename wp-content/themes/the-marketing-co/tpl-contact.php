@@ -33,8 +33,8 @@ endif;
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div><!-- .title-content-wrap -->
+    </div><!-- .container -->
 </section><!-- .title-content-section -->
 <section class="contact-section">
     <div class="container">
@@ -50,7 +50,7 @@ endif;
                             </div>
                             <?php echo do_shortcode('[gravityform id="1" title="false"]'); ?>
                         </div>
-                    </div>
+                    </div><!-- .form-container -->
                 </div>
                 <div class="col-lg-6 contact-cols right-col">
                     <div class="info-container">
@@ -135,12 +135,12 @@ endif;
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div><!-- .info-container -->
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </div><!-- .contact-wrapper -->
+    </div><!-- .container -->
+</section><!-- .contact-section -->
 <?php
 get_footer();
 ?>

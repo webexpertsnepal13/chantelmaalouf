@@ -11434,7 +11434,7 @@ body.woocommerce-shop .woocommerce-result-count {
 .gform_wrapper.gravity-theme select,
 .gform_wrapper.gravity-theme textarea {
   border: 0;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #8D5152;
   padding: 0 0 15px !important;
   background-color: inherit;
   outline: transparent;
@@ -11815,7 +11815,7 @@ body.woocommerce-shop .woocommerce-result-count {
 }
 .contact-section .row .contact-cols.right-col::before {
   background: rgba(242, 223, 210, 0.4);
-  left: -7rem;
+  left: -6rem;
   right: -50vw;
   /* Large Devices, Wide Screens */
   /* Large Devices, Wide Screens */
@@ -11875,7 +11875,7 @@ body.woocommerce-shop .woocommerce-result-count {
 }
 .contact-section .info-container {
   position: relative;
-  padding-left: 100px;
+  padding-left: 75px;
   padding-top: 100px;
   padding-bottom: 100px;
   /* Large Devices, Wide Screens */
@@ -12312,5 +12312,165 @@ body.woocommerce-cart .section-default .entry-header, body.woocommerce-checkout 
 
 .section-default {
   padding: 80px 0;
+}
+
+.single-product-section {
+  padding: 100px 0;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .single-product-section {
+    padding: 60px 0;
+  }
+}
+.single-product-section .product-thumb {
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .single-product-section .product-thumb {
+    margin: 0 0 28px;
+  }
+}
+.single-product-section .product-thumb img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.single-product-section .content-wrapper {
+  padding-top: 36px;
+  padding-left: 40px;
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 1199px) {
+  .single-product-section .content-wrapper {
+    padding: 20px 0 0 20px;
+  }
+}
+@media (max-width: 991px) {
+  .single-product-section .content-wrapper {
+    padding: 0;
+  }
+}
+.single-product-section .product-title {
+  display: none;
+}
+@media (min-width: 768px) {
+  .single-product-section .product-title {
+    display: block;
+  }
+}
+.single-product-section .product-title.mobile-view {
+  display: block;
+  margin: 0 0 28px;
+}
+@media (min-width: 768px) {
+  .single-product-section .product-title.mobile-view {
+    display: none;
+  }
+}
+.single-product-section h3 {
+  margin: 0 0 25px;
+  color: #C58383;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 991px) {
+  .single-product-section h3 {
+    margin: 0 0 15px;
+  }
+}
+.single-product-section p {
+  line-height: 1.8;
+  margin: 0 0 24px;
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 1199px) {
+  .single-product-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  .single-product-section p {
+    margin: 0 0 18px;
+  }
+}
+.single-product-section ul {
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 1199px) {
+  .single-product-section ul {
+    padding-left: 22px;
+  }
+}
+.single-product-section ul li {
+  line-height: 1.8;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 1199px) {
+  .single-product-section ul li {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+.single-product-section ul li::marker {
+  color: #C58383;
+}
+
+.post-navigation,
+.posts-navigation {
+  margin-top: 80px;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .post-navigation,
+  .posts-navigation {
+    margin-top: 40px;
+  }
+}
+.post-navigation .nav-links,
+.posts-navigation .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 -15px;
+}
+.post-navigation .nav-links > div,
+.posts-navigation .nav-links > div {
+  padding: 0 15px;
+}
+.post-navigation a,
+.posts-navigation a {
+  color: #8D5152;
+  text-decoration: underline;
+  text-underline-position: under;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  word-break: keep-all;
+  /* Large Devices, Wide Screens */
+}
+@media (prefers-reduced-motion: reduce) {
+  .post-navigation a,
+  .posts-navigation a {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+@media (max-width: 1199px) {
+  .post-navigation a,
+  .posts-navigation a {
+    font-size: 16px;
+  }
+}
+.post-navigation a:hover,
+.posts-navigation a:hover {
+  opacity: 0.6;
 }
 /*# sourceMappingURL=maps/main.css.map */

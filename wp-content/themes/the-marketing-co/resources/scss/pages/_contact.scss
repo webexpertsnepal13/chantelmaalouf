@@ -129,7 +129,7 @@
 
                 &::before {
                     background: rgba($color_secondary, 0.4);
-                    left: -7rem;
+                    left: -6rem;
                     right: -50vw;
 
                     @include breakpoint (wide) {
@@ -188,7 +188,7 @@
 
     .info-container {
         position: relative;
-        padding-left: 100px;
+        padding-left: 75px;
         padding-top: 100px;
         padding-bottom: 100px;
 
