@@ -272,6 +272,11 @@ require get_template_directory() . '/inc/custom-post-type.php';
  */
 require get_template_directory() . '/inc/acf-options-page.php';
 
+/**
+ * Custom Walker Nav
+ */
+require get_template_directory() . '/inc/class-chantelmaalouf-nav-walker.php';
+
 //fluent form custom submit button
 function fluent_form_custom_submit_button( $button, $form ) {
 	$button_text = 'Submit';
