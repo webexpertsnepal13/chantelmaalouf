@@ -29,9 +29,20 @@ $Chantel_link = get_sub_field( 'chantel_link' );
                     <?php } 
                     
                     if ( $chantel_content ) {
+                        // Get all the <p> tags in the content
+                        preg_match_all('/<p>(.*?)<\/p>/', $chantel_content, $matches);
+                    
+                        // Get the last <p> tag and extract its text content
+                        $last_p = end($matches[1]);
+                        $words = explode(' ', $last_p);
+                        $num_words = count($words);
+                        $shortened = implode(' ', array_slice( $words, $num_words - 40, 40 ));
+                    
+                        // Output the shortened content inside a <p> tag
+                        echo '<p>' . $shortened . '</p>';
+                    }
+                                                         
                     ?>
-                        <p><?php echo esc_html( $chantel_content ); ?></p>
-                    <?php } ?>
                     <div class="button-wrap">
                         <?php
                         if ( $Chantel_link ) :

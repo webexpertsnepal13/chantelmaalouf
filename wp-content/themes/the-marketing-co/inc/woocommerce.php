@@ -33,8 +33,8 @@ function the_marketing_co_woocommerce_setup()
 			),
 		)
 	);
-	add_theme_support('wc-product-gallery-zoom');
-	add_theme_support('wc-product-gallery-lightbox');
+	//add_theme_support('wc-product-gallery-zoom');
+	//add_theme_support('wc-product-gallery-lightbox');
 	add_theme_support('wc-product-gallery-slider');
 }
 add_action('after_setup_theme', 'the_marketing_co_woocommerce_setup');
@@ -322,3 +322,15 @@ add_action( 'woocommerce_after_main_content', 'add_custom_wrapper_close_to_main_
 function add_custom_wrapper_close_to_main_content() {
     echo '</section>';
 }
+
+//remove woocommerce breadcrum
+function remove_uncategorized_breadcrumb( $breadcrumb ) {
+    foreach ( $breadcrumb as $key => $value ) {
+        if ( $value[0] === 'Uncategorized' ) {
+            unset( $breadcrumb[$key] );
+        }
+    }
+    return $breadcrumb;
+}
+add_filter( 'woocommerce_get_breadcrumb', 'remove_uncategorized_breadcrumb', 10, 1 );
+ 

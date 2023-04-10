@@ -215,6 +215,8 @@ function the_marketing_co_scripts() {
 	wp_register_script( 'the-marketing-co-main-js', get_template_directory_uri() . '/' . $main_js, array( 'jquery' ), $ver, true );
 	wp_enqueue_script( 'the-marketing-co-main-js' );
 
+	wp_enqueue_script( 'plus-minus-quantity', get_stylesheet_directory_uri() . '/js/plus-minus-quantity.js', array( 'jquery' ), false, true );
+
 	wp_enqueue_style( 'the-marketing-co-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'the-marketing-co-style', 'rtl', 'replace' );
 
@@ -277,3 +279,53 @@ function fluent_form_custom_submit_button( $button, $form ) {
 	return $button;
  }
  add_filter( 'gform_submit_button', 'fluent_form_custom_submit_button', 10, 2 ); 
+
+//Chantel malouf full details page:
+function display_chantel_section( $page_id ) {
+    if ( have_rows ( 'add_site_layout', $page_id  ) ) :
+        while ( have_rows ( 'add_site_layout', $page_id  ) ) : the_row(); 
+            if ( get_row_layout() == 'meet_chantel_section' ) {
+                $chantel_image = get_sub_field( 'chantel_image', $page_id );
+                $size = 'full';
+                $chantel_title = get_sub_field( 'chantel_title', $page_id );
+                $chantel_content = get_sub_field( 'chantel_content', $page_id );
+                ?>
+                <section class="about-section">
+                    <div class="container">
+                        <div class="about-wrapper">
+                            <div class="row">
+                                <div class="col-md-7 cols">
+                                    <div class="thumbnail-wrapper">
+                                        <div class="about-thumbnail">
+                                            <?php 
+                                            if ( $chantel_image ) {
+                                                echo wp_get_attachment_image( $chantel_image, $size );
+                                            }
+                                            ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 cols">
+                                    <div class="content-inner-wrapper">
+                                        <div class="about-title">
+                                            <?php if ( $chantel_title ) :  ?>
+                                                <h3><?php echo esc_html( $chantel_title ); ?></h3>
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="about-content">
+                                            <?php if ( $chantel_content ):
+                                                echo $chantel_content;
+                                            endif;
+                                            ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- .container -->
+                </section><!-- .about-section -->
+                <?php
+            } 
+        endwhile; 
+    endif;  
+}
