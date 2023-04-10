@@ -263,7 +263,7 @@ add_filter('woocommerce_loop_add_to_cart_link', 'custom_variable_product_message
 function custom_variable_product_message($button, $product)
 {
 	if ($product->is_type('variable')) {
-		$button_text = __("View Colors", "woocommerce");
+		$button_text = __("View colors", "woocommerce");
 		$button = '<a class="button" href="' . esc_url($product->get_permalink()) . '">' . $button_text . '</a>';
 	}
 	return $button;
@@ -275,7 +275,7 @@ add_filter('woocommerce_product_single_add_to_cart_text', 'custom_cart_button_te
 add_filter('woocommerce_product_variation_add_to_cart_text', 'custom_cart_button_text');
 function custom_cart_button_text($text)
 {
-	$text = __('Add to Bag', 'woocommerce'); // Update the text for the add to cart button
+	$text = __('Add to bag', 'woocommerce'); // Update the text for the add to cart button
 	return $text;
 }
 

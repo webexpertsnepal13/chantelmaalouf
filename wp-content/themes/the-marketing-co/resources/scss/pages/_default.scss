@@ -52,6 +52,15 @@
             @include breakpoint (medium) {
                 margin: 0 0 25px;
             }
+            a {
+                color: $color-primary;
+            }
+        }
+
+        p{
+            a {
+                color: $color-primary;
+            }
         }
 
         ul {
@@ -70,11 +79,11 @@
                 &::marker {
                     color: $color-primary;
                 }
-            }
-        }
 
-        a {
-            color: $color-primary;
+                a {
+                    color: $color-primary;
+                }
+            }
         }
 
         img {
