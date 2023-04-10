@@ -12400,6 +12400,23 @@ body.woocommerce-shop .woocommerce-result-count {
   list-style: none;
 }
 
+.cart-empty {
+  padding: 15px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cart-empty.woocommerce-info {
+  background-color: #F2DFD2;
+}
+
 body.woocommerce-cart .section-default .entry-header, body.woocommerce-checkout .section-default .entry-header {
   display: none;
 }

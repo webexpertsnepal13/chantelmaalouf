@@ -55,6 +55,19 @@
     }
 }
 
+.cart-empty {
+    padding: 15px 20px;
+    color: $white;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 30px;
+    display: flex;
+    align-items: center;
+    &.woocommerce-info {
+        background-color: $color_secondary;
+    }
+}
+
 // cart page
 body {
 
