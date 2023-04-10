@@ -12217,10 +12217,6 @@ body.woocommerce-shop .woocommerce-result-count {
   margin: 0;
 }
 
-body.woocommerce-page.woocommerce-cart .section-default, body.woocommerce-page.woocommerce-checkout .section-default {
-  padding: 80px 0;
-}
-
 .woocommerce-notices-wrapper .woocommerce-message,
 .woocommerce-notices-wrapper .woocommerce-error {
   padding: 15px 20px;
