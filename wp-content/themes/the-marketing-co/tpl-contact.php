@@ -5,7 +5,9 @@
  * Template Name: Contact Page Template
  */
 get_header();
-
+?>
+<main id="primary" class="site-main">
+<?php
 //Flexible content
 if ( have_rows ( 'add_site_layout' ) ) :
     while ( have_rows ( 'add_site_layout' ) ) : the_row();
@@ -141,6 +143,7 @@ endif;
         </div><!-- .contact-wrapper -->
     </div><!-- .container -->
 </section><!-- .contact-section -->
+</main><!-- #main -->
 <?php
 get_footer();
 ?>

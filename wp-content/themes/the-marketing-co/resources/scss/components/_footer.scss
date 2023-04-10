@@ -172,8 +172,11 @@
                     display: inline-block;
                     margin-right: 8px;
                 }
-                img {
-                    max-width: 96px;
+                a {
+                    line-height: 0;
+                    img {
+                        max-width: 96px;
+                    }
                 }
             }
         }

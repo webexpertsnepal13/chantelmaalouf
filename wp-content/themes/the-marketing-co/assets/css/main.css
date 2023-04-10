@@ -10845,15 +10845,6 @@ h5 {
   -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
 }
-.cm-product-wrapper .products .product > a .woocommerce-loop-product__title,
-.cm-product-wrapper .products .product > a .price {
-  font-size: 16px;
-  line-height: 1.5;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  color: #000000;
-  text-align: left;
-}
 .cm-product-wrapper .products .product > a .woocommerce-loop-product__title {
   margin: 24px 0 0;
   -webkit-transition: 0.4s color;
@@ -10864,6 +10855,15 @@ h5 {
     -webkit-transition: none;
     transition: none;
   }
+}
+.cm-product-wrapper .products .product .woocommerce-loop-product__title,
+.cm-product-wrapper .products .product .price {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  text-align: left;
 }
 .cm-product-wrapper .products .product:hover .woocommerce-loop-product__title {
   color: #C58383;
@@ -11537,7 +11537,10 @@ body.woocommerce-shop .woocommerce-result-count {
   display: inline-block;
   margin-right: 8px;
 }
-.site-footer .footer-bottom .designed-by p img {
+.site-footer .footer-bottom .designed-by p a {
+  line-height: 0;
+}
+.site-footer .footer-bottom .designed-by p a img {
   max-width: 96px;
 }
 
