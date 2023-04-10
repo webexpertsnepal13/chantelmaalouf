@@ -1,0 +1,254 @@
+.woocommerce-notices-wrapper {
+    .woocommerce-message {
+        padding: 15px 20px;
+        color: $white;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0 0 30px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        color: $black;
+
+        a {
+            color: $black;
+            margin-left: 10px;
+            font-weight: 700;
+        }
+    }
+
+    .woocommerce-message,
+    .woocommerce-info,
+    .woocommerce-error,
+    .woocommerce-noreviews,
+    p.no-comments {
+        color: $black;
+        background-color: rgba($color_secondary, 0.4);
+        border: 1px solid rgba($color_secondary, 0.6);
+    }
+}
+
+// cart page
+body {
+
+    &.woocommerce-cart,
+    &.woocommerce-checkout {
+        .section-default {
+            .entry-header {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Cart form */
+.woocommerce-cart-form {
+    margin-bottom: 60px;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead {
+            th {
+                text-align: left;
+                font-size: 16px;
+                font-weight: bold;
+                color: $black;
+                border-bottom: 2px solid $color_grey;
+                padding: 10px;
+            }
+        }
+
+        tbody {
+            td {
+                vertical-align: middle;
+                border-bottom: 1px solid $color_grey;
+                padding: 10px;
+
+                &.product-remove {
+                    a {
+                        color: $color_primary;
+                        font-size: 24px;
+                        text-decoration: none;
+                        @include transition(0.4s color);
+
+                        &:hover {
+                            color: $black;
+                        }
+                    }
+                }
+
+                &.product-thumbnail {
+                    img {
+                        max-width: 100px;
+                        height: auto;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+
+                &.product-name {
+                    font-size: 16px;
+                    color: $black;
+                    padding-left: 10px;
+
+                    a {
+                        color: $color_primary;
+                    }
+                }
+
+                &.product-price {
+                    font-size: 16px;
+                    color: $black;
+                }
+
+                &.product-quantity {
+                    .quantity {
+                        input {}
+                    }
+                }
+
+                &.product-subtotal {
+                    font-size: 16px;
+                    color: $black;
+                }
+
+                &.actions {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.coupon input[type="text"],
+.woocommerce-form-coupon .form-row input[type="text"] {
+    border: 1px solid $color_grey;
+    padding: 10px;
+    width: 100%;
+    max-width: 235px;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.coupon .wp-element-button,
+.woocommerce-form-coupon .form-row .wp-element-button {
+    max-width: 155px;
+    width: 100%;
+    text-align: center;
+    min-height: 46px;
+}
+
+.coupon {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+
+    +button {
+        float: right;
+    }
+}
+
+.wp-element-button {
+    background: $color_primary;
+    display: inline-block;
+    color: $white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    @include transition(0.4s background);
+    text-decoration: none !important;
+
+    &:hover {
+        background: $black;
+        color: $white;
+    }
+
+    &[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+
+        &:hover {
+            background: $color_primary;
+        }
+    }
+}
+
+/* Applied coupon message */
+.coupon-applied {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-top: 10px;
+
+    p {
+        margin: 0;
+    }
+}
+
+.woocommerce-invalid-coupon {
+    color: #dc3545;
+    margin-top: 10px;
+}
+
+.cart-collaterals {
+    .cart_totals {
+        max-width: 400px;
+        margin: 0 0 0 auto;
+
+        h2 {
+            font-size: 34px;
+            line-height: 1.17;
+            margin-bottom: 10px;
+        }
+
+        table {
+            &.shop_table {
+                margin-bottom: 10px;
+                background: $color_secondary;
+                border-collapse: separate;
+                padding: 20px 30px;
+                margin-bottom: 10px;
+                width: 100%;
+
+                tr {
+                    border-bottom: 1px solid #ccc;
+
+                    th,
+                    td {
+                        font-size: 16px;
+                    }
+
+                    th {
+                        text-align: left;
+                        padding: 10px;
+                        padding-left: 0;
+                    }
+
+                    td {
+                        text-align: right;
+                        padding: 10px;
+                        padding-right: 0;
+                    }
+
+                    &.order-total {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .wc-proceed-to-checkout {
+            text-align: right;
+
+            .wp-element-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}

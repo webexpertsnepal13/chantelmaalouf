@@ -99,24 +99,8 @@
 
                     .quantity {
                         margin-right: 30px;
-
-                        input {
-                            height: 42px;
-                            width: 101px;
-                            border-radius: 5px;
-                            border: 2px solid $color_grey;
-                            padding: 7px 20px;
-                            appearance: none;
-                            -moz-appearance: textfield;
-                            text-align: center;
-
-                            &::-webkit-outer-spin-button,
-                            &::-webkit-inner-spin-button {
-                                -webkit-appearance: none;
-                                margin: 0;
-                            }
-                        }
                     }
+
                     .single_add_to_cart_button {
                         background: $black;
                         color: $white;
@@ -139,7 +123,7 @@
 
                     .woocommerce-variation-add-to-cart {
                         display: flex;
-                        flex-wrap: wrap;                        
+                        flex-wrap: wrap;
                     }
                 }
 
@@ -230,182 +214,23 @@
     }
 }
 
+.quantity {
+    position: relative;
+    width: 101px;
+    input {
+        height: 42px;
+        width: 100%;        
+        border-radius: 5px;
+        border: 2px solid $color_grey;
+        padding: 7px 20px;
+        appearance: none;
+        -moz-appearance: textfield;
+        text-align: center;
 
-// cart page
-body {
-
-    &.woocommerce-cart,
-    &.woocommerce-checkout {
-        .section-default {
-            .entry-header {
-                display: none;
-            }
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
     }
-}
-
-/* Cart form */
-.woocommerce-cart-form {
-    margin-bottom: 30px;
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-
-        thead {
-            th {
-                text-align: left;
-                font-size: 16px;
-                font-weight: bold;
-                color: $black;
-                border-bottom: 2px solid $color_grey;
-                padding: 10px;
-            }
-        }
-
-        tbody {
-            td {
-                vertical-align: middle;
-                border-bottom: 1px solid $color_grey;
-                padding: 10px;
-
-                &.product-remove {
-                    a {
-                        color: $color_primary;
-                        font-size: 24px;
-                        text-decoration: none;
-                        @include transition(0.4s color);
-
-                        &:hover {
-                            color: $black;
-                        }
-                    }
-                }
-
-                &.product-thumbnail {
-                    img {
-                        max-width: 100px;
-                        height: auto;
-                        display: block;
-                        margin: 0 auto;
-                    }
-                }
-
-                &.product-name {
-                    font-size: 16px;
-                    color: $black;
-                    padding-left: 10px;
-
-                    a {
-                        color: $color_primary;
-                    }
-                }
-
-                &.product-price {
-                    font-size: 16px;
-                    color: $black;
-                }
-
-                &.product-quantity {
-                    input {
-                        width: 50px;
-                        border: 1px solid $color_grey;
-                        padding: 5px;
-                        text-align: center;
-                    }
-                }
-
-                &.product-subtotal {
-                    font-size: 16px;
-                    color: $black;
-                }
-            }
-        }
-    }
-}
-
-
-.coupon {
-    input[type="text"] {
-        border: 1px solid $color_grey;
-        padding: 10px;
-        width: 100%;
-        max-width: 400px;
-        margin-right: 5px;
-        font-size: 16px;
-    }
-
-    button.button {
-        background: $black;
-        color: $white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        @include transition(0.4s background);
-
-        &:hover {
-            background: $color_primary;
-        }
-    }
-}
-
-/* Applied coupon message */
-.coupon-applied {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 10px;
-    margin-top: 10px;
-}
-
-.coupon-applied p {
-    margin: 0;
-}
-
-/* Error message for invalid coupon */
-.woocommerce-invalid-coupon {
-    color: #dc3545;
-    margin-top: 10px;
-}
-
-
-/* Container for the entire cart totals section */
-.cart_totals {
-    border-top: 1px solid #ccc;
-    margin-top: 20px;
-    padding-top: 20px;
-}
-
-/* Title of the cart totals section */
-.cart_totals h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-/* Cart totals table */
-.cart_totals table.shop_table {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-/* Cart totals table rows */
-.cart_totals table.shop_table tr {
-    border-bottom: 1px solid #ccc;
-}
-
-/* Cart totals table row labels */
-.cart_totals table.shop_table tr th {
-    text-align: left;
-    padding: 10px;
-}
-
-/* Cart totals table row values */
-.cart_totals table.shop_table tr td {
-    text-align: right;
-    padding: 10px;
-}
-
-/* Cart totals table grand total row */
-.cart_totals table.shop_table tr.order-total {
-    font-weight: bold;
 }
