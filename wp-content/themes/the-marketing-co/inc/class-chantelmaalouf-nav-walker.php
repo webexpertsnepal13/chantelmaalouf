@@ -262,9 +262,11 @@ class Maalouf_Nav_Walker extends Walker_Nav_Menu {
             $item_output    .= '<div class="content-col">';
             //$item_output    .= '<div class="inner">';
 
-            /* if( $content_title ) {
+            /* 
+			if( $content_title ) {
                 $item_output   .= sprintf( '<h3>%s</h3>', $content_title );
-            } */
+            } 
+			*/
 
             if( $short_description ) {
                 $item_output   .= sprintf( '<p>%s</p>', $short_description );
