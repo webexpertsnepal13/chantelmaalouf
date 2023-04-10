@@ -12875,7 +12875,6 @@ body.woocommerce-cart .section-default .entry-header, body.woocommerce-checkout 
 @media (max-width: 1199px) {
   .single-service-section p {
     font-size: 16px;
-    line-height: 1.6;
     margin: 0 0 20px;
   }
 }
@@ -12899,7 +12898,6 @@ body.woocommerce-cart .section-default .entry-header, body.woocommerce-checkout 
 @media (max-width: 1199px) {
   .single-service-section ul li {
     font-size: 16px;
-    line-height: 1.6;
   }
 }
 .single-service-section ul li::marker {
