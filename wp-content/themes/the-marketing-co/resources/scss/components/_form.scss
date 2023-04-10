@@ -32,11 +32,10 @@
             border: 0;
             border-bottom: 1px solid $black;
             padding: 0 0 15px!important;
-            min-height: 3.2rem;
             background-color: inherit;
             outline: transparent;
-            outline-color: $color-primary;
-            color: $color-primary;
+            outline-color: $color-accent;
+            color: $color-accent;
         }
 
         textarea{
@@ -73,8 +72,9 @@
         }
 
         .gfield_label {
-            color: $color-primary;
+            color: $color-accent;
             font-weight: 400 !important;
+            line-height: 1;
         }
         .gform_button{
             margin-left: auto;
