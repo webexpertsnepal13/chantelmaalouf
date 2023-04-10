@@ -335,44 +335,42 @@ function remove_uncategorized_breadcrumb( $breadcrumb ) {
 add_filter( 'woocommerce_get_breadcrumb', 'remove_uncategorized_breadcrumb', 10, 1 );
 
 //wrap the custom class for woocommerce product page Image, title and price
-add_action( 'woocommerce_before_shop_loop_item_title', 'custom_product_wrap_open', 5 );
-function custom_product_wrap_open() {
-  echo '<div class="custom-product-wrap">';
+
+//wrap image
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+add_action( 'woocommerce_before_shop_loop_item_title', 'wrap_product_image_with_anchor_tag', 10 );
+
+function wrap_product_image_with_anchor_tag() {
+   global $product;
+   $url = get_permalink( $product->get_id() );
+   echo '<a href="' . $url . '">';
+   echo get_the_post_thumbnail( $product->get_id(), 'woocommerce_thumbnail' );
+   echo '</a>';
 }
 
-add_action( 'woocommerce_after_shop_loop_item_title', 'custom_product_wrap_close', 15 );
-function custom_product_wrap_close() {
-  echo '</div>';
+
+//wrap title
+remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
+add_action( 'woocommerce_shop_loop_item_title', 'wrap_product_title_with_anchor_tag', 10 );
+
+function wrap_product_title_with_anchor_tag() {
+   global $product;
+   $url = get_permalink( $product->get_id() );
+   echo '<a href="' . $url . '">';
+   the_title('<h2 class="woocommerce-loop-product__title">', '</h2>');
+   echo '</a>';
 }
 
-add_action( 'woocommerce_before_shop_loop_item_title', 'custom_image_wrap_open', 5 );
-function custom_image_wrap_open() {
-  echo '<div class="custom-image-wrap">';
-}
+//wrap price
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+add_action( 'woocommerce_after_shop_loop_item_title', 'wrap_product_price_with_anchor_tag', 10 );
 
-add_action( 'woocommerce_before_shop_loop_item_title', 'custom_image_wrap_close', 15 );
-function custom_image_wrap_close() {
-  echo '</div>';
-}
-
-add_action( 'woocommerce_shop_loop_item_title', 'custom_product_title_wrap_open', 5 );
-function custom_product_title_wrap_open() {
-  echo '<div class="custom-product-title-wrap">';
-}
-
-add_action( 'woocommerce_shop_loop_item_title', 'custom_product_title_wrap_close', 15 );
-function custom_product_title_wrap_close() {
-  echo '</div>';
-}
-
-add_action( 'woocommerce_after_shop_loop_item_title', 'custom_price_wrap_open', 5 );
-function custom_price_wrap_open() {
-  echo '<div class="custom-price-wrap">';
-}
-
-add_action( 'woocommerce_after_shop_loop_item_title', 'custom_price_wrap_close', 15 );
-function custom_price_wrap_close() {
-  echo '</div>';
+function wrap_product_price_with_anchor_tag() {
+   global $product;
+   $url = get_permalink( $product->get_id() );
+   echo '<a href="' . $url . '">';
+   echo $product->get_price_html();
+   echo '</a>';
 }
 
  
