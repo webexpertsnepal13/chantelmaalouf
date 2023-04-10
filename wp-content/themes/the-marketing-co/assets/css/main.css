@@ -10790,6 +10790,9 @@ h5 {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.inner-banner-section .inner-banner-title {
+  max-width: 564px;
+}
 .inner-banner-section .inner-banner-title h1 {
   color: #C58383;
   margin: 0;
