@@ -10842,6 +10842,8 @@ h5 {
 .cm-product-wrapper .products .product > a img {
   width: 100%;
   aspect-ratio: 1/1;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
 }
 .cm-product-wrapper .products .product > a .woocommerce-loop-product__title,
 .cm-product-wrapper .products .product > a .price {
@@ -10941,7 +10943,7 @@ h5 {
 .single_add_to_cart_button.loading {
   pointer-events: none;
   background: #000000;
-  color: #ffffff;
+  color: #000000;
 }
 .cart-button-wrap a.button.loading:after,
 .single_add_to_cart_button.loading:after {
