@@ -2,14 +2,17 @@
     .menu-toggle {
         display: none;
     }
+
     .menu {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin: 0;
         padding: 0;
+
         li {
             list-style-type: none;
+
             a {
                 font-size: 16px;
                 line-height: 1.5;
@@ -19,24 +22,28 @@
                 text-decoration: none;
                 @include transition(0.4s color);
             }
+
             &:hover {
-                > a {
+                >a {
                     color: $color_primary;
                 }
             }
         }
-        > li {
+
+        >li {
             &:not(:last-child) {
                 margin-right: 33px;
             }
+
             &.menu-item-has-children {
-                > a {
+                >a {
                     padding-right: 17px;
                     position: relative;
+
                     &:after {
                         content: '';
                         position: absolute;
-                        top: 9px;
+                        top: 8px;
                         right: 0;
                         height: 7px;
                         width: 12px;
@@ -46,13 +53,43 @@
                         @include transition(0.4s);
                     }
                 }
+
+                .dropdown {
+                    display: none;
+                }
+
                 ul.sub-menu {
                     display: none;
                 }
+
                 &:hover {
-                    > a {
+                    >a {
                         &:after {
                             background-image: url('../../images/arrow-down-primary.svg');
+                        }
+                    }
+                }
+
+                &.mega-nav-menu {
+                    ul.sub-menu {
+                        animation: none;
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        left: 0;
+                        opacity: 0;
+                        pointer-events: none;
+                        display: block;
+                        background: rgba($color_secondary, 0.5);
+                        box-shadow: 0 0.4rem 2rem hsla(23, 21%, 54%, .1);
+                        max-height: calc(100vh - 10rem);
+                        transform: translateY(1.5rem);
+                        visibility: hidden;
+                        transition: all .3s ease-in-out;
+                    }
+                    &:hover {
+                        > ul.sub-menu {
+                            
                         }
                     }
                 }

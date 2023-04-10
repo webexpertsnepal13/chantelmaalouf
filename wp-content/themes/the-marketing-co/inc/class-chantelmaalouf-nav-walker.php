@@ -243,38 +243,41 @@ class Maalouf_Nav_Walker extends Walker_Nav_Menu {
             //$readmore_link      = get_field( 'menu_item_readmore_link', $menu_item->ID );
             //$readmore_url       = ( isset( $readmore_link['url'] ) ) ? $readmore_link['url'] : 'javascript:void(0);';
 
-            $item_output    .= '<div class="malouf-megamenu">';
+            //$item_output    .= '<div class="malouf-megamenu">';
 
             // add "content-only" class if there are no image in megamenu item
+			/*
             if( $image ) {
                 $item_output    .= '<div class="inner-container">';
             } else {
                 $item_output    .= '<div class="inner-container content-only">';
-            }
+            } */
 
             // image
             if( $image ) {
-                $item_output   .= sprintf( '<div class="image-col">%s</div>', wp_get_attachment_image( $image, 'full', false ) );
+                $item_output   .= sprintf( '%s', wp_get_attachment_image( $image, 'full', false ) );
             }
 
             // content
             $item_output    .= '<div class="content-col">';
-            $item_output    .= '<div class="inner">';
+            //$item_output    .= '<div class="inner">';
 
-            if( $content_title ) {
+            /* 
+			if( $content_title ) {
                 $item_output   .= sprintf( '<h3>%s</h3>', $content_title );
-            }
+            } 
+			*/
 
             if( $short_description ) {
                 $item_output   .= sprintf( '<p>%s</p>', $short_description );
             }            
-            $item_output    .= '</div>';
+            // $item_output    .= '</div>';
 
             //$item_output    .=  sprintf( '<a href="%s" class="btn-mdn btn-icon-link link-primary">%s<img src="%s" alt="Arrow Up Right"></a>', esc_url( $readmore_url ), __( 'Read more', 'madinah' ), get_template_directory_uri().'/images/arrow-up-right.svg' );
             //$item_output    .= '</div>';
             
             $item_output    .= '</div>';
-            $item_output    .= '</div>';
+            //$item_output    .= '</div>';
         }
 		
         $item_output .= $args->after;
