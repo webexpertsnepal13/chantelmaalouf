@@ -66,6 +66,7 @@
                         position: relative;
 
                         .variable-items-wrapper {
+                            display: inline-flex;
                             .variable-item {
                                 margin: 0 10px 0 0;
                                 padding: 4px;
@@ -79,14 +80,14 @@
                             }
                         }
 
-                        .reset_variations {
-                            position: absolute;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            left: 100%;
-                            color: $black;
-                            font-size: 16px;
-                        }
+                    }
+                    .reset_variations {
+                        position: relative;
+                        top: -5px;
+                        color: $black;
+                        margin-left: 10px;
+                        font-size: 16px;
+                        visibility: hidden;
                     }
                 }
 

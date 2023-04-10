@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<section class="single-product-section">
+<section class="single-service-section">
     <div class="container">
-        <div class="single-product-wrapper">
+        <div class="single-service-wrapper">
             <div class="product-title mobile-view">
                 <h3> <?php the_title(); ?> </h3>
             </div>
@@ -35,7 +35,7 @@
                 );
                 ?>
             </div>
-        </div><!-- .single-product-wrapper -->
+        </div><!-- .single-service-wrapper -->
     </div><!-- .container -->
-</section><!-- .single-product-section -->
+</section><!-- .single-service-section -->
 <?php get_footer(); ?>
