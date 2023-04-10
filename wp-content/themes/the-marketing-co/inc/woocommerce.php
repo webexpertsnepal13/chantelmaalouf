@@ -334,7 +334,7 @@ function remove_uncategorized_breadcrumb( $breadcrumb ) {
 }
 add_filter( 'woocommerce_get_breadcrumb', 'remove_uncategorized_breadcrumb', 10, 1 );
 
-//wrap the custom class for woocommerce product page Image, title and price
+//wrap the custom anchor for woocommerce product page Image, title and price
 
 //wrap image
 remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );

@@ -501,6 +501,13 @@
                 "operator": "==",
                 "value": "front_page"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "tpl-flexible.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -512,5 +519,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681007790
+    "modified": 1681108098
 }
