@@ -35,8 +35,6 @@ jQuery(document).ready(function ($) {
     });
     $('.quantity .minus').css('left', '10px');
     $('.quantity .plus').css('right', '10px');
-
-
     //walker menu
 
 });
