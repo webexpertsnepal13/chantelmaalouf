@@ -22,7 +22,7 @@ function the_marketing_co_woocommerce_setup()
 	add_theme_support(
 		'woocommerce',
 		array(
-			'thumbnail_image_width' => 150,
+			'thumbnail_image_width' => 300,
 			'single_image_width'    => 300,
 			'product_grid'          => array(
 				'default_rows'    => 3,
@@ -333,4 +333,44 @@ function remove_uncategorized_breadcrumb( $breadcrumb ) {
     return $breadcrumb;
 }
 add_filter( 'woocommerce_get_breadcrumb', 'remove_uncategorized_breadcrumb', 10, 1 );
+
+//wrap the custom anchor for woocommerce product page Image, title and price
+
+//wrap image
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+add_action( 'woocommerce_before_shop_loop_item_title', 'wrap_product_image_with_anchor_tag', 10 );
+
+function wrap_product_image_with_anchor_tag() {
+   global $product;
+   $url = get_permalink( $product->get_id() );
+   echo '<a href="' . $url . '">';
+   echo get_the_post_thumbnail( $product->get_id(), 'woocommerce_thumbnail' );
+   echo '</a>';
+}
+
+
+//wrap title
+remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
+add_action( 'woocommerce_shop_loop_item_title', 'wrap_product_title_with_anchor_tag', 10 );
+
+function wrap_product_title_with_anchor_tag() {
+   global $product;
+   $url = get_permalink( $product->get_id() );
+   echo '<a href="' . $url . '">';
+   the_title('<h2 class="woocommerce-loop-product__title">', '</h2>');
+   echo '</a>';
+}
+
+//wrap price
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+add_action( 'woocommerce_after_shop_loop_item_title', 'wrap_product_price_with_anchor_tag', 10 );
+
+function wrap_product_price_with_anchor_tag() {
+   global $product;
+   $url = get_permalink( $product->get_id() );
+   echo '<a href="' . $url . '">';
+   echo $product->get_price_html();
+   echo '</a>';
+}
+
  

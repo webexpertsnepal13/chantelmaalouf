@@ -1,0 +1,130 @@
+.single-product-section {
+    padding: 100px 0;
+
+    @include breakpoint (small) {
+        padding: 60px 0;
+    }
+
+    .product-thumb {
+        @include breakpoint (small) {
+            margin: 0 0 28px;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content-wrapper {
+        padding-top: 36px;
+        padding-left: 40px;
+
+        @include breakpoint (wide) {
+            padding: 20px 0 0 20px;
+        }
+
+        @include breakpoint (medium) {
+            padding: 0;
+        }
+    }
+
+    .product-title {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+
+        &.mobile-view {
+            display: block;
+            margin: 0 0 28px;
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    h3 {
+        margin: 0 0 25px;
+        color: $color-primary;
+
+        @include breakpoint (medium) {
+            margin: 0 0 15px;
+        }
+    }
+
+    p {
+        line-height: 1.8;
+        margin: 0 0 24px;
+
+        @include breakpoint (wide) {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0 0 20px;
+        }
+
+        @include breakpoint (small) {
+            margin: 0 0 18px;
+        }
+    }
+
+    ul {
+        @include breakpoint (wide) {
+            padding-left: 22px;
+        }
+        li {
+            line-height: 1.8;
+
+            @include breakpoint (wide) {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            &::marker {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+//post navigation styling
+.post-navigation,
+.posts-navigation {
+    margin-top: 80px;
+
+    @include breakpoint (small) {
+        margin-top: 40px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 -15px;
+
+        >div {
+            padding: 0 15px;  
+        }
+
+
+    }
+
+    a {
+        color: $color-accent;
+        text-decoration: underline;
+        text-underline-position: under;
+        @include transition (0.4s);
+        word-break: keep-all;
+
+        @include breakpoint (wide) {
+            font-size: 16px;
+        }
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+    }
+}
