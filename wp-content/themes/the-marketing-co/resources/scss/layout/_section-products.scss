@@ -42,18 +42,18 @@
                 .woocommerce-loop-product__title {
                     margin: 24px 0 0;
                     @include transition(0.4s color);
-                }
+                }                
 
-                .price {
-                    display: block;
-                    margin: 0 0 28px;
+            }
+            &:hover {
+                .woocommerce-loop-product__title {
+                    color: $color_primary;
                 }
-
-                &:hover {
-                    .woocommerce-loop-product__title {
-                        color: $color_primary;
-                    }
-                }
+            }
+            .price {
+                display: block;
+                margin: 0 0 28px;
+                text-align: left;
             }
 
             .cart-button-wrap {
