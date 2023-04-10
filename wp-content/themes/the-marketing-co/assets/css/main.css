@@ -12418,6 +12418,13 @@ body.woocommerce-cart .section-default .entry-header, body.woocommerce-checkout 
 .cart-collaterals .cart_totals {
   max-width: 400px;
   margin: 0 0 0 auto;
+  margin-bottom: 30px;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 991px) {
+  .cart-collaterals .cart_totals {
+    margin-bottom: 22px;
+  }
 }
 .cart-collaterals .cart_totals h2 {
   font-size: 34px;
