@@ -12895,6 +12895,17 @@ body.woocommerce-cart .section-default .entry-header, body.woocommerce-checkout 
     margin: 0 0 25px;
   }
 }
+.section-default .entry-content h1 a,
+.section-default .entry-content h2 a,
+.section-default .entry-content h3 a,
+.section-default .entry-content h4 a,
+.section-default .entry-content h5 a,
+.section-default .entry-content h6 a {
+  color: #C58383;
+}
+.section-default .entry-content p a {
+  color: #C58383;
+}
 .section-default .entry-content ul {
   margin-bottom: 30px;
   /* Large Devices, Wide Screens */
@@ -12916,7 +12927,7 @@ body.woocommerce-cart .section-default .entry-header, body.woocommerce-checkout 
 .section-default .entry-content ul li::marker {
   color: #C58383;
 }
-.section-default .entry-content a {
+.section-default .entry-content ul li a {
   color: #C58383;
 }
 .section-default .entry-content img {
