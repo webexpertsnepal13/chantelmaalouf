@@ -1,16 +1,19 @@
 .faq-section {
-    padding: 100px 0 40px;
+    // padding: 100px 0 40px;
+    padding: 75px 0 100px;
 
     @include breakpoint(small) {
-        padding: 80px 0 36px;
+        // padding: 80px 0 36px;
+        padding: 38px 0 60px;
     }
 
-    .faq-title{
+    .faq-title {
         text-align: center;
         color: $color-primary;
         margin: 0 0 78px;
         text-transform: uppercase;
-        @include breakpoint (small){
+
+        @include breakpoint (small) {
             margin: 0 0 58px;
         }
     }
@@ -18,7 +21,8 @@
     .content-inner {
         .inner {
             margin: 0 0 60px;
-            @include breakpoint (small){
+
+            @include breakpoint (small) {
                 margin: 0 0 44px;
             }
         }
@@ -43,5 +47,81 @@
             }
         }
 
+    }
+
+    .accordion-wrap {
+        max-width: 1199px;
+        margin: 0 auto;
+        .accordion-list {
+            // &:not(:last-child) {
+            //     margin: 0 0 10px;
+            // }
+
+            .title {
+                h4 {
+                    color: $color-primary;
+                    padding: 24px 45px 24px 15px;
+                    border-bottom: 1px solid $color-accent;
+                    position: relative;
+                    margin: 0;
+                    background: inherit;
+                    cursor: pointer;
+                    @include breakpoint (medium){
+                        padding: 22px 45px 22px 15px;
+                    }
+
+                    &:before,
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        background: $color-primary;
+                        transition: 0.4s all;
+                        -webkit-transition: 0.4s all;
+                        transform: translateY(-50%);
+                        top: 50%;
+                    }
+
+                    &:before {
+                        right: 15px;
+                        height: 2px;
+                        width: 17px;
+                    }
+
+                    &:after {
+                        right: 23px;
+                        width: 2px;
+                        height: 17px;
+                    }
+                }
+            }
+
+            .content {
+                padding: 30px 15px 10px 15px;
+                border-top: 0;
+                display: none;
+
+                p {
+                    margin: 0;
+                    line-height: 1.8;
+                    @include breakpoint (medium){
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .title {
+                h4 {
+                    &.icon-open {
+                        &::before, &::after{
+                            transform: translateY(-50%) rotate(180deg);
+                        }
+                        &:after {
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
