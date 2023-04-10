@@ -71,27 +71,147 @@
                 }
 
                 &.mega-nav-menu {
-                    ul.sub-menu {
-                        animation: none;
+                    >ul.sub-menu {
                         position: absolute;
                         top: 100%;
                         right: 0;
                         left: 0;
+                        display: block;
+                        z-index: 20;
+                        background: #f2ebe8;
+                        min-height: 450px;
+                        max-height: calc(100vh - 10rem);
+                        @include transition(all .3s ease-in-out);
                         opacity: 0;
                         pointer-events: none;
-                        display: block;
-                        background: rgba($color_secondary, 0.5);
-                        box-shadow: 0 0.4rem 2rem hsla(23, 21%, 54%, .1);
-                        max-height: calc(100vh - 10rem);
-                        transform: translateY(1.5rem);
                         visibility: hidden;
-                        transition: all .3s ease-in-out;
-                    }
-                    &:hover {
-                        > ul.sub-menu {
-                            
+                        padding: 40px 0 0;
+                        box-shadow: 0px 20px 30px rgba($black, 0.05);
+                        &:before {                            
+                            position: absolute;
+                            top: -44px;
+                            left: 0;
+                            height: 44px;
+                            width: 100%;
+                            background-color: transparent;
+                        }
+
+                        li {
+                            position: relative;
+                            max-width: 550px;
+
+                            &:before,
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                opacity: 0;
+                                pointer-events: none;
+                                background: $color_tertiary;
+                                transform: translateY(-50%);
+                                @include transition(all .3s ease-in-out);
+                            }
+
+                            &:before {
+                                left: calc(100%);
+                                height: 2px;
+                                width: 85px;
+                            }
+
+                            &:after {
+                                left: calc(100% + 82px);
+                                height: 6px;
+                                width: 6px;
+                                border-radius: 50%;
+                            }
+
+                            >a {
+                                position: relative;
+                                z-index: 1;
+                                min-height: 52px;
+                                display: inline-flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                color: $white;
+                                width: 100%;
+                                padding-left: calc((100vw - 1286px) / 2);
+
+                                &:before {
+                                    background: rgba($color_secondary, 0.3);
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    top: 0;
+                                    left: 0;
+                                    z-index: -1;
+                                    content: "";
+                                }
+                            }
+
+                            >img {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                                z-index: -1;
+                                pointer-events: none;
+                            }
+
+                            .content-col {
+                                position: absolute;
+                                top: 12px;
+                                left: calc(100% + 120px);
+                                opacity: 0;
+                                visibility: hidden;
+                                max-width: 500px;
+                                width: 100%;
+                                @include transition(all .3s ease-in-out);
+
+                                p {
+                                    margin: 0;
+                                    font-size: 16px;
+                                    line-height: 1.8;
+                                }
+                            }
+
+                            &:hover {
+
+                                &:before,
+                                &:after {
+                                    opacity: 1;
+                                }
+
+                                .content-col {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
                         }
                     }
+
+                    &:hover {
+                        > a {
+                            &:after {
+                                transform: scale(1, -1);
+                            }
+                        }
+                        >ul.sub-menu {
+                            opacity: 1;
+                            pointer-events: all;
+                            visibility: visible;
+                            &:before {
+                                content: '';
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.current-menu-item {
+                >a {
+                    color: $color_primary;
                 }
             }
         }

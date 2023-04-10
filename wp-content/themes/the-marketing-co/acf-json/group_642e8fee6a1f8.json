@@ -508,6 +508,13 @@
                 "operator": "==",
                 "value": "tpl-flexible.php"
             }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "196"
+            }
         ]
     ],
     "menu_order": 0,
@@ -519,5 +526,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681108098
+    "modified": 1681124247
 }
