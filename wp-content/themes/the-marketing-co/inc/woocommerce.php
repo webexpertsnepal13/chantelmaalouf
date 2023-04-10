@@ -360,17 +360,3 @@ function wrap_product_title_with_anchor_tag() {
    the_title('<h2 class="woocommerce-loop-product__title">', '</h2>');
    echo '</a>';
 }
-
-//wrap price
-remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
-add_action( 'woocommerce_after_shop_loop_item_title', 'wrap_product_price_with_anchor_tag', 10 );
-
-function wrap_product_price_with_anchor_tag() {
-   global $product;
-   $url = get_permalink( $product->get_id() );
-   echo '<a href="' . $url . '">';
-   echo $product->get_price_html();
-   echo '</a>';
-}
-
- 
