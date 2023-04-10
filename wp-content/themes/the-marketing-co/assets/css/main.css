@@ -10943,7 +10943,7 @@ h5 {
 .single_add_to_cart_button.loading {
   pointer-events: none;
   background: #000000;
-  color: #ffffff;
+  color: #000000;
 }
 .cart-button-wrap a.button.loading:after,
 .single_add_to_cart_button.loading:after {

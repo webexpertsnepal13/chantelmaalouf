@@ -115,7 +115,7 @@
     &.loading {
         pointer-events: none;
         background: $black;
-        color: $white;
+        color: $black;
         &:after {
             opacity: 1;
         }
