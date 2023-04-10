@@ -53,8 +53,22 @@
 		// $(this).closest('.gfield').removeClass('is-focused');
 		if (value.length) {
 			$(this).closest('.gfield').addClass('is-focused');
-		}else {
+		} else {
 			$(this).closest('.gfield').removeClass('is-focused');
+		}
+	});
+
+	//accordion faq init
+	$('.accordion-list .title').on('click', function () {
+		$('.accordion-list .content').slideUp().removeClass('content-open');
+		$('.accordion-list .title h4').removeClass('icon-open');
+		if ($(this).next().is(':hidden')) {
+			$(this).next().slideDown().addClass('content-open');
+			$(this).find('h4').addClass('icon-open');
+		}
+		else {
+			$(this).next().slideUp().removeClass('content-open');
+			$(this).find('h4').removeClass('icon-open');
 		}
 	});
 })(jQuery);
