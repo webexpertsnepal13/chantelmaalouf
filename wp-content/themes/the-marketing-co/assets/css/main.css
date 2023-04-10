@@ -10778,7 +10778,7 @@ h5 {
 }
 .inner-banner-section .inner-banner-wrap {
   min-height: 420px;
-  padding: 100px 0;
+  padding: 60px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10795,7 +10795,13 @@ h5 {
   margin: 0;
 }
 .inner-banner-section .inner-banner-title:has(+ .button-wrap) {
-  margin: 0 0 24px;
+  margin: 0 0 35px;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .inner-banner-section .inner-banner-title:has(+ .button-wrap) {
+    margin: 0 0 25px;
+  }
 }
 
 .section-products {
@@ -11430,11 +11436,10 @@ body.woocommerce-shop .woocommerce-result-count {
   border: 0;
   border-bottom: 1px solid #000000;
   padding: 0 0 15px !important;
-  min-height: 3.2rem;
   background-color: inherit;
   outline: transparent;
-  outline-color: #C58383;
-  color: #C58383;
+  outline-color: #8D5152;
+  color: #8D5152;
 }
 .gform_wrapper.gravity-theme textarea {
   height: 135px !important;
@@ -11463,8 +11468,9 @@ body.woocommerce-shop .woocommerce-result-count {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 .gform_wrapper.gravity-theme .gfield_label {
-  color: #C58383;
+  color: #8D5152;
   font-weight: 400 !important;
+  line-height: 1;
 }
 .gform_wrapper.gravity-theme .gform_button {
   margin-left: auto;
@@ -11724,10 +11730,10 @@ body.woocommerce-shop .woocommerce-result-count {
 }
 .contact-section p {
   font-size: 16px;
-  color: #C58383;
+  color: #8D5152;
 }
 .contact-section a {
-  color: #C58383;
+  color: #8D5152;
   text-decoration: none;
   -webkit-transition: 0.4s;
   transition: 0.4s;

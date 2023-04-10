@@ -60,11 +60,11 @@
 
     p {
         font-size: 16px;
-        color: $color-primary;
+        color: $color-accent;
     }
 
     a {
-        color: $color-primary;
+        color: $color-accent;
         text-decoration: none;
         @include transition(0.4s);
 
