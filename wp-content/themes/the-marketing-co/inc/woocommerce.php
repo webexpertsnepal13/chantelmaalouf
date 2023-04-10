@@ -22,7 +22,7 @@ function the_marketing_co_woocommerce_setup()
 	add_theme_support(
 		'woocommerce',
 		array(
-			'thumbnail_image_width' => 150,
+			'thumbnail_image_width' => 300,
 			'single_image_width'    => 300,
 			'product_grid'          => array(
 				'default_rows'    => 3,
@@ -333,4 +333,46 @@ function remove_uncategorized_breadcrumb( $breadcrumb ) {
     return $breadcrumb;
 }
 add_filter( 'woocommerce_get_breadcrumb', 'remove_uncategorized_breadcrumb', 10, 1 );
+
+//wrap the custom class for woocommerce product page Image, title and price
+add_action( 'woocommerce_before_shop_loop_item_title', 'custom_product_wrap_open', 5 );
+function custom_product_wrap_open() {
+  echo '<div class="custom-product-wrap">';
+}
+
+add_action( 'woocommerce_after_shop_loop_item_title', 'custom_product_wrap_close', 15 );
+function custom_product_wrap_close() {
+  echo '</div>';
+}
+
+add_action( 'woocommerce_before_shop_loop_item_title', 'custom_image_wrap_open', 5 );
+function custom_image_wrap_open() {
+  echo '<div class="custom-image-wrap">';
+}
+
+add_action( 'woocommerce_before_shop_loop_item_title', 'custom_image_wrap_close', 15 );
+function custom_image_wrap_close() {
+  echo '</div>';
+}
+
+add_action( 'woocommerce_shop_loop_item_title', 'custom_product_title_wrap_open', 5 );
+function custom_product_title_wrap_open() {
+  echo '<div class="custom-product-title-wrap">';
+}
+
+add_action( 'woocommerce_shop_loop_item_title', 'custom_product_title_wrap_close', 15 );
+function custom_product_title_wrap_close() {
+  echo '</div>';
+}
+
+add_action( 'woocommerce_after_shop_loop_item_title', 'custom_price_wrap_open', 5 );
+function custom_price_wrap_open() {
+  echo '<div class="custom-price-wrap">';
+}
+
+add_action( 'woocommerce_after_shop_loop_item_title', 'custom_price_wrap_close', 15 );
+function custom_price_wrap_close() {
+  echo '</div>';
+}
+
  
