@@ -12802,7 +12802,7 @@ body.woocommerce-cart .section-default .entry-header, body.woocommerce-checkout 
 }
 
 .single-service-section {
-  padding: 100px 0;
+  padding: 80px 0;
   /* Large Devices, Wide Screens */
 }
 @media (max-width: 767px) {
