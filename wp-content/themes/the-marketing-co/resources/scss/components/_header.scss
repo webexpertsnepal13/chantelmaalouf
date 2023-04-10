@@ -1,6 +1,9 @@
 .site-header {
     background: $color_secondary;
-    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 20;
 
     .header-wrap {
         display: flex;
