@@ -7,9 +7,9 @@
         padding-top: 60px 0 35px;
         margin-bottom: 60px;
     }
+
     .row {
         margin: 0 -30px;
-        align-items: center;
 
         @media (max-width: 1368px) {
             margin: 0 -15px;
@@ -59,8 +59,9 @@
 
     .about-content {
         p {
-            font-family: $font_nantes;
+            line-height: 1.8;
             margin: 0 0 25px;
+            font-size: 16px;
         }
     }
 }
@@ -69,17 +70,9 @@
     background-color: $color-secondary;
     padding: 15px 0 100px 0;
 
-    @include breakpoint (small){
+    @include breakpoint (small) {
         padding-bottom: 60px;
     }
-
-    // .container-fluid {
-    //     padding: 0;
-    // }
-
-    // .sip-learn-wrapper {
-    //     padding-left: calc((100% - 1286px) / 2);
-    // }
 
     .row {
         @media (min-width: 768px) {
@@ -89,10 +82,6 @@
         @include breakpoint (small) {
             flex-direction: column-reverse;
         }
-
-        // .cols {
-        //     padding: 0;
-        // }
     }
 
     .sip-learn-content-wrap {
@@ -101,20 +90,23 @@
         @include breakpoint (wide) {
             padding-right: 15px;
         }
-        @include breakpoint (small){
+
+        @include breakpoint (small) {
             padding-right: 0;
         }
 
         h2 {
             color: $color_primary;
             margin: 0 0 30px;
-            @include breakpoint (small){
+
+            @include breakpoint (small) {
                 margin: 0 0 23px;
             }
         }
 
         p {
-            font-family: $font_nantes;
+            font-size: 16px;
+            line-height: 1.8;
             margin: 0 0 24px;
         }
 
@@ -122,7 +114,8 @@
             margin: 0;
 
             li {
-                font-family: $font_nantes;
+                font-size: 16px;
+                line-height: 1.8;
 
                 &::marker {
                     color: $color_primary;

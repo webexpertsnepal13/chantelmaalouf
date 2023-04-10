@@ -11506,9 +11506,6 @@ body.woocommerce-shop .woocommerce-result-count {
 }
 .about-section .row {
   margin: 0 -30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 @media (max-width: 1368px) {
   .about-section .row {
@@ -11558,8 +11555,9 @@ body.woocommerce-shop .woocommerce-result-count {
   color: #C58383;
 }
 .about-section .about-content p {
-  font-family: "Nantes";
+  line-height: 1.8;
   margin: 0 0 25px;
+  font-size: 16px;
 }
 
 .sip-learn-section {
@@ -11616,14 +11614,16 @@ body.woocommerce-shop .woocommerce-result-count {
   }
 }
 .sip-learn-section .sip-learn-content-wrap p {
-  font-family: "Nantes";
+  font-size: 16px;
+  line-height: 1.8;
   margin: 0 0 24px;
 }
 .sip-learn-section .sip-learn-content-wrap ul {
   margin: 0;
 }
 .sip-learn-section .sip-learn-content-wrap ul li {
-  font-family: "Nantes";
+  font-size: 16px;
+  line-height: 1.8;
 }
 .sip-learn-section .sip-learn-content-wrap ul li::marker {
   color: #C58383;
