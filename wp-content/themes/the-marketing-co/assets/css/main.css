@@ -11559,11 +11559,13 @@ body.woocommerce-shop .woocommerce-result-count {
   margin: 0 0 25px;
   font-size: 16px;
 }
+.about-section .about-content p:last-child {
+  margin: 0;
+}
 
 .sip-learn-section {
   background-color: #F2DFD2;
-  padding: 15px 0 100px 0;
-  /* Large Devices, Wide Screens */
+  padding: 15px 0 100px 0; /* Large Devices, Wide Screens */
 }
 @media (max-width: 767px) {
   .sip-learn-section {
