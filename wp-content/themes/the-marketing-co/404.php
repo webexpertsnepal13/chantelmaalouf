@@ -23,7 +23,7 @@ get_header();
 		<div class="page-content">
 			<div class="container">
 				<p><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'the-marketing-co'); ?></p>
-				<a href="" class="btn-cm btn-outline">Learn more</a>
+				<a href="<?php echo home_url();?>" class="btn-cm btn-outline">Go back to home</a>
 				<?php
 				//get_search_form();
 				?>
