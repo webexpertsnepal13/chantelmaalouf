@@ -11045,7 +11045,7 @@ body.woocommerce-shop .woocommerce-result-count {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 999;
 }
 .site-header .header-wrap {
   display: -webkit-box;
@@ -12726,6 +12726,10 @@ body.woocommerce-cart .section-default .entry-header, body.woocommerce-checkout 
   font-size: 16px;
   width: 100%;
   margin: 0 0 5px;
+}
+.checkout.woocommerce-checkout .woocommerce-billing-fields .form-row label abbr,
+.checkout.woocommerce-checkout .woocommerce-additional-fields .form-row label abbr {
+  text-decoration: none;
 }
 .checkout.woocommerce-checkout .woocommerce-billing-fields .form-row .woocommerce-input-wrapper,
 .checkout.woocommerce-checkout .woocommerce-additional-fields .form-row .woocommerce-input-wrapper {
