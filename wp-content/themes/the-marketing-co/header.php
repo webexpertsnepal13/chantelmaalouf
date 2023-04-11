@@ -48,7 +48,6 @@
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'the-marketing-co' ); ?></button>
 					<?php
 					wp_nav_menu(
 						array(
@@ -80,8 +79,14 @@
 							?>
 								<a href="<?php echo esc_url( $cart_url ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/shopping-bag.png" alt=""></a>
 							<?php } ?>
-						</div><!-- header-cart -->
+						</div><!-- header-cart -->						
 					</div><!-- header-right-inner -->
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
 				</div><!-- header-right -->
 			</div><!-- header-wrap -->
 		</div><!-- container -->

@@ -3,6 +3,9 @@
 }
 .container {
     max-width: 1286px;
+    @media screen and (max-width: 1299px) {
+        padding: 0 45px;
+    }
 }
 .bg-image {
     position: absolute;
@@ -48,4 +51,13 @@
             }
         }
     }
+}
+.anim-cln{
+    visibility: hidden;
+}
+.fadeIn{
+    animation: fadeIn 0.6s linear forwards;
+}
+.fadeinUp{
+    animation: fadeinUp 0.6s linear forwards;
 }
