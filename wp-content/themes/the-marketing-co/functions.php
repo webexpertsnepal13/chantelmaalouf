@@ -277,13 +277,10 @@ require get_template_directory() . '/inc/acf-options-page.php';
  */
 require get_template_directory() . '/inc/class-chantelmaalouf-nav-walker.php';
 
-//fluent form custom submit button
-function fluent_form_custom_submit_button( $button, $form ) {
-	$button_text = 'Submit';
-	$button = '<button class="btn-cm btn-outline" id="gform_submit_button_1" type="submit" value="' . $button_text . '">' . $button_text . '</button>';
-	return $button;
- }
- add_filter( 'gform_submit_button', 'fluent_form_custom_submit_button', 10, 2 ); 
+/**
+ * Custom gravity form validation
+ */
+require get_template_directory() . '/inc/gravity-form-validation.php';
 
 //Chantel malouf full details page:
 function display_chantel_section( $page_id ) {
