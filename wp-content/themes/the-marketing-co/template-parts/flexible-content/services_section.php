@@ -10,7 +10,7 @@ $service_posts = get_sub_field( 'services_list' );
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="title w-brush anim-cln fadeIn" data-wow-duration="0.5s">
+                    <div class="title w-brush anim-cln fadeinUp" data-wow-duration="0.7s">
                         <?php if ( $our_services ) :  ?>
                             <h3><span><?php echo esc_html( $our_services ); ?></span></h3>
                         <?php endif; ?>
@@ -21,7 +21,7 @@ $service_posts = get_sub_field( 'services_list' );
                     if ( $service_posts ) { ?>
                         <div class="services-grid">
                             <?php foreach( $service_posts as $post ) { ?>
-                                <div class="service-card anim-cln fadeinUp">
+                                <div class="service-card anim-cln fadeinUp" data-wow-duration="0.8s">
                                     <div class="card-inner">
                                         <div class="card-image">
                                             <a href="<?php the_permalink(); ?>">

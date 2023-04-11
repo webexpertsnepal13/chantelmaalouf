@@ -56,5 +56,5 @@
     animation: fadeIn 0.6s linear forwards;
 }
 .fadeinUp{
-    animation: fadeinUp 0.6s linear forwards;
+    animation: fadeinUp 0.6s cubic-bezier(.39,.575,.565,1) both;
 }

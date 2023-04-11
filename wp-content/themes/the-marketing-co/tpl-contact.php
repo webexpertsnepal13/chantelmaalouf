@@ -21,14 +21,14 @@ endif;
         <div class="title-content-wrap">
             <div class="row">
                 <div class="col-lg-6 cols">
-                    <div class="title">
+                    <div class="title anim-cln fadeinUp" data-wow-duration="0.7s">
                         <?php if ( $contact_left_title = get_field( 'contact_left_title' ) ) : ?>
                             <h3><?php echo esc_html( $contact_left_title ); ?></h3>
                         <?php endif; ?>
                     </div>
                 </div>
                 <div class="col-lg-6 cols">
-                    <div class="inner-content">
+                    <div class="inner-content anim-cln fadeinUp" data-wow-duration="0.8s">
                         <?php if ( $contact_right_title = get_field( 'contact_right_title' ) ) : ?>
                             <p><?php echo esc_html( $contact_right_title ); ?></p>
                         <?php endif; ?>
@@ -43,7 +43,7 @@ endif;
         <div class="contact-wrapper">
             <div class="row">
                 <div class="col-lg-6 contact-cols">
-                    <div class="form-container">
+                    <div class="form-container anim-cln fadeinUp" data-wow-duration="0.7s">
                         <div class="form-wrapper">
                             <div class="form-title">
                                 <?php if ( $contact_form_title = get_field( 'contact_form_title' ) ) : ?>
@@ -58,7 +58,7 @@ endif;
                     <div class="info-container">
                         <div class="row">
                             <div class="col-xl-5 col-lg-12 info-cols">
-                                <div class="hours-wrap">
+                                <div class="hours-wrap anim-cln fadeinUp" data-wow-duration="0.7s">
                                     <?php if ( $contact_hours = get_field( 'contact_hours' ) ) : ?>
                                         <?php echo $contact_hours; ?>
                                     <?php endif; ?>
@@ -69,7 +69,7 @@ endif;
                                 $address_title = get_field( 'address_title' ); 
                                 $address = get_field( 'address' );
                                 ?>
-                                <div class="address-wrap">
+                                <div class="address-wrap anim-cln fadeinUp" data-wow-duration="0.7s">
                                     <?php 
                                     if ( $address_title ) {
                                     ?>
@@ -89,7 +89,7 @@ endif;
                                 $phone_title = get_field( 'phone_title' );
                                 $phone = get_field( 'phone' );
                                 ?>
-                                <div class="phone-wrap">
+                                <div class="phone-wrap anim-cln fadeinUp" data-wow-duration="0.7s">
                                     <?php 
                                     if ( $phone_title ) { 
                                         ?>
@@ -111,7 +111,7 @@ endif;
                                 $email_title = get_field( 'email_title' );
                                 $email = get_field( 'email' ); 
                                 ?>
-                                <div class="email-wrap">
+                                <div class="email-wrap anim-cln fadeinUp" data-wow-duration="0.7s">
                                     <?php 
                                     if ( $email_title ) {
                                     ?>
@@ -128,7 +128,7 @@ endif;
                                 </div>
                             </div>
                             <div class="col-sm-12 info-cols">
-                                <div class="social-link-container">
+                                <div class="social-link-container anim-cln fadeinUp" data-wow-duration="0.7s">
                                     <h3>Follow Us On Instagram & Facebook</h3>
                                     <ul class="social-link">
                                         <li class="social-link-menu"><a href="https://www.instagram.com/chantelmaalouf.mua/">Instagram</a></li>

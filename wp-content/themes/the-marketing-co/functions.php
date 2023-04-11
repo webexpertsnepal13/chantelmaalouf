@@ -301,7 +301,7 @@ function display_chantel_section( $page_id ) {
                             <div class="row">
                                 <div class="col-md-6 col-lg-7 cols">
                                     <div class="thumbnail-wrapper">
-                                        <div class="about-thumbnail">
+                                        <div class="about-thumbnail anim-cln fadeIn" data-wow-duration="0.7s">
                                             <?php 
                                             if ( $chantel_image ) {
                                                 echo wp_get_attachment_image( $chantel_image, $size );
@@ -312,12 +312,12 @@ function display_chantel_section( $page_id ) {
                                 </div>
                                 <div class="col-md-6 col-lg-5 cols">
                                     <div class="content-inner-wrapper">
-                                        <div class="about-title">
+                                        <div class="about-title anim-cln fadeinUp" data-wow-duration="0.8s">
                                             <?php if ( $chantel_title ) :  ?>
                                                 <h3><?php echo esc_html( $chantel_title ); ?></h3>
                                             <?php endif; ?>
                                         </div>
-                                        <div class="about-content">
+                                        <div class="about-content anim-cln fadeinUp" data-wow-duration="0.8s">
                                             <?php if ( $chantel_content ):
                                                 echo $chantel_content;
                                             endif;
