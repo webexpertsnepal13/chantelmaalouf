@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-    console.log('Quantity box script loaded.');
+    //console.log('Quantity box script loaded.');
 
     // Append plus and minus buttons
     $('.quantity').prepend('<span class="minus">-</span>');
@@ -17,7 +17,7 @@ jQuery(document).ready(function ($) {
 
     // Handle minus button click
     $(document).on('click', '.minus', function () {
-        console.log('Minus button clicked.');
+        //console.log('Minus button clicked.');
         var input = $(this).siblings('input[type="number"]');
         var currentVal = parseFloat(input.val());
         if (!isNaN(currentVal) && currentVal > 1) {
@@ -35,15 +35,6 @@ jQuery(document).ready(function ($) {
     // Trigger cart recalculation when quantity is changed
     $(document).on('change', '.quantity input[type="number"]', function () {
         $(document.body).trigger('woocommerce-cart-calculate-fees');
-    });
-
-    //slider nav
-    $('.slider-nav .slider-prev').click(function() {
-        $(this).parent().prev('.woocommerce-product-gallery').find('.woocommerce-product-gallery__trigger').trigger('click');
-    });
-
-    $('.slider-nav .slider-next').click(function() {
-        $(this).parent().prev('.woocommerce-product-gallery').find('.woocommerce-product-gallery__trigger').trigger('click');
     });
 
 });
