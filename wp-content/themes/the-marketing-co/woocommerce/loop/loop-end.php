@@ -21,4 +21,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 </div><!-- products -->
 </div><!-- cm-product-wrapper -->
-</div><!-- container -->
