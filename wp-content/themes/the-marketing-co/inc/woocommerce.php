@@ -263,7 +263,7 @@ add_filter('woocommerce_loop_add_to_cart_link', 'custom_variable_product_message
 function custom_variable_product_message($button, $product)
 {
 	if ($product->is_type('variable')) {
-		$button_text = __("View colors", "woocommerce");
+		$button_text = __("View colours", "woocommerce");
 		$button = '<a class="button" href="' . esc_url($product->get_permalink()) . '">' . $button_text . '</a>';
 	}
 	return $button;
@@ -360,3 +360,5 @@ function wrap_product_title_with_anchor_tag() {
    the_title('<h2 class="woocommerce-loop-product__title">', '</h2>');
    echo '</a>';
 }
+
+//Remove the breadcrumb link of last element
