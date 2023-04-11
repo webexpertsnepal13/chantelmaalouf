@@ -33,8 +33,7 @@
         select,
         textarea {
             border: 0;
-            border-bottom: 1px solid $color-accent;
-            padding: 0 0 15px !important;
+            padding: 0 0 5px !important;
             background-color: inherit;
             outline: transparent;
             outline-color: $color-accent;
@@ -49,7 +48,8 @@
 
         select {
             appearance: none;
-            background: url("../../images/arrow-down-primary.svg") no-repeat 100% calc(100% - 1.28rem)/1.3rem;
+            background: url("../../images/arrow-down-primary.svg") no-repeat 100% calc(100% - 6px)/20px;
+            padding-right: 22px !important;
         }
 
         .gform_fields {
@@ -61,6 +61,9 @@
         }
 
         .gfield {
+            border-bottom: 1px solid $color-accent;
+            padding: 0 0 10px !important;
+
             &.is-focused {
                 .gfield_label {
                     opacity: 0;
