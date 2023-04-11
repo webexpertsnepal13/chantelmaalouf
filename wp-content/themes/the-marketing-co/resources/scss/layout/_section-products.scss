@@ -6,7 +6,7 @@
         span {
             &:after {
                 @include breakpoint(small) {
-                    content: none;
+                    content: none !important;
                 }
             }
         }

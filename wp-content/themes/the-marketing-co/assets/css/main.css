@@ -11219,7 +11219,7 @@ a.btn-book-now,
 }
 @media (max-width: 767px) {
   .section-products .title span:after {
-    content: none;
+    content: none !important;
   }
 }
 .section-products .product-wrapper .container {
