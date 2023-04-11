@@ -11873,16 +11873,17 @@ body.shown .menu-toggle span:nth-child(3) {
   opacity: 1;
 }
 
-.site-footer {
-  background: #F2DFD2;
-}
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
-  .site-footer {
+  body.error404 .site-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     left: 0;
   }
+}
+
+.site-footer {
+  background: #F2DFD2;
 }
 .site-footer .footer-top .foo-top-wrap {
   padding-top: 54px;
@@ -12129,8 +12130,7 @@ body.shown .menu-toggle span:nth-child(3) {
 .gform_wrapper.gravity-theme select,
 .gform_wrapper.gravity-theme textarea {
   border: 0;
-  border-bottom: 1px solid #8D5152;
-  padding: 0 0 15px !important;
+  padding: 0 0 5px !important;
   background-color: inherit;
   outline: transparent;
   outline-color: #8D5152;
@@ -12145,7 +12145,8 @@ body.shown .menu-toggle span:nth-child(3) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: url("../../images/arrow-down-primary.svg") no-repeat 100% calc(100% - 1.28rem)/1.3rem;
+  background: url("../../images/arrow-down-primary.svg") no-repeat 100% calc(100% - 6px)/20px;
+  padding-right: 22px !important;
 }
 .gform_wrapper.gravity-theme .gform_fields {
   gap: 32px 30px !important;
@@ -12154,6 +12155,10 @@ body.shown .menu-toggle span:nth-child(3) {
   .gform_wrapper.gravity-theme .gform_fields {
     gap: 32px 0px !important;
   }
+}
+.gform_wrapper.gravity-theme .gfield {
+  border-bottom: 1px solid #8D5152;
+  padding: 0 0 10px !important;
 }
 .gform_wrapper.gravity-theme .gfield.is-focused .gfield_label {
   opacity: 0;
@@ -12472,6 +12477,20 @@ body.shown .menu-toggle span:nth-child(3) {
   margin-right: 16px;
   list-style: none;
 }
+.contact-section .row {
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 1199px) {
+  .contact-section .row {
+    margin: 0 -30px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-section .row {
+    margin: 0 -20px;
+  }
+}
 @media (min-width: 992px) {
   .contact-section .row {
     margin: 0;
@@ -12544,8 +12563,14 @@ body.shown .menu-toggle span:nth-child(3) {
   padding-right: 30px;
   padding: 100px 0 76px;
   /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
 }
 @media (max-width: 1199px) {
+  .contact-section .form-container {
+    padding: 60px 15px 36px 0;
+  }
+}
+@media (max-width: 991px) {
   .contact-section .form-container {
     padding: 60px 0px 36px;
   }
