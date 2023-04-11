@@ -10659,20 +10659,6 @@ h5 {
   height: 34px;
 }
 
-.anim-cln {
-  visibility: hidden;
-}
-
-.fadeIn {
-  -webkit-animation: fadeIn 0.6s linear forwards;
-          animation: fadeIn 0.6s linear forwards;
-}
-
-.fadeinUp {
-  -webkit-animation: fadeinUp 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-          animation: fadeinUp 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-
 .section-services {
   padding-top: 137px;
   padding-bottom: 102px;
