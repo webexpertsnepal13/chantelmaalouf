@@ -1,6 +1,9 @@
 .section-hero-banner {
     position: relative;
     height: 646px;
+    @media screen and (max-wdith: 1299px) {
+        height: 546px;
+    }
     .bg-image {
 
     }

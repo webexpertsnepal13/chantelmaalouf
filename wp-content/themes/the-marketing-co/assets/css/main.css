@@ -10428,26 +10428,80 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 48px;
   line-height: 1.2;
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 1199px) {
+  h1 {
+    font-size: 42px;
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 38px;
+  }
 }
 
 h2 {
   font-size: 42px;
   line-height: 1.23;
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 1199px) {
+  h2 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 767px) {
+  h2 {
+    font-size: 32px;
+  }
 }
 
 h3 {
   font-size: 34px;
   line-height: 1.17;
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 1199px) {
+  h3 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  h3 {
+    font-size: 26px;
+  }
 }
 
 h4 {
   font-size: 26px;
   line-height: 1.23;
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 1199px) {
+  h4 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  h4 {
+    font-size: 20px;
+  }
 }
 
 h5 {
   font-size: 18px;
   line-height: 1.5;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  h5 {
+    font-size: 16px;
+  }
 }
 
 @-webkit-keyframes fadeIn {
@@ -10616,6 +10670,10 @@ a.btn-book-now,
     background: transparent;
     color: #C58383;
   }
+}
+
+* {
+  scroll-behavior: unset;
 }
 
 .site-main {
@@ -11172,13 +11230,25 @@ body.woocommerce-shop .woocommerce-result-count {
 @media (max-width: 1199px) {
   .site-header .header-wrap .site-branding {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 50%;
-            flex: 0 1 50%;
+        -ms-flex: 0 1 60%;
+            flex: 0 1 60%;
   }
 }
 .site-header .header-wrap .site-branding .custom-logo-link img {
   width: 186px;
   height: auto;
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 479px) {
+  .site-header .header-wrap .site-branding .custom-logo-link img {
+    width: 160px;
+  }
+}
+@media (max-width: 374px) {
+  .site-header .header-wrap .site-branding .custom-logo-link img {
+    width: 140px;
+  }
 }
 .site-header .header-wrap .main-navigation {
   -webkit-box-flex: 0;
@@ -11202,8 +11272,8 @@ body.woocommerce-shop .woocommerce-result-count {
 @media (max-width: 1199px) {
   .site-header .header-wrap .header-right {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 50%;
-            flex: 0 1 50%;
+        -ms-flex: 0 1 40%;
+            flex: 0 1 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -11242,6 +11312,7 @@ body.woocommerce-shop .woocommerce-result-count {
   margin-left: 42px;
   /* Large Devices, Wide Screens */
   /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
 }
 @media screen and (max-width: 1368px) {
   .site-header .header-wrap .header-right .header-right-inner .header-cart {
@@ -11258,12 +11329,25 @@ body.woocommerce-shop .woocommerce-result-count {
     margin: 0 25px 0 0;
   }
 }
+@media (max-width: 479px) {
+  .site-header .header-wrap .header-right .header-right-inner .header-cart {
+    margin: 0 20px 0 0;
+  }
+}
 .site-header .header-wrap .header-right .header-right-inner .header-cart img {
   width: 22px;
   height: auto;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 479px) {
+  .site-header .header-wrap .header-right .header-right-inner .header-cart img {
+    width: 19px;
+  }
 }
 
 .main-navigation {
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
   /* Large Devices, Wide Screens */
   /* Large Devices, Wide Screens */
 }
@@ -11290,6 +11374,18 @@ body.woocommerce-shop .woocommerce-result-count {
 @media (max-width: 767px) {
   .main-navigation {
     padding: 45px 5px 20px 20px;
+  }
+}
+@media (max-width: 479px) {
+  .main-navigation {
+    top: 84px;
+    height: calc(100% - 84px);
+  }
+}
+@media (max-width: 374px) {
+  .main-navigation {
+    top: 78px;
+    height: calc(100% - 78px);
   }
 }
 .main-navigation .menu-primary-menu-container {
@@ -11443,17 +11539,7 @@ body.woocommerce-shop .woocommerce-result-count {
   background-image: url("../../images/arrow-down.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-transition: 0.4s -webkit-transform;
-  transition: 0.4s -webkit-transform;
-  transition: 0.4s transform;
-  transition: 0.4s transform, 0.4s -webkit-transform;
   /* Large Devices, Wide Screens */
-}
-@media (prefers-reduced-motion: reduce) {
-  .main-navigation .menu > li.menu-item-has-children > a:after {
-    -webkit-transition: none;
-    transition: none;
-  }
 }
 @media (max-width: 1199px) {
   .main-navigation .menu > li.menu-item-has-children > a:after {
@@ -12130,6 +12216,11 @@ body.shown .menu-toggle span:nth-child(3) {
 .section-hero-banner {
   position: relative;
   height: 646px;
+}
+@media screen and (max-wdith: 1299px) {
+  .section-hero-banner {
+    height: 546px;
+  }
 }
 .about-section {
   background-color: rgba(211, 162, 162, 0.2);
