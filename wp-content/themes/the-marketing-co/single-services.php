@@ -8,7 +8,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6 product-cols">
-                    <div class="product-thumb">
+                    <div class="product-thumb anim-cln fadeIn">
                         <?php
                         the_post_thumbnail();
                         ?>
@@ -17,9 +17,9 @@
                 <div class="col-md-6 product-colx">
                     <div class="content-wrapper">
                         <div class="product-title">
-                            <h3> <?php the_title(); ?> </h3>
+                            <h3 class="anim-cln fadeinUp"> <?php the_title(); ?> </h3>
                         </div>
-                        <div class="product-content">
+                        <div class="product-content anim-cln fadeinUp">
                             <?php the_content(); ?>
                         </div>
                     </div>
