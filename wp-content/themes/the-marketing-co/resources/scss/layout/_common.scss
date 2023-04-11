@@ -6,6 +6,12 @@
     @media screen and (max-width: 1299px) {
         padding: 0 45px;
     }
+    @include breakpoint(wide) {
+        padding: 0 30px;
+    }
+    @include breakpoint(small) {
+        padding: 0 20px;
+    }
 }
 .bg-image {
     position: absolute;

@@ -4,17 +4,29 @@
         top: 93px;
         left: -100%;
         width: 100%;
-        background: $color_secondary;
+        height: calc(100% - 93px);
+        background: #f2ebe8;
         z-index: 1000;
         @include transition(0.4s left);
+        padding: 60px 30px 30px;
     }
-
+    .menu-primary-menu-container {
+        @include breakpoint(wide) {
+            height: 100%;
+        }
+    }
     .menu {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin: 0;
         padding: 0;
+
+        @include breakpoint(wide) {
+            display: block;
+            height: 100%;
+            overflow: auto;
+        }
 
         li {
             list-style-type: none;
@@ -27,11 +39,17 @@
                 color: $black;
                 text-decoration: none;
                 @include transition(0.4s color);
+
+                @include breakpoint(wide) {
+                    font-size: 20px;
+                }
             }
 
             &:hover {
                 >a {
-                    color: $color_primary;
+                    @media (hover: hover) {
+                        color: $color_primary;
+                    }
                 }
             }
         }
@@ -43,9 +61,20 @@
                 @media screen and (max-width: 1299px) {
                     margin-right: 28px;
                 }
+
+                @include breakpoint(wide) {
+                    margin: 0 0 15px;
+                    border-bottom: 1px solid rgba($color_primary, 0.2);
+                    padding: 0 0 15px;
+                }
             }
 
             &.menu-item-has-children {
+                @include breakpoint(wide) {
+                    position: relative;
+                    border-bottom: 1px solid rgba($color_primary, 0.2);
+                }
+
                 >a {
                     padding-right: 17px;
                     position: relative;
@@ -60,12 +89,31 @@
                         background-image: url('../../images/arrow-down.svg');
                         background-size: contain;
                         background-repeat: no-repeat;
-                        @include transition(0.4s);
+                        @include transition(0.4s transform);
+
+                        @include breakpoint(wide) {
+                            content: none;
+                        }
                     }
                 }
 
                 .dropdown {
                     display: none;
+
+                    @include breakpoint(wide) {
+                        display: block;
+                        position: absolute;
+                        top: 8px;
+                        right: 0;
+                        height: 12px;
+                        width: 20px;
+                        background-image: url('../../images/arrow-down.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        @include transition(0.4s);
+                        z-index: 1;
+                        cursor: pointer;
+                    }
                 }
 
                 ul.sub-menu {
@@ -79,7 +127,6 @@
                         }
                     }
                 }
-
                 &.mega-nav-menu {
                     >ul.sub-menu {
                         @media screen and (min-width: 1200px) {
@@ -101,6 +148,9 @@
 
                         @include breakpoint(wide) {
                             display: none;
+                            min-height: unset;
+                            max-height: unset;
+                            padding: 18px 0 0;
                         }
 
                         &:before {
@@ -121,6 +171,9 @@
                             @media screen and (min-width: 1921px) {
                                 max-width: 40vw;
                             }
+                            @include breakpoint(wide) {
+                                max-width: 100%;
+                            }
 
                             &:before,
                             &:after {
@@ -132,6 +185,9 @@
                                 background: $color_tertiary;
                                 transform: translateY(-50%);
                                 @include transition(all .3s ease-in-out);
+                                @include breakpoint(wide) {
+                                    content: none;
+                                }
                             }
 
                             &:before {
@@ -161,6 +217,13 @@
                                 @media screen and (max-width: 1299px) {
                                     padding-left: 45px;
                                 }
+                                @include breakpoint(wide) {
+                                    font-size: 16px;
+                                    padding-left: 30px;
+                                }
+                                @include breakpoint(small) {
+                                    padding-left: 20px;
+                                }
 
                                 &:before {
                                     background: rgba($color_secondary, 0.3);
@@ -171,6 +234,9 @@
                                     left: 0;
                                     z-index: -1;
                                     content: "";
+                                    @include breakpoint(wide) {
+                                        background: rgba($color_tertiary, 0.3);
+                                    }
                                 }
                             }
 
@@ -194,6 +260,9 @@
                                 max-width: 500px;
                                 width: 100%;
                                 @include transition(all .3s ease-in-out);
+                                @include breakpoint(wide) {
+                                    display: none;
+                                }
 
                                 p {
                                     margin: 0;
@@ -249,6 +318,14 @@
                         }
                     }
                 }
+                &.menu-opened {
+                    > .dropdown {
+                        transform: scale(1, -1);
+                    }
+                    ul.sub-menu {
+                        display: block;
+                    }
+                }
             }
 
             &.current-menu-item {
@@ -258,6 +335,9 @@
                     &:after {
                         background-image: url('../../images/arrow-down-primary.svg');
                     }
+                }
+                .dropdown {
+                    background-image: url('../../images/arrow-down-primary.svg');                    
                 }
             }
         }
@@ -303,6 +383,11 @@
 
 body {
     &.shown {
+        overflow: hidden;
+        .main-navigation {
+            left: 0;
+        }
+
         .menu-toggle {
             span {
                 transform-origin: center;
