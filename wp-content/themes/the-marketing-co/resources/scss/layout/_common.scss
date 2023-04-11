@@ -1,3 +1,6 @@
+* {
+    scroll-behavior: unset;
+}
 .site-main {
     overflow: hidden;
 }
@@ -5,6 +8,12 @@
     max-width: 1286px;
     @media screen and (max-width: 1299px) {
         padding: 0 45px;
+    }
+    @include breakpoint(wide) {
+        padding: 0 30px;
+    }
+    @include breakpoint(small) {
+        padding: 0 20px;
     }
 }
 .bg-image {
@@ -37,6 +46,11 @@
                     background-image: url('../../images/title-brush.svg');
                     background-size: contain;
                     background-repeat: no-repeat;
+                    @include breakpoint(small) {
+                        width: 134px;
+                        height: 18px;
+                    }
+                    
                 }
             }
         }
@@ -46,18 +60,13 @@
                     &:after {
                         width: 262px;
                         height: 34px;
+                        @include breakpoint(small) {
+                            width: 212px;
+                            height: 30px;
+                        }
                     }
                 }
             }
         }
     }
-}
-.anim-cln{
-    visibility: hidden;
-}
-.fadeIn{
-    animation: fadeIn 0.6s linear forwards;
-}
-.fadeinUp{
-    animation: fadeinUp 0.6s linear forwards;
 }

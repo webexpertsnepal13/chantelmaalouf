@@ -74,15 +74,23 @@
 
 	var wow = new WOW(
 		{
-		  boxClass:     'anim-cln',
-		  animateClass: 'animated',
-		  offset:       50,
+			boxClass: 'anim-cln',
+			animateClass: 'animated',
+			offset: 50,
 		}
-	  );
-	  wow.init();
-	
-	  // class toggled in body on ham menu clicked 
-	  $('.menu-toggle').on('click', function(){
+	);
+	wow.init();
+
+	// class toggled in body on ham menu clicked 
+	$('.menu-toggle').on('click', function () {
 		$('body').toggleClass('shown');
-	  });
+		if($('body').hasClass('shown')) {
+			$('.menu-item-has-children').removeClass('menu-opened');
+		}
+	});
+
+	// sub-menu open
+	$('.dropdown').on('click', function(){
+		$(this).parent().toggleClass('menu-opened');
+	});
 })(jQuery);

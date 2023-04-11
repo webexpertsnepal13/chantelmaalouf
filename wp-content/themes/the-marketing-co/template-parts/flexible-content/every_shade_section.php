@@ -12,14 +12,14 @@ $size = 'full';
         <div class="info-block-left">
             <div class="info-block">
                 <?php if ( $shade_title ) { ?>
-                    <h1><?php echo $shade_title; ?></h1>
+                    <h1 class="anim-cln fadeinUp"><?php echo $shade_title; ?></h1>
                 <?php } ?>
-                <div class="bg-logo">
+                <div class="bg-logo anim-cln fadeIn">
                     <?php the_custom_logo(); ?>
                 </div><!-- bg-logo -->
             </div>
         </div><!-- info-block-left -->
-        <div class="image-right">
+        <div class="image-right anim-cln fadeIn">
             <?php if ( $shade_image ) {
               echo wp_get_attachment_image( $shade_image, $size );
             }

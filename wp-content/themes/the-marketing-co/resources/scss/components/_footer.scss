@@ -1,25 +1,75 @@
+body {
+    &.error404 {
+        .site-footer {
+            @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+}
+
 .site-footer {
     background: $color_secondary;
+
     .footer-top {
         .foo-top-wrap {
             padding-top: 54px;
             padding-bottom: 48px;
             border-bottom: 1px solid $black;
+            .row {
+                .col-md-4 {
+                    &:first-child,
+                    &:last-child {
+                        @include breakpoint(small) {
+                            flex: 0 1 50%;
+                        }
+                        @include breakpoint(extrasmall) {
+                            flex: 0 1 100%;
+                        }
+                    }
+                    &:first-child {
+                        @include breakpoint(small) {                            
+                            order: 2;
+                        }
+                        @include breakpoint(smaller) {
+                            margin: 0 0 30px;
+                        }                            
+                    }
+                    &:last-child {
+                        @include breakpoint(small) {                            
+                            order: 3;
+                        }
+                    }
+                    &:nth-child(2) {
+                        @include breakpoint(small) {                            
+                            order: 1;
+                            margin: 0 0 30px;
+                        }
+                    }
+                }
+            }
             .footer-block {
                 .widget {
                     .widget-title {
-                        font-weight: 700;                    
+                        font-weight: 700;
                     }
+
                     ul {
                         margin: 0;
                         padding: 0;
+
                         li {
                             list-style: none;
+
                             a {
                                 font-size: 14px;
                                 line-height: 1.5;
                                 color: $black;
                                 @include transition(0.4s color);
+
                                 &:hover {
                                     color: $color_primary;
                                 }
@@ -27,50 +77,63 @@
                         }
                     }
                 }
+
                 &.footer-mid {
                     text-align: center;
                     max-width: 230px;
                     margin: 0 auto;
+
                     .custom-logo-link {
                         margin: 0 0 40px;
                         display: inline-block;
+
                         img {
                             width: 186px;
                             height: auto;
                         }
                     }
+
                     .widget {
                         .wp-block-heading {
                             margin: 0 0 13px;
                         }
+
                         .wp-block-gallery {
                             &.has-nested-images {
                                 justify-content: center;
                                 gap: 0 15px;
+
                                 figure {
                                     display: block;
                                     flex: unset;
                                     width: 39px !important;
                                     height: 39px !important;
-                                    img {
-                                    }
+
+                                    img {}
                                 }
                             }
                         }
                     }
                 }
+
                 &.footer-right {
                     max-width: 170px;
                     margin: 0 0 0 auto;
+                    @include breakpoint(extrasmall) {
+                        max-width: unset;
+                        margin: 0;
+                    }
                 }
             }
         }
+
         .foo-payment-back-top {
             position: relative;
             padding-top: 26px;
             padding-bottom: 37px;
             max-width: 80%;
             margin: 0 auto;
+
             .widget {
                 .wp-block-heading {
                     margin: 0 0 16px;
@@ -81,16 +144,19 @@
                     font-weight: 500;
                     font-family: $font_avenir;
                 }
+
                 .wp-block-gallery {
                     &.has-nested-images {
                         justify-content: center;
                         gap: 0 15px;
                         align-items: center;
                         margin: 0;
+
                         figure {
                             display: block;
                             flex: unset;
                             width: unset !important;
+
                             img {
                                 height: unset !important;
                                 width: unset !important;
@@ -100,28 +166,40 @@
                     }
                 }
             }
+
             .back-to-top {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
                 right: 0;
+                @include breakpoint(small) {
+                    position: static;
+                    margin-top: 25px;
+                    transform: unset;
+                    text-align: center;
+                }
+
                 a {
                     text-decoration: none;
+                    display: inline-block;
+
                     svg,
                     img {
                         height: 22px;
                         width: 22px;
                         border: 1px solid $black;
-                        border-radius: 50%;                        
+                        border-radius: 50%;
                         display: block;
                         margin: 0 auto 5px;
                         padding: 4px 6px;
                         @include transition(0.4s);
+
                         path {
                             @include transition(0.4s);
                         }
 
                     }
+
                     span {
                         display: block;
                         font-size: 17px;
@@ -130,15 +208,19 @@
                         font-family: $font_avenir;
                         @include transition(0.4s color);
                     }
+
                     &:hover {
+
                         img,
                         svg {
                             background: $color_primary;
                             border-color: $color_primary;
+
                             path {
                                 fill: $white;
                             }
                         }
+
                         span {
                             color: $color_primary;
                         }
@@ -147,9 +229,11 @@
             }
         }
     }
+
     .footer-bottom {
         background: $black;
         padding: 24px 0;
+
         .copyright,
         .designed-by {
             p {
@@ -159,6 +243,13 @@
                 line-height: 1.5;
             }
         }
+        .copyright {
+            @include breakpoint(small) {
+                text-align: center;
+                margin: 0 0 25px;
+            }
+        }
+
         .designed-by {
             p {
                 display: flex;
@@ -168,13 +259,19 @@
                 font-size: 16px;
                 line-height: 1.37;
                 font-family: $font_avenir;
+                @include breakpoint(small) {
+                    justify-content: center;
+                }
+
                 span {
                     display: inline-block;
                     margin-right: 8px;
                 }
+
                 a {
-                    line-height: 0;                    
+                    line-height: 0;
                 }
+
                 img {
                     max-width: 96px;
                 }
@@ -182,7 +279,9 @@
         }
     }
 }
+
 .widget {
+
     .widget-title,
     .wp-block-heading {
         text-transform: uppercase;

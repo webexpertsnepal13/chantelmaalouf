@@ -11,12 +11,14 @@
     min-height: 42px;
     text-decoration: none !important;
     @include transition(0.4s background, 0.4s color);
+
     &.btn-outline {
         border: 2px solid $color_primary;
         border-radius: 50px;
         padding: 6px 20px;
         padding-right: 80px;
         word-break: break-word;
+
         &:before,
         &:after {
             content: '';
@@ -25,27 +27,35 @@
             top: 50%;
             transform: translateY(-50%);
         }
+
         &:before {
             height: 2px;
             width: 33px;
-           left: calc(100% - 13px); 
+            left: calc(100% - 13px);
         }
+
         &:after {
             left: calc(100% + 12px);
             height: 9px;
             width: 9px;
             border-radius: 50%;
         }
+
         &.btn-fill-white {
             background: $white;
         }
+
         &:hover {
-            background: $color_primary;
-            color: $white;
+            @media (hover: hover) {
+                background: $color_primary;
+                color: $white;
+            }
         }
     }
 }
-.btn-book-now {    
+
+a.btn-book-now,
+.btn-book-now>a {
     font-size: 16px;
     line-height: 1.43;
     font-family: $font_jost;
@@ -62,13 +72,17 @@
     align-items: center;
     justify-content: center;
     @include transition(0.4s background, 0.4s color);
+
     @include breakpoint(wide) {
         font-size: 14px;
         min-height: 44px;
         padding: 6px 20px;
     }
+
     &:hover {
-        background: transparent;
-        color: $color_primary;
+        @media (hover: hover) {
+            background: transparent;
+            color: $color_primary;
+        }
     }
 }

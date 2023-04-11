@@ -50,7 +50,6 @@
     h3 {
         font-size: 32px;
         line-height: 1.25;
-        text-transform: capitalize;
         color: $color-primary;
         margin: 0 0 15px;
         @include breakpoint (small){
@@ -87,11 +86,23 @@
     }
 
     .row {
+        @include breakpoint (wide){
+            margin: 0 -30px;
+        }
+        @include breakpoint (small){
+            margin: 0 -20px;
+        }
         @media (min-width: 992px){
             margin: 0;
         }
 
         .contact-cols {
+            @include breakpoint (wide){
+                padding: 0 30px;
+            }
+            @include breakpoint (small){
+                padding: 0 20px;
+            }
             @media (min-width: 992px){
                 padding: 0;
             }
@@ -149,6 +160,9 @@
         padding-right: 30px;
         padding: 100px 0 76px;
         @include breakpoint (wide){
+            padding: 60px 15px 36px 0;
+        }
+        @include breakpoint (medium){
             padding: 60px 0px 36px;
         }
 
@@ -215,6 +229,10 @@
 
         .row{
             margin: 0 -15px;
+        }
+
+        h3{
+            text-transform: capitalize;
         }
     }
 }

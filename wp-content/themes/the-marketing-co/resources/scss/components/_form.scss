@@ -16,6 +16,13 @@
             display: none;
         }
 
+        
+        #field_1_9, #field_1_10{
+            @include breakpoint (wide){
+                grid-column: span 12;
+            }
+        }
+
         input[type=color],
         input[type=date],
         input[type=datetime-local],
@@ -33,12 +40,13 @@
         select,
         textarea {
             border: 0;
-            border-bottom: 1px solid $color-accent;
-            padding: 0 0 15px !important;
+            padding: 0 0 5px !important;
             background-color: inherit;
             outline: transparent;
             outline-color: $color-accent;
             color: $color-accent;
+            line-height: 1;
+            font-size: 16px !important;
         }
 
         textarea {
@@ -47,7 +55,8 @@
 
         select {
             appearance: none;
-            background: url("../../images/arrow-down-primary.svg") no-repeat 100% calc(100% - 1.28rem)/1.3rem;
+            background: url("../../images/arrow-down-primary.svg") no-repeat 100% calc(100% - 6px)/16px;
+            padding-right: 22px !important;
         }
 
         .gform_fields {
@@ -59,23 +68,25 @@
         }
 
         .gfield {
+            border-bottom: 1px solid $color-accent;
+            padding: 0 0 10px !important;
+            position: relative;
+
             &.is-focused {
                 .gfield_label {
                     opacity: 0;
                     visibility: hidden;
                 }
             }
-        }
 
-        .gfield:not(#field_1_6) {
-            position: relative;
-
-            .gfield_label {
-                position: absolute;
-                top: 8px;
-                pointer-events: none;
-                margin-bottom: 0;
-                transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+            &.floated-label{
+                .gfield_label {
+                    position: absolute;
+                    top: 8px;
+                    pointer-events: none;
+                    margin-bottom: 0;
+                    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+                }
             }
         }
 
