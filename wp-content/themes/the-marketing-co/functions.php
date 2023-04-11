@@ -332,15 +332,10 @@ function display_chantel_section( $page_id ) {
     endif;  
 }
 
-
-function custom_body_classes( $classes ) {
-    if ( is_user_logged_in() ) {
-        $classes[] = 'logged-in';
-        $classes[] = 'custom-logged-in-class';
-    } else {
-        $classes[] = 'logged-out';
-        $classes[] = 'custom-logged-out-class';
+function disable_search_page() {
+    if(is_search()) {
+        wp_redirect(home_url());
+        exit;
     }
-    return $classes;
 }
-add_filter( 'body_class', 'custom_body_classes' );
+add_action('template_redirect', 'disable_search_page');

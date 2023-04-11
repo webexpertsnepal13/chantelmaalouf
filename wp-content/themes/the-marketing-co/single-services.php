@@ -31,9 +31,12 @@
                     array(
                         'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous', 'the-marketing-co') . '</span>',
                         'next_text' => '<span class="nav-subtitle">' . esc_html__('Next', 'the-marketing-co') . '</span>',
+                        'orderby'   => 'modified',
+                        'order'     => 'DESC'
                     )
                 );
                 ?>
+
             </div>
         </div><!-- .single-service-wrapper -->
     </div><!-- .container -->

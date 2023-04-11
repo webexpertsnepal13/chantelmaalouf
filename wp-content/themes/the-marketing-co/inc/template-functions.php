@@ -21,6 +21,14 @@ function the_marketing_co_body_classes( $classes ) {
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'no-sidebar';
 	}
+	//custom body class
+	if ( is_user_logged_in() ) {
+        $classes[] = 'logged-in';
+        $classes[] = 'custom-logged-in-class';
+    } else {
+        $classes[] = 'logged-out';
+        $classes[] = 'custom-logged-out-class';
+    }
 
 	return $classes;
 }
