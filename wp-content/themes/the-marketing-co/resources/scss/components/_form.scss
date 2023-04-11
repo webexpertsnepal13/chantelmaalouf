@@ -1,15 +1,18 @@
 .gform_wrapper {
-    .gfield_validation_message, .validation_message{
+
+    .gfield_validation_message,
+    .validation_message {
         padding: 9px 10px !important;
         line-height: 1 !important;
     }
+
     &.gravity-theme {
 
-        .gform-body{
+        .gform-body {
             margin: 0 0 34px;
         }
 
-        .gform_required_legend{
+        .gform_required_legend {
             display: none;
         }
 
@@ -31,28 +34,33 @@
         textarea {
             border: 0;
             border-bottom: 1px solid $color-accent;
-            padding: 0 0 15px!important;
+            padding: 0 0 15px !important;
             background-color: inherit;
             outline: transparent;
             outline-color: $color-accent;
             color: $color-accent;
         }
 
-        textarea{
+        textarea {
             height: 135px !important;
         }
 
-        .gform_fields{
-           gap: 32px 30px !important;
-
-           @media (max-width: 640px){
-            gap: 32px 0px !important;
-           }
+        select {
+            appearance: none;
+            background: url("../../images/arrow-down-primary.svg") no-repeat 100% calc(100% - 1.28rem)/1.3rem;
         }
 
-        .gfield{
-            &.is-focused{
-                .gfield_label{
+        .gform_fields {
+            gap: 32px 30px !important;
+
+            @media (max-width: 640px) {
+                gap: 32px 0px !important;
+            }
+        }
+
+        .gfield {
+            &.is-focused {
+                .gfield_label {
                     opacity: 0;
                     visibility: hidden;
                 }
@@ -76,16 +84,20 @@
             font-weight: 400 !important;
             line-height: 1;
         }
-        .gform_button{
+
+        .gform_button {
             margin-left: auto;
-            @include breakpoint (medium){
+
+            @include breakpoint (medium) {
                 margin: 0 auto;
             }
         }
-        .gform_footer{
+
+        .gform_footer {
             justify-content: flex-end;
             padding-right: 20px !important;
-            @include breakpoint (medium){
+
+            @include breakpoint (medium) {
                 justify-content: center;
                 padding-right: 0 !important;
             }

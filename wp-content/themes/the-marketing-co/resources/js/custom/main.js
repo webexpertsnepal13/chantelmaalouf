@@ -44,10 +44,10 @@
 	});
 
 	//form focus and blur 
-	$('.ginput_container input').on('focus', function () {
+	$('.ginput_container input, .ginput_container select').on('focus', function () {
 		$(this).closest('.gfield').addClass('is-focused');
 	});
-	$('.ginput_container input').on('blur', function () {
+	$('.ginput_container input, .ginput_container select').on('blur', function () {
 		var value = $(this).val();
 		console.log(value)
 		// $(this).closest('.gfield').removeClass('is-focused');
@@ -80,4 +80,9 @@
 		}
 	  );
 	  wow.init();
+	
+	  // class toggled in body on ham menu clicked 
+	  $('.menu-toggle').on('click', function(){
+		$('body').toggleClass('shown');
+	  });
 })(jQuery);
