@@ -19,6 +19,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<div class="container">
 <div class="cm-product-wrapper">
 <div class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
