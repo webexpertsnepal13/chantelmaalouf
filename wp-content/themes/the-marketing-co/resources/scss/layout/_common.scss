@@ -46,6 +46,11 @@
                     background-image: url('../../images/title-brush.svg');
                     background-size: contain;
                     background-repeat: no-repeat;
+                    @include breakpoint(small) {
+                        width: 134px;
+                        height: 18px;
+                    }
+                    
                 }
             }
         }
@@ -55,6 +60,10 @@
                     &:after {
                         width: 262px;
                         height: 34px;
+                        @include breakpoint(small) {
+                            width: 212px;
+                            height: 30px;
+                        }
                     }
                 }
             }

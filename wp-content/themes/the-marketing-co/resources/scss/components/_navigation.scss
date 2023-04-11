@@ -463,4 +463,21 @@ body {
             }
         }
     }
+    &.single-services {
+        .main-navigation {
+            .menu {
+                > li {
+                    &.service-menu {
+                        >a {
+                            color: $color_primary;
+        
+                            &:after {
+                                background-image: url('../../images/arrow-down-primary.svg');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

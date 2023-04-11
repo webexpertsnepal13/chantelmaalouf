@@ -16,7 +16,7 @@
 			<div class="container">
 				<div class="foo-top-wrap">
 					<div class="row">
-						<div class="col-lg-4">
+						<div class="col-md-4">
 							<div class="footer-block anim-cln fadeinUp">
 								<?php
 								if ( is_active_sidebar( 'footer-sidebar-2' ) ) :
@@ -24,8 +24,8 @@
 								endif;
 								?>
 							</div><!-- footer-block -->
-						</div><!-- col-lg-4 -->
-						<div class="col-lg-4">
+						</div><!-- col-md-4 -->
+						<div class="col-md-4">
 							<div class="footer-block footer-mid anim-cln fadeinUp" data-wow-duration="0.7s">
 								<?php 
 								the_custom_logo();
@@ -36,8 +36,8 @@
 								endif;
 								?>
 							</div><!-- footer-block -->
-						</div><!-- col-lg-4 -->
-						<div class="col-lg-4">
+						</div><!-- col-md-4 -->
+						<div class="col-md-4">
 							<div class="footer-block footer-right anim-cln fadeinUp" data-wow-duration="0.8s">
 								<?php
 								if ( is_active_sidebar( 'footer-sidebar-4' ) ) :
@@ -45,7 +45,7 @@
 								endif;
 								?>
 							</div><!-- footer-block -->
-						</div><!-- col-lg-4 -->
+						</div><!-- col-md-4 -->
 					</div><!-- row -->
 				</div><!-- foo-top-wrap -->
 				<div class="foo-payment-back-top anim-cln fadeinUp" data-wow-duration="0.8s">

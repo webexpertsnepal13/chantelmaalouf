@@ -3,10 +3,22 @@
 
     .title {
         margin: 0 0 83px;
+        span {
+            &:after {
+                @include breakpoint(small) {
+                    content: none;
+                }
+            }
+        }
+    }
+    .product-wrapper {
+        .container {
+            padding: 0;
+        }
     }
 }
 
-.cm-product-wrapper {
+.cm-product-wrapper {    
     .products {
         display: flex;
         flex-wrap: wrap;
@@ -18,6 +30,15 @@
             padding: 0 15px;
             margin: 0 0 30px;
             text-align: center;
+            @include breakpoint(wide) {
+                flex: 0 1 33.33%;
+            }
+            @include breakpoint(medium) {
+                flex: 0 1 50%;
+            }
+            @include breakpoint(smaller) {
+                flex: 0 1 100%;
+            }
 
             a {
                 text-decoration: none;
@@ -68,6 +89,9 @@
                     width: 100%;
                     padding: 20px 30px;
                     background: transparent;
+                    @include breakpoint(wide) {
+                        padding: 15px 20px;
+                    }
 
                     &:hover {
                         color: $white;

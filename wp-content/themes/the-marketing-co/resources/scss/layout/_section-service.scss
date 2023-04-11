@@ -1,6 +1,40 @@
 .section-services {
     padding-top: 137px;
     padding-bottom: 102px;
+    @include breakpoint(wide) {
+        padding-top: 107px;
+        padding-bottom: 82px;
+    }
+    @include breakpoint(medium) {
+        padding-top: 87px;
+        padding-bottom: 52px;
+    }
+    @include breakpoint(small) {
+        padding-top: 67px;
+        padding-bottom: 42px;
+    }
+    .row {
+        .col-lg-4 {
+            @media screen and (max-width: 1024px) and (min-width: 992px) {
+                flex: 25%;
+                max-width: 25%;
+            }
+        }
+        .col-lg-8 {
+            @media screen and (max-width: 1024px) and (min-width: 992px) {
+                flex: 75%;
+                max-width: 75%;
+            }
+        }
+    }
+    .title {
+        @include breakpoint(medium) {
+            margin: 0 0 65px;
+        }
+        @include breakpoint(small) {
+            margin: 0 0 45px;
+        }
+    }
 }
 
 .services-grid {
@@ -11,6 +45,12 @@
         padding: 0 15px;
         flex: 0 1 33.33%;
         margin: 0 0 30px;
+        @include breakpoint(small) {
+            flex: 0 1 50%;
+        }
+        @include breakpoint(extrasmall) {
+            flex: 0 1 100%;
+        }
 
         .card-inner {
             .card-image {
@@ -39,10 +79,26 @@
                     height: 273px;
                     width: 100%;
                     object-fit: cover;
+                    @include breakpoint(wide) {
+                        height: 213px;
+                    }
+                    @include breakpoint(small) {
+                        height: 253px;
+                    }
+                    @include breakpoint(extrasmall) {
+                        height: auto;
+                    }
                 }
             }
 
-            .button-wrap {}
+            .button-wrap {
+                a.btn-cm {
+                    @include breakpoint(wide) {
+                        width: calc(100% - 19px);
+                        padding-right: 20px;
+                    }
+                }
+            }
             &:hover {
                 .card-image {
                     a {
