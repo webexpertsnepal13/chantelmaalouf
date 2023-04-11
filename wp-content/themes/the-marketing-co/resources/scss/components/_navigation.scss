@@ -8,13 +8,18 @@
         background: #f2ebe8;
         z-index: 1000;
         @include transition(0.4s left);
-        padding: 60px 30px 30px;
+        padding: 60px 15px 30px 30px;
     }
+    @include breakpoint(small) {
+        padding: 45px 5px 20px 20px;
+    }
+
     .menu-primary-menu-container {
         @include breakpoint(wide) {
             height: 100%;
         }
     }
+
     .menu {
         display: flex;
         flex-wrap: wrap;
@@ -26,6 +31,7 @@
             display: block;
             height: 100%;
             overflow: auto;
+            padding-right: 15px;
         }
 
         li {
@@ -42,6 +48,36 @@
 
                 @include breakpoint(wide) {
                     font-size: 20px;
+                }
+                @include breakpoint(small) {
+                    font-size: 18px;
+                }
+            }
+
+            &.hide-desktop {
+                @media screen and (min-width: 1200px) {
+                    display: none;
+                }
+
+                @include breakpoint(wide) {
+                    padding-top: 15px;
+                    text-align: center;
+                }
+            }
+
+            &.btn-book-now {
+                >a {
+                    @include breakpoint(wide) {
+                        padding: 10px 30px;
+                        min-height: 50px;
+                        color: $white;
+                        font-size: 16px;
+                        @include transition(0.4s background, 0.4s color);
+                    }
+                    @include breakpoint(small) {
+                        min-height: 40px;
+                        font-size: 14px;
+                    }
                 }
             }
 
@@ -63,9 +99,13 @@
                 }
 
                 @include breakpoint(wide) {
-                    margin: 0 0 15px;
                     border-bottom: 1px solid rgba($color_primary, 0.2);
+                    margin: 0 0 15px;
                     padding: 0 0 15px;
+                }
+                @include breakpoint(small) {
+                    margin: 0 0 10px;
+                    padding: 0 0 10px;
                 }
             }
 
@@ -127,6 +167,7 @@
                         }
                     }
                 }
+
                 &.mega-nav-menu {
                     >ul.sub-menu {
                         @media screen and (min-width: 1200px) {
@@ -171,6 +212,7 @@
                             @media screen and (min-width: 1921px) {
                                 max-width: 40vw;
                             }
+
                             @include breakpoint(wide) {
                                 max-width: 100%;
                             }
@@ -185,6 +227,7 @@
                                 background: $color_tertiary;
                                 transform: translateY(-50%);
                                 @include transition(all .3s ease-in-out);
+
                                 @include breakpoint(wide) {
                                     content: none;
                                 }
@@ -217,10 +260,12 @@
                                 @media screen and (max-width: 1299px) {
                                     padding-left: 45px;
                                 }
+
                                 @include breakpoint(wide) {
                                     font-size: 16px;
                                     padding-left: 30px;
                                 }
+
                                 @include breakpoint(small) {
                                     padding-left: 20px;
                                 }
@@ -234,6 +279,7 @@
                                     left: 0;
                                     z-index: -1;
                                     content: "";
+
                                     @include breakpoint(wide) {
                                         background: rgba($color_tertiary, 0.3);
                                     }
@@ -260,6 +306,7 @@
                                 max-width: 500px;
                                 width: 100%;
                                 @include transition(all .3s ease-in-out);
+
                                 @include breakpoint(wide) {
                                     display: none;
                                 }
@@ -318,10 +365,12 @@
                         }
                     }
                 }
+
                 &.menu-opened {
-                    > .dropdown {
+                    >.dropdown {
                         transform: scale(1, -1);
                     }
+
                     ul.sub-menu {
                         display: block;
                     }
@@ -336,8 +385,9 @@
                         background-image: url('../../images/arrow-down-primary.svg');
                     }
                 }
+
                 .dropdown {
-                    background-image: url('../../images/arrow-down-primary.svg');                    
+                    background-image: url('../../images/arrow-down-primary.svg');
                 }
             }
         }
@@ -355,7 +405,6 @@
 
     @include breakpoint(wide) {
         display: block;
-        margin-left: 30px;
     }
 
     @include breakpoint(extrasmall) {
@@ -384,6 +433,7 @@
 body {
     &.shown {
         overflow: hidden;
+
         .main-navigation {
             left: 0;
         }
