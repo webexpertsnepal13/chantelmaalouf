@@ -9,14 +9,19 @@ $service_posts = get_sub_field( 'services_list' );
 <section class="section-services">
         <div class="container">
             <div class="row">
+<<<<<<< HEAD
+                <div class="col-lg-4">
+                    <div class="title w-brush anim-cln fadeinUp" data-wow-duration="0.7s">
+=======
                 <div class="col-md-4">
                     <div class="title w-brush anim-cln fadeinUp">
+>>>>>>> a6ad7cdf3a4afff285bb50054c10bb1c2d91c631
                         <?php if ( $our_services ) :  ?>
                             <h3><span><?php echo esc_html( $our_services ); ?></span></h3>
                         <?php endif; ?>
                     </div><!-- title -->
-                </div><!-- col-md-4 -->
-                <div class="col-md-8">
+                </div><!-- col-lg-4 -->
+                <div class="col-lg-8">
                     <?php
                     if ( $service_posts ) { ?>
                         <div class="services-grid">
@@ -36,7 +41,7 @@ $service_posts = get_sub_field( 'services_list' );
                             <?php } wp_reset_postdata(); ?>
                         </div><!-- services-grid -->
                     <?php } ?>
-                </div><!-- col-md-8 -->
+                </div><!-- col-lg-8 -->
             </div><!-- row -->
         </div><!-- container -->
     </section><!-- section-services -->
