@@ -1,6 +1,12 @@
 .main-navigation {
-    .menu-toggle {
-        display: none;
+    @include breakpoint(wide) {
+        position: fixed;
+        top: 93px;
+        left: -100%;
+        width: 100%;
+        background: $color_secondary;
+        z-index: 1000;
+        @include transition(0.4s left);
     }
 
     .menu {
@@ -33,6 +39,10 @@
         >li {
             &:not(:last-child) {
                 margin-right: 33px;
+
+                @media screen and (max-width: 1299px) {
+                    margin-right: 28px;
+                }
             }
 
             &.menu-item-has-children {
@@ -72,33 +82,42 @@
 
                 &.mega-nav-menu {
                     >ul.sub-menu {
-                        position: absolute;
-                        top: 100%;
-                        right: 0;
-                        left: 0;
-                        display: block;
-                        z-index: 20;
-                        background: #f2ebe8;
-                        min-height: 350px;
-                        max-height: calc(100vh - 10rem);
-                        @include transition(all .3s ease-in-out);
-                        opacity: 0;
-                        pointer-events: none;
-                        visibility: hidden;
-                        padding: 60px 0;
-                        // box-shadow: 0px 20px 30px rgba($black, 0.05);
-                        &:before {                            
+                        @media screen and (min-width: 1200px) {
                             position: absolute;
-                            top: -44px;
+                            top: 100%;
+                            right: 0;
                             left: 0;
-                            height: 44px;
-                            width: 100%;
-                            background-color: transparent;
+                            display: block;
+                            z-index: 20;
+                            background: #f2ebe8;
+                            min-height: 350px;
+                            max-height: calc(100vh - 10rem);
+                            @include transition(all .3s ease-in-out);
+                            opacity: 0;
+                            pointer-events: none;
+                            visibility: hidden;
+                            padding: 60px 0;
+                        }
+
+                        @include breakpoint(wide) {
+                            display: none;
+                        }
+
+                        &:before {
+                            @media screen and (min-width: 1200px) {
+                                position: absolute;
+                                top: -44px;
+                                left: 0;
+                                height: 44px;
+                                width: 100%;
+                                background-color: transparent;
+                            }
                         }
 
                         li {
                             position: relative;
                             max-width: 35vw;
+
                             @media screen and (min-width: 1921px) {
                                 max-width: 40vw;
                             }
@@ -139,6 +158,10 @@
                                 width: 100%;
                                 padding-left: calc((100vw - 1286px) / 2);
 
+                                @media screen and (max-width: 1299px) {
+                                    padding-left: 45px;
+                                }
+
                                 &:before {
                                     background: rgba($color_secondary, 0.3);
                                     position: absolute;
@@ -178,12 +201,14 @@
                                     line-height: 1.5;
                                 }
                             }
+
                             &.content-up {
                                 .content-col {
                                     bottom: 12px;
                                     top: unset;
                                 }
                             }
+
                             &.content-mid {
                                 .content-col {
                                     top: 50%;
@@ -207,15 +232,17 @@
                     }
 
                     &:hover {
-                        > a {
+                        >a {
                             &:after {
                                 transform: scale(1, -1);
                             }
                         }
+
                         >ul.sub-menu {
                             opacity: 1;
                             pointer-events: all;
                             visibility: visible;
+
                             &:before {
                                 content: '';
                             }
@@ -227,6 +254,68 @@
             &.current-menu-item {
                 >a {
                     color: $color_primary;
+
+                    &:after {
+                        background-image: url('../../images/arrow-down-primary.svg');
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-toggle {
+    height: 24px;
+    width: 32px;
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    display: none;
+
+    @include breakpoint(wide) {
+        display: block;
+        margin-left: 30px;
+    }
+
+    @include breakpoint(extrasmall) {
+        width: 26px;
+    }
+
+    span {
+        transition: 0.3s ease-in-out;
+        display: block;
+        height: 4px;
+        width: 100%;
+        background: $black;
+        margin: 0 0 6px auto;
+
+        @include breakpoint(small) {
+            height: 3px;
+            margin: 0 0 7px auto;
+        }
+
+        &:nth-child(3) {
+            margin-top: -10px;
+        }
+    }
+}
+
+body {
+    &.shown {
+        .menu-toggle {
+            span {
+                transform-origin: center;
+                opacity: 0;
+
+                &:nth-child(2) {
+                    transform: rotate(45deg);
+                    opacity: 1;
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg);
+                    opacity: 1;
                 }
             }
         }

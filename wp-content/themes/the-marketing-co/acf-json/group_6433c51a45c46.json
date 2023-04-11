@@ -48,26 +48,6 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6433c583986e5",
-            "label": "Title",
-            "name": "menu_item_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_6433c5dc986e6",
             "label": "Short Description",
             "name": "menu_item_short_description",
@@ -106,5 +86,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681114685
+    "modified": 1681125562
 }
