@@ -10467,11 +10467,25 @@ h5 {
     opacity: 1;
   }
 }
+.anim-cln {
+  visibility: hidden;
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 0.6s linear forwards;
+          animation: fadeIn 0.6s linear forwards;
+}
+
+.fadeinUp {
+  -webkit-animation: fadeinUp 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fadeinUp 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
 @-webkit-keyframes fadeinUp {
   from {
     opacity: 0;
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
   }
   to {
     opacity: 1;
@@ -10479,11 +10493,12 @@ h5 {
             transform: translateY(0px);
   }
 }
+
 @keyframes fadeinUp {
   from {
     opacity: 0;
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
   }
   to {
     opacity: 1;
@@ -10656,20 +10671,6 @@ h5 {
   height: 34px;
 }
 
-.anim-cln {
-  visibility: hidden;
-}
-
-.fadeIn {
-  -webkit-animation: fadeIn 0.6s linear forwards;
-          animation: fadeIn 0.6s linear forwards;
-}
-
-.fadeinUp {
-  -webkit-animation: fadeinUp 0.6s linear forwards;
-          animation: fadeinUp 0.6s linear forwards;
-}
-
 .section-services {
   padding-top: 137px;
   padding-bottom: 102px;
@@ -10682,38 +10683,6 @@ h5 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 -15px;
-}
-.services-grid .service-card:nth-child(0) {
-  -webkit-animation-duration: 0s;
-          animation-duration: 0s;
-}
-.services-grid .service-card:nth-child(1) {
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-}
-.services-grid .service-card:nth-child(2) {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-.services-grid .service-card:nth-child(3) {
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-.services-grid .service-card:nth-child(4) {
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-.services-grid .service-card:nth-child(5) {
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
-}
-.services-grid .service-card:nth-child(6) {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-}
-.services-grid .service-card:nth-child(7) {
-  -webkit-animation-duration: 3.5s;
-          animation-duration: 3.5s;
 }
 .services-grid .service-card {
   padding: 0 15px;
@@ -12003,6 +11972,8 @@ body.shown .menu-toggle span:nth-child(3) {
   outline: transparent;
   outline-color: #8D5152;
   color: #8D5152;
+  line-height: 1;
+  font-size: 16px !important;
 }
 .gform_wrapper.gravity-theme textarea {
   height: 135px !important;

@@ -17,7 +17,7 @@
 				<div class="foo-top-wrap">
 					<div class="row">
 						<div class="col-lg-4">
-							<div class="footer-block">
+							<div class="footer-block anim-cln fadeinUp">
 								<?php
 								if ( is_active_sidebar( 'footer-sidebar-2' ) ) :
 									dynamic_sidebar( 'footer-sidebar-2' );
@@ -26,7 +26,7 @@
 							</div><!-- footer-block -->
 						</div><!-- col-lg-4 -->
 						<div class="col-lg-4">
-							<div class="footer-block footer-mid">
+							<div class="footer-block footer-mid anim-cln fadeinUp" data-wow-duration="0.7s">
 								<?php 
 								the_custom_logo();
 								
@@ -38,7 +38,7 @@
 							</div><!-- footer-block -->
 						</div><!-- col-lg-4 -->
 						<div class="col-lg-4">
-							<div class="footer-block footer-right">
+							<div class="footer-block footer-right anim-cln fadeinUp" data-wow-duration="0.8s">
 								<?php
 								if ( is_active_sidebar( 'footer-sidebar-4' ) ) :
 									dynamic_sidebar( 'footer-sidebar-4' );
@@ -48,7 +48,7 @@
 						</div><!-- col-lg-4 -->
 					</div><!-- row -->
 				</div><!-- foo-top-wrap -->
-				<div class="foo-payment-back-top">
+				<div class="foo-payment-back-top anim-cln fadeinUp" data-wow-duration="0.8s">
 					<?php
 					if ( is_active_sidebar( 'footer-sidebar-5' ) ) :
 						dynamic_sidebar( 'footer-sidebar-5' );
@@ -67,7 +67,7 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-md-8">
-						<div class="copyright">
+						<div class="copyright ">
 						<?php if ( $copyright_text = get_field( 'copyright_text', 'options' ) ) : ?>
 							<p><?php echo __( 'Copyright ', 'the-marketing-co' ).date( 'Y' )." ".$copyright_text.'</p>'; ?>
 						<?php endif; ?>
@@ -78,7 +78,7 @@
 						$site_by_text = get_field( 'site_by_text', 'options' );
 						$agency_logo = get_field( 'agency_logo', 'options' );
 						?>
-						<div class="designed-by text-right">
+						<div class="designed-by text-right ">
 							<?php if ( $site_by_text || $agency_logo ) :  ?>
 								<p>
 									<span><?php echo esc_html( $site_by_text ); ?></span>

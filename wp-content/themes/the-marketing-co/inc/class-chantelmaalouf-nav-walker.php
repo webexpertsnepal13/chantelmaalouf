@@ -238,7 +238,7 @@ class Maalouf_Nav_Walker extends Walker_Nav_Menu {
 		$item_output .= '</a>';
         if( $depth >= 1 && $enable_megamenu ) {
             $image              = get_field( 'menu_item_image', $menu_item->ID );
-            $content_title      = get_field( 'menu_item_title', $menu_item->ID );
+            //$content_title      = get_field( 'menu_item_title', $menu_item->ID );
             $short_description  = get_field( 'menu_item_short_description', $menu_item->ID );
             //$readmore_link      = get_field( 'menu_item_readmore_link', $menu_item->ID );
             //$readmore_url       = ( isset( $readmore_link['url'] ) ) ? $readmore_link['url'] : 'javascript:void(0);';
@@ -269,8 +269,12 @@ class Maalouf_Nav_Walker extends Walker_Nav_Menu {
 			*/
 
             if( $short_description ) {
-                $item_output   .= sprintf( '<p>%s</p>', $short_description );
-            }            
+				
+				$short_description_arr = explode(' ', $short_description);
+				$short_description_arr = array_slice($short_description_arr, 0, 122);
+				$short_description = implode(' ', $short_description_arr);
+				$item_output .= sprintf('<p>%s</p>', $short_description);
+			}       
             // $item_output    .= '</div>';
 
             //$item_output    .=  sprintf( '<a href="%s" class="btn-mdn btn-icon-link link-primary">%s<img src="%s" alt="Arrow Up Right"></a>', esc_url( $readmore_url ), __( 'Read more', 'madinah' ), get_template_directory_uri().'/images/arrow-up-right.svg' );

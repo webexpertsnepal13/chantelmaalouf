@@ -9,14 +9,14 @@ $heading_text = get_sub_field( 'heading_text' );
 <section class="inner-banner-section">
     <div class="container">
         <div class="inner-banner-wrap">
-            <div class="inner-banner-title">
+            <div class="inner-banner-title anim-cln fadeinUp" data-wow-duration="0.7s">
                 <?php if ( $heading_text ) : ?>
                     <h1><?php echo esc_html( $heading_text ); ?></h1>
                 <?php endif; ?>
             </div>
             <?php 
             if ( $link ) : ?>
-                <div class="button-wrap">
+                <div class="button-wrap anim-cln fadeinUp" data-wow-duration="0.8s">
                     <?php
                     $link_url = $link['url'];
                     $link_title = $link['title'];

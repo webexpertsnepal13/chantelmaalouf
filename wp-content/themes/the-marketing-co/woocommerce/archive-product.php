@@ -16,14 +16,19 @@
  */
 
 get_header();
-
-$shop_page_id = get_option( 'woocommerce_shop_page_id' );
-//Flexible content
-if ( have_rows ( 'add_site_layout', $shop_page_id  ) ) :
-    while ( have_rows ( 'add_site_layout', $shop_page_id  ) ) : the_row();
-        $layouts = get_row_layout ();
-        get_template_part( 'template-parts/flexible-content/'. $layouts );
-    endwhile;
-endif;
+?>
+<main id="primary" class="site-main">
+    <?php
+    $shop_page_id = get_option( 'woocommerce_shop_page_id' );
+    //Flexible content
+    if ( have_rows ( 'add_site_layout', $shop_page_id  ) ) :
+        while ( have_rows ( 'add_site_layout', $shop_page_id  ) ) : the_row();
+            $layouts = get_row_layout ();
+            get_template_part( 'template-parts/flexible-content/'. $layouts );
+        endwhile;
+    endif;
+    ?>
+</main>
+<?php
 
 get_footer();
