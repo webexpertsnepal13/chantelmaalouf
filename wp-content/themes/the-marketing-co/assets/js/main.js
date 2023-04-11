@@ -67,4 +67,10 @@
       $(this).find('h4').removeClass('icon-open');
     }
   });
+  var wow = new WOW({
+    boxClass: 'anim-cln',
+    animateClass: 'animated',
+    offset: 50
+  });
+  wow.init();
 })(jQuery);
