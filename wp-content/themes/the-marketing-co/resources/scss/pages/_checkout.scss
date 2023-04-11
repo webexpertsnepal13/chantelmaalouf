@@ -30,10 +30,22 @@
 
         &.form-row-first {
             max-width: 235px;
+            @include breakpoint(smaller) {
+                max-width: 100%;    
+                width: 100%;            
+            }
+            input {
+                @include breakpoint(smaller) {
+                    margin: 0 0 10px;
+                }
+            }
         }
 
         &.form-row-last {
             max-width: 155px;
+            @include breakpoint(smaller) {
+                max-width: 100%;
+            }
         }
     }
 }
@@ -54,6 +66,9 @@
         .checkout-customer-detials {
             display: block;
             flex: 0 1 60%;
+            @include breakpoint(medium) {
+                flex: 0 1 100%;
+            }
 
             .col-1,
             .col-2 {
@@ -69,8 +84,7 @@
                 margin: 0 0 20px;
             }
 
-            .form-row {
-                margin: 0;
+            .form-row {                
 
                 label {
                     font-size: 16px;
@@ -127,6 +141,10 @@
 
         .order-review-wrapper {
             flex: 0 1 40%;
+            @include breakpoint(medium) {
+                flex: 0 1 100%;
+                padding-top: 30px;
+            }
 
             #order_review_heading {
                 margin: 0 0 20px;
@@ -140,6 +158,9 @@
                     padding: 30px;
                     border-collapse: separate;
                     width: 100%;
+                    @include breakpoint(small) {
+                        padding: 20px 15px;
+                    }
 
                     tr {
 
@@ -234,6 +255,8 @@
         &.form-row-first,
         &.form-row-last {
             width: 50%;
+            margin-left: 0;
+            margin-right: 0;
             @include breakpoint(small) {
                 width: 100%;
             }
@@ -242,7 +265,7 @@
         &.form-row-first {
             padding-right: 10px;
             float: left;
-            @include breakpoint(smaller) {
+            @include breakpoint(small) {
                 float: none;
                 padding-right: 0;
             }
@@ -251,7 +274,7 @@
         &.form-row-last {
             padding-left: 10px;
             float: right;
-            @include breakpoint(smaller) {
+            @include breakpoint(small) {
                 float: none;
                 padding-left: 0;
             }
