@@ -11993,6 +11993,7 @@ body.woocommerce-shop .woocommerce-result-count {
 @media (max-width: 767px) {
   .main-navigation .menu > li.menu-item-has-children.mega-nav-menu > ul.sub-menu li > a {
     padding-left: 20px;
+    font-size: 15px;
   }
 }
 .main-navigation .menu > li.menu-item-has-children.mega-nav-menu > ul.sub-menu li > a:before {
@@ -12201,17 +12202,12 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
 }
 .site-footer .footer-top .foo-top-wrap .row .col-md-4:first-child {
   /* Large Devices, Wide Screens */
-  /* Large Devices, Wide Screens */
 }
 @media (max-width: 767px) {
   .site-footer .footer-top .foo-top-wrap .row .col-md-4:first-child {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-  }
-}
-@media (max-width: 567px) {
-  .site-footer .footer-top .foo-top-wrap .row .col-md-4:first-child {
     margin: 0 0 30px;
   }
 }
@@ -12309,6 +12305,12 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
   padding-bottom: 37px;
   max-width: 80%;
   margin: 0 auto;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .site-footer .footer-top .foo-payment-back-top {
+    max-width: 100%;
+  }
 }
 .site-footer .footer-top .foo-payment-back-top .widget .wp-block-heading {
   margin: 0 0 16px;
@@ -12328,6 +12330,12 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .site-footer .footer-top .foo-payment-back-top .widget .wp-block-gallery.has-nested-images {
+    gap: 15px;
+  }
 }
 .site-footer .footer-top .foo-payment-back-top .widget .wp-block-gallery.has-nested-images figure {
   display: block;
@@ -12335,6 +12343,12 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
       -ms-flex: unset;
           flex: unset;
   width: unset !important;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  .site-footer .footer-top .foo-payment-back-top .widget .wp-block-gallery.has-nested-images figure {
+    margin: 0 0 15px;
+  }
 }
 .site-footer .footer-top .foo-payment-back-top .widget .wp-block-gallery.has-nested-images figure img {
   height: unset !important;
