@@ -71,6 +71,7 @@
                     }
                     @include breakpoint (small){
                         font-size: 22px;
+                        padding: 22px 36px 22px 3px;
                     }
 
                     &:before,
@@ -88,12 +89,18 @@
                         right: 15px;
                         height: 2px;
                         width: 17px;
+                        @include breakpoint (small){
+                            right: 15px;
+                        }
                     }
 
                     &:after {
                         right: 23px;
                         width: 2px;
                         height: 17px;
+                        @include breakpoint (small){
+                            right: 13px;
+                        }
                     }
                 }
             }

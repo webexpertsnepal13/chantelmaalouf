@@ -8,7 +8,7 @@ $size = 'full';
 ?>
 
 <section class="section-hero-banner">
-    <div class="bg-image anim-cln fadeIn" data-wow-duration="0.2s">
+    <div class="bg-image anim-cln fadeIn">
         <?php
         if ( $home_banner_image ) {
             echo wp_get_attachment_image( $home_banner_image, $size );

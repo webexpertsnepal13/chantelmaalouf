@@ -11,12 +11,12 @@ $section_right_image = get_sub_field( 'section_right_image' );
             <div class="row">
                 <div class="col-md-6 cols">
                     <div class="sip-learn-content-wrap">
-                        <div class="title anim-cln fadeinUp" data-wow-duration="0.7s">
+                        <div class="title anim-cln fadeinUp">
                             <?php if ( $section_title = get_sub_field( 'section_title' ) ) : ?>
                                 <h2><?php echo esc_html( $section_title ); ?></h2>
                             <?php endif; ?>
                         </div>
-                        <div class="inner anim-cln fadeinUp" data-wow-duration="0.8s">
+                        <div class="inner anim-cln fadeinUp">
                             <?php if ( $section_content = get_sub_field( 'section_content' ) ) : ?>
                                 <?php echo $section_content; ?>
                             <?php endif; ?>

@@ -78,10 +78,10 @@ h5 {
   visibility: hidden;
 }
 .fadeIn{
-  animation: fadeIn 0.6s linear forwards;
+  animation: fadeIn 0.7s linear forwards;
 }
 .fadeinUp{
-  animation: fadeinUp 0.6s cubic-bezier(.39,.575,.565,1) both;
+  animation: fadeinUp 0.7s cubic-bezier(.39,.575,.565,1) both;
 }
 @keyframes fadeinUp{
   from{
