@@ -11184,11 +11184,17 @@ a.btn-book-now,
       -ms-flex-pack: center;
           justify-content: center;
   /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
 }
-@media (max-width: 567px) {
+@media (max-width: 767px) {
   .inner-banner-section .inner-banner-wrap {
     min-height: 380px;
     padding: 40px 0;
+  }
+}
+@media (max-width: 567px) {
+  .inner-banner-section .inner-banner-wrap {
+    min-height: 207px;
   }
 }
 .inner-banner-section .inner-banner-title {
