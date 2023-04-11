@@ -73,7 +73,7 @@
 						</div><!-- button-wrap -->
 						<div class="header-cart">
 							<div class="my-account">
-								<a href="<?php echo home_url('./my-acccount'); ?>">
+								<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">
 									<img src="<?php echo get_template_directory_uri(); ?>/images/my-account.svg" alt="">
 								</a>
 							</div><!-- my-account -->
