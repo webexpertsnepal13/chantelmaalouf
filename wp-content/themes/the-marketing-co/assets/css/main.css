@@ -12763,7 +12763,7 @@ body.shown .menu-toggle span:nth-child(3) {
 }
 @media (max-width: 767px) {
   .faq-section .accordion-wrap .accordion-list .title h4:before {
-    right: 15px;
+    right: 5px;
   }
 }
 .faq-section .accordion-wrap .accordion-list .title h4:after {
