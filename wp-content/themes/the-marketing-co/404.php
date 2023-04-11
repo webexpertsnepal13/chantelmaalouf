@@ -22,8 +22,8 @@ get_header();
 
 		<div class="page-content">
 			<div class="container">
-				<p><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'the-marketing-co'); ?></p>
-				<a href="<?php echo home_url();?>" class="btn-cm btn-outline">Go back to home</a>
+				<p><?php esc_html_e('Sorry, but the page you were trying to view does not exist.', 'the-marketing-co'); ?></p>
+				<a href="<?php echo home_url();?>" class="btn-cm btn-outline"><?php esc_html_e( 'Go back to home', 'the-marketing-co' ); ?></a>
 				<?php
 				//get_search_form();
 				?>
