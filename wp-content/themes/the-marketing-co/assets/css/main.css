@@ -12268,7 +12268,6 @@ body.shown .menu-toggle span:nth-child(3) {
 .contact-section h3 {
   font-size: 32px;
   line-height: 1.25;
-  text-transform: capitalize;
   color: #C58383;
   margin: 0 0 15px;
   /* Large Devices, Wide Screens */
@@ -12458,6 +12457,9 @@ body.shown .menu-toggle span:nth-child(3) {
 }
 .contact-section .info-container .row {
   margin: 0 -15px;
+}
+.contact-section .info-container h3 {
+  text-transform: capitalize;
 }
 
 .faq-section {
