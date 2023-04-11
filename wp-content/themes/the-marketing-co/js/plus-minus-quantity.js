@@ -37,22 +37,6 @@ jQuery(document).ready(function ($) {
         $(document.body).trigger('woocommerce-cart-calculate-fees');
     });
 
-    // Append CSS styles
-    $('.quantity').css({
-        'position': 'relative',
-        'width': '80px'
-    });
-    $('.quantity input').css('text-align', 'center');
-    $('.quantity .plus, .quantity .minus').css({
-        'position': 'absolute',
-        'top': '50%',
-        'transform': 'translateY(-50%)',
-        'font-size': '16px',
-        'cursor': 'pointer'
-    });
-    $('.quantity .minus').css('left', '10px');
-    $('.quantity .plus').css('right', '10px');
-
     //slider nav
     $('.slider-nav .slider-prev').click(function() {
         $(this).parent().prev('.woocommerce-product-gallery').find('.woocommerce-product-gallery__trigger').trigger('click');
