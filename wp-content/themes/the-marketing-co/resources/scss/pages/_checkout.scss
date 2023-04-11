@@ -234,16 +234,27 @@
         &.form-row-first,
         &.form-row-last {
             width: 50%;
+            @include breakpoint(small) {
+                width: 100%;
+            }
         }
 
         &.form-row-first {
             padding-right: 10px;
             float: left;
+            @include breakpoint(smaller) {
+                float: none;
+                padding-right: 0;
+            }
         }
 
         &.form-row-last {
             padding-left: 10px;
             float: right;
+            @include breakpoint(smaller) {
+                float: none;
+                padding-left: 0;
+            }
         }
 
         &.form-row-wide {

@@ -40,141 +40,192 @@
 
 body {
     &.woocommerce-account {
-        .entry-content {
-            .woocommerce {
-                // max-width: 540px;
-                // margin: 0 auto;
-                // background: rgba($color_secondary, 0.4);
-                // padding: 30px;
-                display: flex;
-                flex-wrap: wrap;
-                margin: 0 -15px;
-                box-shadow: 0px 0px 30px rgba($black, 0.15);
-
-                .woocommerce-MyAccount-navigation {
-                    flex: 0 1 25%;
-                    background: $color_secondary;
+        &.custom-logged-out-class {
+            .entry-content {
+                .woocommerce {
+                    max-width: 540px;
+                    margin: 0 auto;
+                    background: rgba($color_secondary, 0.4);
                     padding: 30px;
+                }
+            }
+        }
 
-                    ul {
+        &.custom-logged-in-class {
+            .entry-content {
+                .woocommerce {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 -30px;
+                    box-shadow: 0px 0px 30px rgba($black, 0.15);
+                    @include breakpoint(medium) {
                         margin: 0;
-                        padding: 0;
+                    }
 
-                        li {
-                            list-style-type: none;
-                            margin: 0 0 15px;
+                    .woocommerce-MyAccount-navigation {
+                        flex: 0 1 25%;
+                        background: $color_secondary;
+                        padding: 30px;
+                        
+                        @include breakpoint(medium) {
+                            flex: 0 1 100%;
+                            padding: 30px 20px 20px;
+                        }
+                        @include breakpoint(small) {
+                        }
 
-                            a {
-                                color: $black;
-                                font-size: 16px;
+                        ul {
+                            margin: 0;
+                            padding: 0;
+                            @include breakpoint(medium) {
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: center;
                             }
-                        }
-                    }
-                }
-
-                .woocommerce-MyAccount-content {
-                    flex: 0 1 75%;
-                    padding: 30px;
-                    background: $white;
-
-                    p,
-                    address,
-                    .add,
-                    .edit {
-                        font-size: 16px;
-                    }
-
-                    .add,
-                    .edit {
-                        color: $color_primary;
-                    }
-
-                    .woocommerce-Message {
-                        padding: 15px 20px;
-                        color: $black;
-                        background-color: rgba($color_secondary, 0.4);
-                        border: 1px solid rgba($color_secondary, 0.6);
-                        font-size: 16px;
-
-                        a {
-                            font-weight: 700;
-                            color: $black;
-                        }
-                    }
-
-                    .col2-set {
-                        display: flex;
-                        flex-wrap: wrap;
-                        margin: 0 -15px;
-
-                        .col-1,
-                        .col-2 {
-                            flex: 50%;
-                            max-width: 50%;
-                        }
-                    }
-
-                    .woocommerce-address-fields,
-                    .edit-account {
-                        .form-row {
-                            label {
-                                width: 100%;
-                                position: static !important;
+                            @include breakpoint(extrasmall) {
+                                display: block;
                             }
+                            
+                            li {
+                                list-style-type: none;
+                                margin: 0 0 15px;
+                                @include breakpoint(medium) {
+                                    margin: 0 15px 15px;
+                                }
+                                @include breakpoint(extrasmall) {
+                                    margin: 0 0 15px;
+                                }
 
-                            .woocommerce-input-wrapper {
-                                width: 100%;
-                            }
-
-                            input,
-                            select {
-                                width: 100%;
-                                height: 46px;
-                                border: 1px solid $color_grey;
-                                padding: 10px;
-                                margin-right: 5px;
-                                font-size: 16px;
-                            }
-                        }
-
-                        .password-input {
-                            width: 100%;
-                        }
-                    }
-                }
-
-                .woocommerce-orders-table {
-                    width: 100%;
-
-                    tr {
-
-                        td,
-                        th {
-                            padding: 10px 15px;
-                            font-size: 16px;
-
-                            a {
-                                &:not(.wp-element-button) {
-                                    color: $color_primary;
+                                a {
+                                    color: $black;
+                                    font-size: 16px;
+                                }
+                                &.is-active {
+                                    a {
+                                        text-decoration: underline;
+                                        font-weight: 700;
+                                    }
                                 }
                             }
                         }
                     }
 
-                    tbody {
+                    .woocommerce-MyAccount-content {
+                        flex: 0 1 75%;
+                        padding: 30px;
+                        background: $white;
+
+                        @include breakpoint(medium) {
+                            flex: 0 1 100%;
+                            padding: 30px 20px;
+                        }
+                        @include breakpoint(small) {
+                        }
+
+                        p,
+                        address,
+                        .add,
+                        .edit {
+                            font-size: 16px;
+                        }
+
+                        .add,
+                        .edit {
+                            color: $color_primary;
+                        }
+
+                        .woocommerce-Message {
+                            padding: 15px 20px;
+                            color: $black;
+                            background-color: rgba($color_secondary, 0.4);
+                            border: 1px solid rgba($color_secondary, 0.6);
+                            font-size: 16px;
+
+                            a {
+                                font-weight: 700;
+                                color: $black;
+                            }
+                        }
+
+                        .col2-set {
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin: 0 -15px;
+
+                            .col-1,
+                            .col-2 {
+                                flex: 50%;
+                                max-width: 50%;
+                                @include breakpoint(smaller) {
+                                    flex: 100%;
+                                    max-width: 100%;
+                                    margin: 0 0 20px;
+                                }
+                            }
+                        }
+
+                        .woocommerce-address-fields,
+                        .edit-account {
+                            .form-row {
+                                label {
+                                    width: 100%;
+                                    position: static !important;
+                                }
+
+                                .woocommerce-input-wrapper {
+                                    width: 100%;
+                                }
+
+                                input,
+                                select {
+                                    width: 100%;
+                                    height: 46px;
+                                    border: 1px solid $color_grey;
+                                    padding: 10px;
+                                    margin-right: 5px;
+                                    font-size: 16px;
+                                }
+                            }
+
+                            .password-input {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .woocommerce-orders-table {
+                        width: 100%;
+
                         tr {
-                            border-top: 1px solid $color_grey;
+
+                            td,
+                            th {
+                                padding: 10px 15px;
+                                font-size: 16px;
+
+                                a {
+                                    &:not(.wp-element-button) {
+                                        color: $color_primary;
+                                    }
+                                }
+                            }
+                        }
+
+                        tbody {
+                            tr {
+                                border-top: 1px solid $color_grey;
+                            }
                         }
                     }
                 }
             }
-        }
 
-        .woocommerce-form-login {
-            .form-row {
-                label {
-                    width: 100%;
-                    font-size: 16px;
+            .woocommerce-form-login {
+                .form-row {
+                    label {
+                        width: 100%;
+                        font-size: 16px;
+                    }
                 }
             }
         }
@@ -183,6 +234,7 @@ body {
 
 .woocommerce-order-details {
     padding-bottom: 30px;
+
     .woocommerce-table--order-details {
         width: 100%;
 
@@ -212,6 +264,7 @@ body {
         td {
             font-size: 16px;
         }
+
         tfoot {
             margin-top: 20px;
             background: #eeeeee;
