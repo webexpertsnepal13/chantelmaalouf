@@ -97,6 +97,12 @@
         }
 
         .contact-cols {
+            @include breakpoint (wide){
+                padding: 0 30px;
+            }
+            @include breakpoint (small){
+                padding: 0 20px;
+            }
             @media (min-width: 992px){
                 padding: 0;
             }

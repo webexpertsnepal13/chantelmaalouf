@@ -24,9 +24,15 @@
 								endif;
 								?>
 							</div><!-- footer-block -->
+<<<<<<< HEAD
 						</div><!-- col-md-4 -->
 						<div class="col-md-4">
 							<div class="footer-block footer-mid anim-cln fadeinUp" data-wow-duration="0.7s">
+=======
+						</div><!-- col-lg-4 -->
+						<div class="col-lg-4">
+							<div class="footer-block footer-mid anim-cln fadeinUp">
+>>>>>>> a6ad7cdf3a4afff285bb50054c10bb1c2d91c631
 								<?php 
 								the_custom_logo();
 								
@@ -36,9 +42,15 @@
 								endif;
 								?>
 							</div><!-- footer-block -->
+<<<<<<< HEAD
 						</div><!-- col-md-4 -->
 						<div class="col-md-4">
 							<div class="footer-block footer-right anim-cln fadeinUp" data-wow-duration="0.8s">
+=======
+						</div><!-- col-lg-4 -->
+						<div class="col-lg-4">
+							<div class="footer-block footer-right anim-cln fadeinUp">
+>>>>>>> a6ad7cdf3a4afff285bb50054c10bb1c2d91c631
 								<?php
 								if ( is_active_sidebar( 'footer-sidebar-4' ) ) :
 									dynamic_sidebar( 'footer-sidebar-4' );
@@ -48,7 +60,7 @@
 						</div><!-- col-md-4 -->
 					</div><!-- row -->
 				</div><!-- foo-top-wrap -->
-				<div class="foo-payment-back-top anim-cln fadeinUp" data-wow-duration="0.8s">
+				<div class="foo-payment-back-top anim-cln fadeinUp">
 					<?php
 					if ( is_active_sidebar( 'footer-sidebar-5' ) ) :
 						dynamic_sidebar( 'footer-sidebar-5' );

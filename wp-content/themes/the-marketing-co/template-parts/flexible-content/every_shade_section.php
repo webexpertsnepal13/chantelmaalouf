@@ -12,9 +12,9 @@ $size = 'full';
         <div class="info-block-left">
             <div class="info-block">
                 <?php if ( $shade_title ) { ?>
-                    <h1 class="anim-cln fadeinUp" data-wow-duration="0.7s"><?php echo $shade_title; ?></h1>
+                    <h1 class="anim-cln fadeinUp"><?php echo $shade_title; ?></h1>
                 <?php } ?>
-                <div class="bg-logo anim-cln fadeIn" data-wow-duration="0.8s">
+                <div class="bg-logo anim-cln fadeIn">
                     <?php the_custom_logo(); ?>
                 </div><!-- bg-logo -->
             </div>

@@ -16,14 +16,14 @@ $Chantel_link = get_sub_field( 'chantel_link' );
     </div><!-- bg-logo -->
     <div class="container">
         <div class="section-wrapper">
-            <div class="image-left anim-cln fadeIn" data-wow-duration="0.8s">
+            <div class="image-left anim-cln fadeIn">
                 <?php if ( $chantel_image ) {
                     echo wp_get_attachment_image( $chantel_image, $size );
                 } 
                 ?>
             </div><!-- image-left -->
             <div class="content-right">
-                <div class="content-inner anim-cln fadeinUp" data-wow-duration="0.8s">
+                <div class="content-inner anim-cln fadeinUp">
                     <?php  if ( $chantel_title ) { ?>
                         <h2><?php  echo esc_html( $chantel_title ); ?></h2>
                     <?php } 

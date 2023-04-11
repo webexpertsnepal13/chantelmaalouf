@@ -9,8 +9,13 @@ $service_posts = get_sub_field( 'services_list' );
 <section class="section-services">
         <div class="container">
             <div class="row">
+<<<<<<< HEAD
                 <div class="col-lg-4">
                     <div class="title w-brush anim-cln fadeinUp" data-wow-duration="0.7s">
+=======
+                <div class="col-md-4">
+                    <div class="title w-brush anim-cln fadeinUp">
+>>>>>>> a6ad7cdf3a4afff285bb50054c10bb1c2d91c631
                         <?php if ( $our_services ) :  ?>
                             <h3><span><?php echo esc_html( $our_services ); ?></span></h3>
                         <?php endif; ?>
@@ -21,7 +26,7 @@ $service_posts = get_sub_field( 'services_list' );
                     if ( $service_posts ) { ?>
                         <div class="services-grid">
                             <?php foreach( $service_posts as $post ) { ?>
-                                <div class="service-card anim-cln fadeinUp" data-wow-duration="0.8s">
+                                <div class="service-card anim-cln fadeinUp">
                                     <div class="card-inner">
                                         <div class="card-image">
                                             <a href="<?php the_permalink(); ?>">

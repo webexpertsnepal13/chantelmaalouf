@@ -10,7 +10,7 @@
             <?php if (have_rows('faq_lists')) : ?>
                 <?php while (have_rows('faq_lists')) :
                     the_row(); ?>
-                    <div class="accordion-list anim-cln fadeinUp" data-wow-duration="0.7s">
+                    <div class="accordion-list anim-cln fadeinUp">
                         <div class="title">
                             <?php if ($faq_title = get_sub_field('faq_title')) : ?>
                                 <h4><?php echo esc_html($faq_title); ?></h4>
