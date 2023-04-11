@@ -7,7 +7,7 @@ $product_title = get_sub_field( 'product_title' );
 ?>
 <section class="section-products">
     <div class="container">
-        <div class="title w-brush brush-2x text-center">
+        <div class="title w-brush brush-2x text-center anim-cln fadeinUp" data-wow-dutration="0.7s" >
             <?php if ( $product_title ) { ?>
                 <h2><?php echo $product_title; ?></h2>
             <?php } ?>

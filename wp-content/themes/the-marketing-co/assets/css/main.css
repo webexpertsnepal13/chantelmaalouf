@@ -10450,6 +10450,47 @@ h5 {
   line-height: 1.5;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeinUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes fadeinUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
 .btn-cm {
   font-size: 14px;
   line-height: 1;
@@ -10580,6 +10621,20 @@ h5 {
   height: 34px;
 }
 
+.anim-cln {
+  visibility: hidden;
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 0.6s linear forwards;
+          animation: fadeIn 0.6s linear forwards;
+}
+
+.fadeinUp {
+  -webkit-animation: fadeinUp 0.6s linear forwards;
+          animation: fadeinUp 0.6s linear forwards;
+}
+
 .section-services {
   padding-top: 137px;
   padding-bottom: 102px;
@@ -10592,6 +10647,38 @@ h5 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 -15px;
+}
+.services-grid .service-card:nth-child(0) {
+  -webkit-animation-duration: 0s;
+          animation-duration: 0s;
+}
+.services-grid .service-card:nth-child(1) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+.services-grid .service-card:nth-child(2) {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+.services-grid .service-card:nth-child(3) {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+.services-grid .service-card:nth-child(4) {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+.services-grid .service-card:nth-child(5) {
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+}
+.services-grid .service-card:nth-child(6) {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+.services-grid .service-card:nth-child(7) {
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
 }
 .services-grid .service-card {
   padding: 0 15px;
@@ -11551,7 +11638,8 @@ body.woocommerce-shop .woocommerce-result-count {
   margin: 0 0 16px;
 }
 
-.gform_wrapper .gfield_validation_message, .gform_wrapper .validation_message {
+.gform_wrapper .gfield_validation_message,
+.gform_wrapper .validation_message {
   padding: 9px 10px !important;
   line-height: 1 !important;
 }
@@ -11587,6 +11675,12 @@ body.woocommerce-shop .woocommerce-result-count {
 }
 .gform_wrapper.gravity-theme textarea {
   height: 135px !important;
+}
+.gform_wrapper.gravity-theme select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("../../images/arrow-down-primary.svg") no-repeat 100% calc(100% - 1.28rem)/1.3rem;
 }
 .gform_wrapper.gravity-theme .gform_fields {
   gap: 32px 30px !important;
@@ -11997,7 +12091,7 @@ body.woocommerce-shop .woocommerce-result-count {
   background-color: #F2DFD2;
 }
 .contact-section .form-container .form-wrapper {
-  max-width: 470px;
+  max-width: 540px;
   margin-right: auto;
   /* Large Devices, Wide Screens */
 }
