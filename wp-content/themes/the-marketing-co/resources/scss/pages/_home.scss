@@ -1,16 +1,33 @@
 .section-hero-banner {
     position: relative;
     height: 646px;
+
     @media screen and (max-width: 1299px) {
         height: 546px;
     }
+
     @include breakpoint(wide) {
-        height: unset;
+        height: 446px;
     }
+    @include breakpoint(medium) {
+        height: 346px;
+    }
+    @include breakpoint(small) {
+        height: 286px;
+    }
+    @include breakpoint(extrasmall) {
+        height: 206px;
+    }
+
     .bg-image {
-        position: static;
+        @include breakpoint(wide) {
+            // position: static;
+        }
+
         img {
-            height: unset;
+            @include breakpoint(wide) {
+                // height: unset;
+            }
         }
     }
 }

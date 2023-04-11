@@ -37,7 +37,7 @@
         }
 
         .main-navigation {
-            flex: 0 1 60%;
+            flex: 0 1 55%;
 
             @include breakpoint(wide) {
                 flex: 0 1 100%;
@@ -45,7 +45,7 @@
         }
 
         .header-right {
-            flex: 0 1 20%;
+            flex: 0 1 25%;
 
             @include breakpoint(wide) {
                 flex: 0 1 40%;
@@ -69,6 +69,9 @@
 
                 .header-cart {
                     margin-left: 42px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
 
                     @media screen and (max-width: 1368px) {
                         margin-left: 30px;
@@ -82,6 +85,15 @@
                     }
                     @include breakpoint(extrasmall) {
                         margin: 0 20px 0 0;
+                    }
+                    .my-account {
+                        margin-right: 15px;
+                        @include breakpoint(iPhone5) {
+                            margin-right: 10px;
+                        }
+                        img {
+                            width: 24px;
+                        }
                     }
 
                     img {

@@ -196,6 +196,12 @@
                     color: $black;
                 }
             }
+            &:last-child {
+                a {
+                    pointer-events: none;
+                    color: $black;
+                }
+            }
         }
     }
 }

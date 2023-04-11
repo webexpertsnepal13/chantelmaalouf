@@ -72,12 +72,17 @@
 							<?php endif; ?>
 						</div><!-- button-wrap -->
 						<div class="header-cart">
+							<div class="my-account">
+								<a href="<?php echo home_url('./my-acccount'); ?>">
+									<img src="<?php echo get_template_directory_uri(); ?>/images/my-account.svg" alt="">
+								</a>
+							</div><!-- my-account -->
 							<?php
 							$cart_url = wc_get_cart_url();
 
 							if ( $cart_url ) {
 							?>
-								<a href="<?php echo esc_url( $cart_url ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/shopping-bag.png" alt=""></a>
+								<a href="<?php echo esc_url( $cart_url ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/shopping-bag.svg" alt=""></a>
 							<?php } ?>
 						</div><!-- header-cart -->						
 					</div><!-- header-right-inner -->

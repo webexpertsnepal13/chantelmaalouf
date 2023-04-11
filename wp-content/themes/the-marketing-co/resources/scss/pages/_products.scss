@@ -11,7 +11,9 @@
 
             .woocommerce-product-gallery {
                 float: none;
-                box-shadow: 0px 0px 10px 5px rgba($black, 0.05);
+                .flex-viewport {
+                    box-shadow: 0px 0px 10px 5px rgba($black, 0.05);
+                }
 
                 .woocommerce-product-gallery__wrapper {
                     img {
@@ -232,6 +234,34 @@
         &::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
+        }
+    }
+}
+
+.single-product {
+    div.product {
+        .woocommerce-product-gallery {
+            .flex-control-thumbs {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                li {
+                    width: 92px !important;
+                    height: 78px;
+                    padding: 0 7px;
+                    float: none !important;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 5px;
+                        border: 1px solid $color_grey;
+                        &.flex-active {
+                            border-color: $black;
+                        }
+                    }
+                }
+            }
         }
     }
 }

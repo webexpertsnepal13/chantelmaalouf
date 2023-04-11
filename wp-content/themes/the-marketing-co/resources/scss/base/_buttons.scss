@@ -11,6 +11,7 @@
     min-height: 42px;
     text-decoration: none !important;
     @include transition(0.4s background, 0.4s color);
+    background: $white;
 
     &.btn-outline {
         border: 2px solid $color_primary;
@@ -46,6 +47,9 @@
         }
 
         &:hover {
+            @include breakpoint(wide) {
+                color: $black;
+            }
             @media (hover: hover) {
                 background: $color_primary;
                 color: $white;
