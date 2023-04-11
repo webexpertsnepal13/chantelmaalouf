@@ -10408,8 +10408,10 @@ a.text-dark:hover, a.text-dark:focus {
 }
 img,
 video {
-  height: auto; /* Make sure images are scaled correctly. */
-  max-width: 100%; /* Adhere to container width. */
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
 }
 
 body {
@@ -10418,9 +10420,20 @@ body {
   font-family: "Poppins", sans-serif;
   color: #000000;
   font-weight: 400;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Nantes";
   font-weight: 400;
 }
