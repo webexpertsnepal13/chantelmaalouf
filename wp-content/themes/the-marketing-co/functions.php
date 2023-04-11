@@ -331,3 +331,16 @@ function display_chantel_section( $page_id ) {
         endwhile; 
     endif;  
 }
+
+
+function custom_body_classes( $classes ) {
+    if ( is_user_logged_in() ) {
+        $classes[] = 'logged-in';
+        $classes[] = 'custom-logged-in-class';
+    } else {
+        $classes[] = 'logged-out';
+        $classes[] = 'custom-logged-out-class';
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'custom_body_classes' );
