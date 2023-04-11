@@ -13661,7 +13661,6 @@ body.woocommerce-cart .section-default .entry-header, body.woocommerce-checkout 
           transform: translateY(-50%);
   font-size: 16px;
   cursor: pointer;
-  left: 10px;
 }
 .woocommerce-cart-form table tbody td.product-quantity .quantity .minus {
   left: 10px;
@@ -14037,6 +14036,10 @@ body.woocommerce-cart .section-default .entry-header, body.woocommerce-checkout 
 
 .select2-dropdown {
   font-size: 16px;
+}
+
+.woocommerce-form-login .form-row label {
+  width: 100%;
 }
 
 .entry-header,
