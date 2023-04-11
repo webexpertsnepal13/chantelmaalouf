@@ -12557,7 +12557,7 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
   outline: transparent;
   outline-color: #8D5152;
   color: #8D5152;
-  line-height: 1;
+  line-height: 1.8;
   font-size: 16px !important;
 }
 .gform_wrapper.gravity-theme textarea {
@@ -12567,7 +12567,7 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: url("../../images/arrow-down-primary.svg") no-repeat 100% calc(100% - 6px)/16px;
+  background: url("../../images/arrow-down-primary.svg") no-repeat 100% calc(100% - 15px)/16px;
   padding-right: 22px !important;
 }
 .gform_wrapper.gravity-theme .gform_fields {
@@ -12589,7 +12589,7 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
 }
 .gform_wrapper.gravity-theme .gfield.floated-label .gfield_label {
   position: absolute;
-  top: 8px;
+  top: 6px;
   pointer-events: none;
   margin-bottom: 0;
   -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
