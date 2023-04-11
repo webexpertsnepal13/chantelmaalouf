@@ -11829,6 +11829,8 @@ body.shown .menu-toggle span:nth-child(3) {
   outline: transparent;
   outline-color: #8D5152;
   color: #8D5152;
+  line-height: 1;
+  font-size: 16px !important;
 }
 .gform_wrapper.gravity-theme textarea {
   height: 135px !important;
