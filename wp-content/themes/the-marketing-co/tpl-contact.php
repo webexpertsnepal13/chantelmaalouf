@@ -100,7 +100,7 @@ endif;
                                     if ( $phone ) {
                                         $phone_formatted = preg_replace( '/[^0-9]/', '', $phone ); // remove any non-numeric characters from the phone number
                                         ?>
-                                        <p><a href="tel:<?php echo $phone_formatted; ?>"><?php echo $phone_formatted; ?></a></p>
+                                        <p><a href="tel:<?php echo $phone_formatted; ?>"><?php echo $phone; ?></a></p>
                                         <?php 
                                     } 
                                     ?>
@@ -128,7 +128,6 @@ endif;
                                 </div>
                             </div>
                             <div class="col-sm-12 info-cols">
-<<<<<<< HEAD
                                 <div class="social-link-container">
                                     <?php if ( $social_title = get_field( 'social_title' ) ) : ?>
                                         <h3><?php echo esc_html( $social_title ); ?></h3>
@@ -150,14 +149,6 @@ endif;
                                             <?php endwhile; ?>
                                         </ul>
                                     <?php endif; ?>
-=======
-                                <div class="social-link-container anim-cln fadeinUp">
-                                    <h3>Follow Us On Instagram & Facebook</h3>
-                                    <ul class="social-link">
-                                        <li class="social-link-menu"><a href="https://www.instagram.com/chantelmaalouf.mua/">Instagram</a></li>
-                                        <li class="social-link-menu"><a href="https://www.facebook.com/chantelmaaloufmua/">Facebook</a></li>
-                                    </ul>
->>>>>>> 8cc2a85d697c8276091c116f8593a0a8c4bf6e88
                                 </div>
                             </div>
                         </div>
