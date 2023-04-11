@@ -128,12 +128,36 @@ endif;
                                 </div>
                             </div>
                             <div class="col-sm-12 info-cols">
+<<<<<<< HEAD
+                                <div class="social-link-container">
+                                    <?php if ( $social_title = get_field( 'social_title' ) ) : ?>
+                                        <h3><?php echo esc_html( $social_title ); ?></h3>
+                                    <?php endif; ?>
+                                    <?php if ( have_rows( 'social_links' ) ) : ?>
+                                        <ul class="social-link">
+                                            <?php while ( have_rows( 'social_links' ) ) :
+                                                the_row();
+
+                                                $link = get_sub_field( 'social_text_and_links' );
+                                                if ( $link ) :
+                                                    $link_url = $link['url'];
+                                                    $link_title = $link['title'];
+                                                    $link_target = $link['target'] ? $link['target'] : '_self';
+                                                    ?>
+                                                    <li class="social-link-menu"><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></li>
+                                                    <a class="button" href="" target="<?php echo esc_attr( $link_target ); ?>"></a>
+                                                <?php endif; ?>  
+                                            <?php endwhile; ?>
+                                        </ul>
+                                    <?php endif; ?>
+=======
                                 <div class="social-link-container anim-cln fadeinUp">
                                     <h3>Follow Us On Instagram & Facebook</h3>
                                     <ul class="social-link">
                                         <li class="social-link-menu"><a href="https://www.instagram.com/chantelmaalouf.mua/">Instagram</a></li>
                                         <li class="social-link-menu"><a href="https://www.facebook.com/chantelmaaloufmua/">Facebook</a></li>
                                     </ul>
+>>>>>>> 8cc2a85d697c8276091c116f8593a0a8c4bf6e88
                                 </div>
                             </div>
                         </div>
