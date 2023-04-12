@@ -45,11 +45,12 @@
 
 	//form focus and blur 
 	$(window).on("load", function () {
-		$('.gfield').each(function () {
-			if ($(this).find('input').val().length) {
-				$(this).find('.ginput_container input').closest('.gfield').addClass('is-focused');
-			} else {
-				$(this).find('.ginput_container input').closest('.gfield').removeClass('is-focused');
+		$('.gfield input:not(.gform_hidden').each(function () {
+			if ($(this).val().length) {
+				$(this).parents('.gfield').addClass('is-focused');
+			}
+			else {
+				$(this).parents('.gfield').removeClass('is-focused');
 			}
 		});
 	});
