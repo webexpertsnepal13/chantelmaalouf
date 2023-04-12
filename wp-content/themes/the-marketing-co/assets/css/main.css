@@ -12560,11 +12560,13 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
 .gform_wrapper.gravity-theme .gform_required_legend {
   display: none;
 }
-.gform_wrapper.gravity-theme #field_1_9, .gform_wrapper.gravity-theme #field_1_10 {
+.gform_wrapper.gravity-theme #field_1_9,
+.gform_wrapper.gravity-theme #field_1_10 {
   /* Large Devices, Wide Screens */
 }
 @media (max-width: 1199px) {
-  .gform_wrapper.gravity-theme #field_1_9, .gform_wrapper.gravity-theme #field_1_10 {
+  .gform_wrapper.gravity-theme #field_1_9,
+  .gform_wrapper.gravity-theme #field_1_10 {
     grid-column: span 12;
   }
 }
@@ -12612,9 +12614,14 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
   }
 }
 .gform_wrapper.gravity-theme .gfield {
+  position: relative;
+}
+.gform_wrapper.gravity-theme .gfield input,
+.gform_wrapper.gravity-theme .gfield select,
+.gform_wrapper.gravity-theme .gfield textarea {
+  border: 0;
   border-bottom: 1px solid #8D5152;
   padding: 0 0 10px !important;
-  position: relative;
 }
 .gform_wrapper.gravity-theme .gfield.is-focused .gfield_label {
   opacity: 0;
@@ -14159,6 +14166,7 @@ body.woocommerce-cart .section-default .entry-header, body.woocommerce-checkout 
   padding: 10px;
   margin-right: 5px;
   font-size: 16px;
+  border-radius: 0 !important;
 }
 .checkout.woocommerce-checkout .woocommerce-billing-fields .form-row .woocommerce-input-wrapper textarea,
 .checkout.woocommerce-checkout .woocommerce-additional-fields .form-row .woocommerce-input-wrapper textarea {
