@@ -53,12 +53,11 @@
 			}
 		});
 	});
-	$('.ginput_container input, .ginput_container select').on('focus', function () {
+	$('.ginput_container input').on('focus', function () {
 		$(this).closest('.gfield').addClass('is-focused');
 	});
-	$('.ginput_container input, .ginput_container select').on('blur', function () {
+	$('.ginput_container input').on('blur', function () {
 		var value = $(this).val();
-		console.log(value)
 		// $(this).closest('.gfield').removeClass('is-focused');
 		if (value.length === 0) {
 			$(this).closest('.gfield').removeClass('is-focused');
