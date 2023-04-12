@@ -3,7 +3,7 @@
  * Innerpage Banner section
  */
 
-$link = get_field( 'button_text_and_link' ); //appoinment button text
+$link = get_sub_field( 'button_text_and_link' ); //appoinment button text
 $heading_text = get_sub_field( 'heading_text' );
 ?>
 <section class="inner-banner-section">
