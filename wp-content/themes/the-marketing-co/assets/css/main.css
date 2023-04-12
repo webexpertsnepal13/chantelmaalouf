@@ -12608,6 +12608,7 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
   line-height: 1.8;
   font-size: 16px !important;
   border-bottom: 1px solid #8D5152 !important;
+  border-radius: 0 !important;
 }
 .gform_wrapper.gravity-theme textarea {
   height: 80px !important;
