@@ -41,6 +41,15 @@
   });
 
   //form focus and blur 
+  $(window).on("load", function () {
+    $('.gfield').each(function () {
+      if ($(this).find('input').val().length) {
+        $(this).find('.ginput_container input').closest('.gfield').addClass('is-focused');
+      } else {
+        $(this).find('.ginput_container input').closest('.gfield').removeClass('is-focused');
+      }
+    });
+  });
   $('.ginput_container input, .ginput_container select').on('focus', function () {
     $(this).closest('.gfield').addClass('is-focused');
   });
@@ -48,10 +57,10 @@
     var value = $(this).val();
     console.log(value);
     // $(this).closest('.gfield').removeClass('is-focused');
-    if (value.length) {
-      $(this).closest('.gfield').addClass('is-focused');
-    } else {
+    if (value.length === 0) {
       $(this).closest('.gfield').removeClass('is-focused');
+    } else {
+      $(this).closest('.gfield').addClass('is-focused');
     }
   });
 
