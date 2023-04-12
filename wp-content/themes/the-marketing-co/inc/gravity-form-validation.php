@@ -40,3 +40,6 @@ function gravity_form_custom_submit_button( $button, $form ) {
 	return $button;
  }
  add_filter( 'gform_submit_button', 'gravity_form_custom_submit_button', 10, 2 ); 
+
+//remove Scroll to top of the page issue on Gravity form submission
+ add_filter( 'gform_confirmation_anchor', '__return_true' );

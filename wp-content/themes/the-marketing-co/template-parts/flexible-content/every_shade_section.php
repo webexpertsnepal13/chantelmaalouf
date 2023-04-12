@@ -15,7 +15,7 @@ $size = 'full';
                     <h1 class="anim-cln fadeinUp"><?php echo $shade_title; ?></h1>
                 <?php } ?>
                 <div class="bg-logo anim-cln fadeIn">
-                    <?php the_custom_logo(); ?>
+                    <?php echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'full' ); ?>
                 </div><!-- bg-logo -->
             </div>
         </div><!-- info-block-left -->
