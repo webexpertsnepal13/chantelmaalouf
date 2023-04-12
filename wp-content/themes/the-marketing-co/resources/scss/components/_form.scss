@@ -16,9 +16,10 @@
             display: none;
         }
 
-        
-        #field_1_9, #field_1_10{
-            @include breakpoint (wide){
+
+        #field_1_9,
+        #field_1_10 {
+            @include breakpoint (wide) {
                 grid-column: span 12;
             }
         }
@@ -68,9 +69,15 @@
         }
 
         .gfield {
-            border-bottom: 1px solid $color-accent;
-            padding: 0 0 10px !important;
             position: relative;
+
+            input,
+            select,
+            textarea {
+                border: 0;
+                border-bottom: 1px solid $color-accent;
+                padding: 0 0 10px !important;
+            }
 
             &.is-focused {
                 .gfield_label {
@@ -79,7 +86,7 @@
                 }
             }
 
-            &.floated-label{
+            &.floated-label {
                 .gfield_label {
                     position: absolute;
                     top: 7px;
@@ -112,6 +119,7 @@
                 justify-content: center;
                 padding-right: 0 !important;
             }
+
             .btn-cm {
                 -webkit-appearance: button;
             }
