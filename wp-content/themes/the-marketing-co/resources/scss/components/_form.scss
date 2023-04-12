@@ -66,6 +66,10 @@
             font-size: 16px !important;
             border-bottom: 1px solid $color-accent !important;
             border-radius: 0 !important;
+
+            &::placeholder{
+                color: $color-accent;
+            }
         }
 
         textarea {

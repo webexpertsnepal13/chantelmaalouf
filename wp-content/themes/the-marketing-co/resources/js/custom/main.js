@@ -44,17 +44,26 @@
 	});
 
 	//form focus and blur 
-	$('.ginput_container input, .ginput_container select').on('focus', function () {
+	$(window).on("load", function () {
+		$('.gfield input:not(.gform_hidden').each(function () {
+			if ($(this).val().length) {
+				$(this).parents('.gfield').addClass('is-focused');
+			}
+			else {
+				$(this).parents('.gfield').removeClass('is-focused');
+			}
+		});
+	});
+	$('.ginput_container input').on('focus', function () {
 		$(this).closest('.gfield').addClass('is-focused');
 	});
-	$('.ginput_container input, .ginput_container select').on('blur', function () {
+	$('.ginput_container input').on('blur', function () {
 		var value = $(this).val();
-		console.log(value)
 		// $(this).closest('.gfield').removeClass('is-focused');
-		if (value.length) {
-			$(this).closest('.gfield').addClass('is-focused');
-		} else {
+		if (value.length === 0) {
 			$(this).closest('.gfield').removeClass('is-focused');
+		} else {
+			$(this).closest('.gfield').addClass('is-focused');
 		}
 	});
 
@@ -84,13 +93,13 @@
 	// class toggled in body on ham menu clicked 
 	$('.menu-toggle').on('click', function () {
 		$('body').toggleClass('shown');
-		if($('body').hasClass('shown')) {
+		if ($('body').hasClass('shown')) {
 			$('.menu-item-has-children').removeClass('menu-opened');
 		}
 	});
 
 	// sub-menu open
-	$('.dropdown').on('click', function(){
+	$('.dropdown').on('click', function () {
 		$(this).parent().toggleClass('menu-opened');
 	});
 })(jQuery);

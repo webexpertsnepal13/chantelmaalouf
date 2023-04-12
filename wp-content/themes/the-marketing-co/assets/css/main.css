@@ -12610,6 +12610,36 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
   border-bottom: 1px solid #8D5152 !important;
   border-radius: 0 !important;
 }
+.gform_wrapper.gravity-theme input[type=color]::-webkit-input-placeholder, .gform_wrapper.gravity-theme input[type=date]::-webkit-input-placeholder, .gform_wrapper.gravity-theme input[type=datetime-local]::-webkit-input-placeholder, .gform_wrapper.gravity-theme input[type=datetime]::-webkit-input-placeholder, .gform_wrapper.gravity-theme input[type=email]::-webkit-input-placeholder, .gform_wrapper.gravity-theme input[type=month]::-webkit-input-placeholder, .gform_wrapper.gravity-theme input[type=number]::-webkit-input-placeholder, .gform_wrapper.gravity-theme input[type=password]::-webkit-input-placeholder, .gform_wrapper.gravity-theme input[type=search]::-webkit-input-placeholder, .gform_wrapper.gravity-theme input[type=tel]::-webkit-input-placeholder, .gform_wrapper.gravity-theme input[type=text]::-webkit-input-placeholder, .gform_wrapper.gravity-theme input[type=time]::-webkit-input-placeholder, .gform_wrapper.gravity-theme input[type=url]::-webkit-input-placeholder, .gform_wrapper.gravity-theme input[type=week]::-webkit-input-placeholder, .gform_wrapper.gravity-theme select::-webkit-input-placeholder, .gform_wrapper.gravity-theme textarea::-webkit-input-placeholder {
+  color: #8D5152;
+}
+.gform_wrapper.gravity-theme input[type=color]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=date]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=datetime-local]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=datetime]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=email]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=month]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=number]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=password]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=search]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=tel]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=text]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=time]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=url]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=week]::-moz-placeholder, .gform_wrapper.gravity-theme select::-moz-placeholder, .gform_wrapper.gravity-theme textarea::-moz-placeholder {
+  color: #8D5152;
+}
+.gform_wrapper.gravity-theme input[type=color]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=date]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=datetime-local]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=datetime]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=email]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=month]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=number]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=password]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=search]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=tel]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=text]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=time]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=url]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=week]:-ms-input-placeholder, .gform_wrapper.gravity-theme select:-ms-input-placeholder, .gform_wrapper.gravity-theme textarea:-ms-input-placeholder {
+  color: #8D5152;
+}
+.gform_wrapper.gravity-theme input[type=color]::-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=date]::-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=datetime-local]::-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=datetime]::-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=email]::-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=month]::-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=number]::-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=password]::-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=search]::-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=tel]::-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=text]::-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=time]::-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=url]::-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=week]::-ms-input-placeholder, .gform_wrapper.gravity-theme select::-ms-input-placeholder, .gform_wrapper.gravity-theme textarea::-ms-input-placeholder {
+  color: #8D5152;
+}
+.gform_wrapper.gravity-theme input[type=color]::placeholder,
+.gform_wrapper.gravity-theme input[type=date]::placeholder,
+.gform_wrapper.gravity-theme input[type=datetime-local]::placeholder,
+.gform_wrapper.gravity-theme input[type=datetime]::placeholder,
+.gform_wrapper.gravity-theme input[type=email]::placeholder,
+.gform_wrapper.gravity-theme input[type=month]::placeholder,
+.gform_wrapper.gravity-theme input[type=number]::placeholder,
+.gform_wrapper.gravity-theme input[type=password]::placeholder,
+.gform_wrapper.gravity-theme input[type=search]::placeholder,
+.gform_wrapper.gravity-theme input[type=tel]::placeholder,
+.gform_wrapper.gravity-theme input[type=text]::placeholder,
+.gform_wrapper.gravity-theme input[type=time]::placeholder,
+.gform_wrapper.gravity-theme input[type=url]::placeholder,
+.gform_wrapper.gravity-theme input[type=week]::placeholder,
+.gform_wrapper.gravity-theme select::placeholder,
+.gform_wrapper.gravity-theme textarea::placeholder {
+  color: #8D5152;
+}
 .gform_wrapper.gravity-theme textarea {
   height: 80px !important;
 }
