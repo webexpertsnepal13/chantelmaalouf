@@ -24,14 +24,22 @@
         justify-content: flex-end;
         align-items: center;
 
+        @include breakpoint(small) {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+
         a {
             color: $black;
             margin-left: 10px;
-            font-weight: 700;
+            font-weight: 700;            
 
             &.button {
                 color: $white;
                 font-weight: 400;
+                @include breakpoint(small) {
+                    margin: 10px 0 0;
+                }
 
                 &:hover {
                     color: $white;
@@ -55,7 +63,8 @@
     }
 }
 
-.cart-empty {
+.cart-empty,
+.woocommerce-notice-wrapper .woocommerce-info {
     padding: 15px 20px;
     color: $black;
     font-size: 16px;
@@ -137,11 +146,22 @@ body {
                 }
 
                 &.product-thumbnail {
+                    &:before {
+                        @include breakpoint(small) {
+                            content: none;
+                        }
+                    }
+
+                    a {
+                        display: inline-block;
+                    }
+
                     img {
                         max-width: 100px;
-                        height: auto;
+                        height: 100px;
                         display: block;
                         margin: 0 auto;
+                        object-fit: cover;
                     }
                 }
 
@@ -162,23 +182,9 @@ body {
 
                 &.product-quantity {
                     .quantity {
-
-                        .plus,
-                        .minus {
-                            position: absolute;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            font-size: 16px;
-                            cursor: pointer;
+                        @include breakpoint(small) {
+                            margin-left: auto;
                         }
-                        .minus {
-                            left: 10px;
-                        }
-                        .plus {
-                            right: 10px;
-                        }
-
-                        input {}
                     }
                 }
 
@@ -189,11 +195,35 @@ body {
 
                 &.actions {
                     border-bottom: 0;
+
+                    @include breakpoint(small) {
+                        text-align: left;
+                    }
+
+                    .coupon {
+                        @include breakpoint(small) {
+                            gap: 10px;
+                        }
+                        +button {
+                            @include breakpoint(small) {
+                                float: none;
+                                margin: 20px 0 0;
+                            }
+                        }
+                    }
                 }
+            }
+        }
+
+        .cart_item {
+            @include breakpoint(small) {
+                background: rgba($color_grey, 0.1);
+                border-bottom: 10px solid $white;
             }
         }
     }
 }
+
 
 .coupon input[type="text"],
 .woocommerce-form-coupon .form-row input[type="text"] {
@@ -203,6 +233,10 @@ body {
     max-width: 235px;
     margin-right: 5px;
     font-size: 16px;
+    @include breakpoint(smaller) {
+        max-width: 100%;
+        margin-right: 0;
+    }
 }
 
 .coupon .wp-element-button,
@@ -211,6 +245,9 @@ body {
     width: 100%;
     text-align: center;
     min-height: 46px;
+    @include breakpoint(smaller) {
+        max-width: 100%;
+    }
 }
 
 .coupon {
@@ -218,7 +255,7 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    float: left;
+    float: left;    
 
     +button {
         float: right;
@@ -292,6 +329,9 @@ body {
                 padding: 20px 30px;
                 margin-bottom: 10px;
                 width: 100%;
+                @include breakpoint(smaller) {
+                    padding: 20px 15px;
+                }
 
                 tr {
                     border-bottom: 1px solid #ccc;
