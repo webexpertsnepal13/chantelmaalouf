@@ -5,10 +5,16 @@
 
 $link = get_sub_field( 'button_text_and_link' ); //appoinment button text
 $heading_text = get_sub_field( 'heading_text' );
+$inner_page_banner_image = get_sub_field( 'inner_page_banner_image' );
+$size = 'full';
 ?>
 <section class="inner-banner-section">
     <div class="bg-image">
-        <img src="<?php echo get_home_url(); ?>/wp-content/uploads/2023/04/banner-bg-color-palelte.jpg" alt="">
+        <?php
+        if ( $inner_page_banner_image ) {
+            echo wp_get_attachment_image( $inner_page_banner_image, $size );
+        } 
+        ?>
     </div>
     <div class="container">
         <div class="inner-banner-wrap">

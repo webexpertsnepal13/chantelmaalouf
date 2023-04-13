@@ -367,6 +367,31 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_6437902522509",
+                            "label": "Banner Image",
+                            "name": "inner_page_banner_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium"
+                        },
+                        {
                             "key": "field_64321fb42b60f",
                             "label": "Heading Text",
                             "name": "heading_text",
@@ -506,7 +531,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "tpl-flexible.php"
+                "value": "default"
             }
         ],
         [
@@ -526,5 +551,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681128940
+    "modified": 1681363050
 }
