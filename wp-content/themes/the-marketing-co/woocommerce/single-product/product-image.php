@@ -53,10 +53,6 @@ $wrapper_classes   = apply_filters(
 
 			do_action('woocommerce_product_thumbnails');
 			?>
-			<div class="slider-nav">
-				<a class="slider-prev" href="#"><i class="fa fa-angle-left"></i><-</a>
-				<a class="slider-next" href="#"><i class="fa fa-angle-right"></i>-></a>
-			</div>
 		</figure>
 	</div>
 </div><!-- product-detail-gallery -->

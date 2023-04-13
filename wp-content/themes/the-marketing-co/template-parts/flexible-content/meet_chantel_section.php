@@ -12,7 +12,7 @@ $Chantel_link = get_sub_field( 'chantel_link' );
 
 <section class="section-about-cm">
     <div class="bg-logo">
-        <?php the_custom_logo(); ?>
+        <?php echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'full' ); ?>
     </div><!-- bg-logo -->
     <div class="container">
         <div class="section-wrapper">
