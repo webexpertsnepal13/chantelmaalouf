@@ -35,6 +35,51 @@
 		mainNavigation.init();
 	});
 
+	// animation initialization
+	var wow = new WOW(
+		{
+			boxClass: 'anim-cln',
+			animateClass: 'animated',
+			offset: 50,
+		}
+	);
+	wow.init();
+
+	// Append plus and minus buttons
+	$('.quantity').prepend('<span class="minus">-</span>');
+	$('.quantity').append('<span class="plus">+</span>');
+
+	// Handle plus button click
+	$(document).on('click', '.plus', function () {
+		var input = $(this).prev('input');
+		var currentVal = parseFloat(input.val());
+		if (!isNaN(currentVal)) {
+			input.val(currentVal + 1);
+			input.trigger('change');
+		}
+	});
+
+	// Handle minus button click
+	$(document).on('click', '.minus', function () {
+		var input = $(this).siblings('input[type="number"]');
+		var currentVal = parseFloat(input.val());
+		if (!isNaN(currentVal) && currentVal > 1) {
+			input.val(currentVal - 1);
+			input.trigger('change');
+		}
+	});
+
+	// Re-add plus and minus buttons when cart is updated
+	$(document).on('updated_cart_totals', function () {
+		$('.quantity:not(:has(.plus))').prepend('<span class="minus">-</span>');
+		$('.quantity:not(:has(.plus))').append('<span class="plus">+</span>');
+	});
+
+	// Trigger cart recalculation when quantity is changed
+	$(document).on('change', '.quantity input[type="number"]', function () {
+		$(document.body).trigger('woocommerce-cart-calculate-fees');
+	});
+
 	// back to top on button click
 	$('.back-to-top a').on('click', function (e) {
 		e.preventDefault();
@@ -45,7 +90,7 @@
 
 	//form focus and blur 
 	$(window).on("load", function () {
-		$('.gfield input:not(.gform_hidden').each(function () {
+		$('.gfield input:not(.gform_hidden)').each(function () {
 			if ($(this).val().length) {
 				$(this).parents('.gfield').addClass('is-focused');
 			}
@@ -59,7 +104,6 @@
 	});
 	$('.ginput_container input').on('blur', function () {
 		var value = $(this).val();
-		// $(this).closest('.gfield').removeClass('is-focused');
 		if (value.length === 0) {
 			$(this).closest('.gfield').removeClass('is-focused');
 		} else {
@@ -80,15 +124,6 @@
 			$(this).find('h4').removeClass('icon-open');
 		}
 	});
-
-	var wow = new WOW(
-		{
-			boxClass: 'anim-cln',
-			animateClass: 'animated',
-			offset: 50,
-		}
-	);
-	wow.init();
 
 	// class toggled in body on ham menu clicked 
 	$('.menu-toggle').on('click', function () {

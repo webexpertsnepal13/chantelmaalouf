@@ -13566,7 +13566,7 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
       flex-wrap: wrap;
 }
 .section-product-detail .product .wc-tabs-wrapper .wc-tabs li:not(:first-child) {
-  margin-right: 12px;
+  margin-left: 16px;
 }
 .section-product-detail .product .wc-tabs-wrapper .wc-tabs li a {
   font-size: 18px;
@@ -13608,7 +13608,11 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
   display: none;
 }
 .section-product-detail .product .wc-tabs-wrapper .wc-tab p {
+  margin: 0;
   /* Large Devices, Wide Screens */
+}
+.section-product-detail .product .wc-tabs-wrapper .wc-tab p:not(:last-child) {
+  margin: 0 0 15px;
 }
 @media (max-width: 767px) {
   .section-product-detail .product .wc-tabs-wrapper .wc-tab p {
