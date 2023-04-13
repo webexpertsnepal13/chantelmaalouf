@@ -290,24 +290,36 @@ function remove_product_tabs($tabs)
 		'priority' => 20,
 		'callback' => 'textures_tab_content'
 	);
-	 $tabs['description_tab'] = array(
-		'title'    => __( 'Description', 'woocommerce' ),
+	 $tabs['features_tab'] = array(
+		'title'    => __( 'Features', 'woocommerce' ),
 		'priority' => 30,
-		'callback' => 'description_tab_content'
+		'callback' => 'features_tab_content'
 	);
 
-	$tabs['description']['title'] = __( 'Details', 'woocommerce' );
+	//$tabs['description']['title'] = __( 'Details', 'woocommerce' );
 	unset($tabs['additional_information']);
 	unset($tabs['reviews']);
 	return $tabs;
 }
 function textures_tab_content() {
-   echo '<h2>Textures Tab</h2>';
-   echo '<p>This is the content of the Textures tab.</p>';
+   echo '<h2>Textures</h2>';
+   ?>
+	<ul>
+		<li>Matte, Full Coverage, Longwear, and No Shine</li>
+	</ul>
+   <?php
 }
-function description_tab_content() {
-   echo '<h2>Description Tab</h2>';
-   echo '<p>This is the content of the Description tab.</p>';
+function features_tab_content() {
+   echo '<h2>Features Tab</h2>';
+   ?>
+	<ul>
+		<li>Velvet Creamy Liquid Lipstick</li>
+		<li>Lightweight and Longwear</li>
+		<li>Highly Pigmented</li>
+		<li>Dries to Matte</li>
+		<li>Will not Feather</li>
+	</ul>
+   <?php
 }
 
 

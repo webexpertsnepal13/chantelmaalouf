@@ -199,7 +199,7 @@
 
                 li {
                     &:not(:first-child) {
-                        margin-right: 12px;
+                        margin-left: 16px;
                     }
 
                     a {
@@ -250,6 +250,10 @@
                 }
 
                 p {
+                    margin: 0;
+                    &:not(:last-child) {
+                        margin: 0 0 15px;
+                    }
                     @include breakpoint(small) {
                         font-size: 15px;
                     }
