@@ -293,7 +293,7 @@ function reorder_product_tabs($tabs)
 
 	$tabs['textures_tab'] = array(
 		'title'    => __( 'Textures', 'woocommerce' ),
-		'priority' => 5, // lower priority than default description
+		'priority' => 4, // lower priority than default description
 		'callback' => 'textures_tab_content'
 	);
 	
