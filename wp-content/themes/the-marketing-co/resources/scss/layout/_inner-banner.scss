@@ -1,7 +1,9 @@
-.inner-banner-section { 
+.inner-banner-section {
     position: relative;
-    &::before{
-        content: '';
+    background-color: rgba($color_tertiary, 0.2);
+
+    &::before {
+        content: none;
         position: absolute;
         inset: 0;
         width: 100%;
@@ -9,19 +11,41 @@
         opacity: 0.5;
         height: 100%;
     }
-    .bg-image{
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
 
-        img{
+    .bg-image{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.banner-w-image {
+        background-color: unset;
+        &::before {
+            content: '';
+        }
+
+        .bg-image {
+            position: absolute;
+            inset: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            z-index: -1;
+            opacity: 1;
+            visibility: visible;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .inner-banner-title {
+            h1 {
+                color: $white;
+            }
         }
     }
+
     .inner-banner-wrap {
         min-height: 420px;
         padding: 60px 0;
@@ -29,25 +53,30 @@
         flex-direction: column;
         justify-content: center;
         isolation: isolate;
-        @include breakpoint (small){
+
+        @include breakpoint (small) {
             min-height: 380px;
             padding: 40px 0;
         }
-        @include breakpoint (smaller){
+
+        @include breakpoint (smaller) {
             min-height: 207px;
         }
     }
 
-    .inner-banner-title{
+    .inner-banner-title {
         max-width: 564px;
-        h1{
-            color: $white;
+
+        h1 {
+            color: $color_primary;
             margin: 0;
         }
     }
-    .button-wrap{
+
+    .button-wrap {
         margin-top: 35px;
-        @include breakpoint (small){
+
+        @include breakpoint (small) {
             margin-top: 25px;
         }
     }
