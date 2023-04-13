@@ -215,8 +215,6 @@ function the_marketing_co_scripts() {
 	wp_register_script( 'the-marketing-co-main-js', get_template_directory_uri() . '/' . $main_js, array( 'jquery' ), $ver, true );
 	wp_enqueue_script( 'the-marketing-co-main-js' );
 
-	wp_enqueue_script( 'plus-minus-quantity', get_stylesheet_directory_uri() . '/js/plus-minus-quantity.js', array( 'jquery' ), false, true );
-
 	wp_enqueue_style( 'the-marketing-co-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'the-marketing-co-style', 'rtl', 'replace' );
 
