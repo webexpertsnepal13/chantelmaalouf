@@ -11190,7 +11190,27 @@ a.btn-book-now,
 }
 
 .inner-banner-section {
-  background-color: rgba(211, 162, 162, 0.2);
+  position: relative;
+}
+.inner-banner-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: #000000;
+  opacity: 0.74;
+  height: 100%;
+}
+.inner-banner-section .bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.inner-banner-section .bg-image img {
+  width: 100%;
+  height: 100%;
 }
 .inner-banner-section .inner-banner-wrap {
   min-height: 420px;
@@ -11205,6 +11225,7 @@ a.btn-book-now,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  isolation: isolate;
   /* Large Devices, Wide Screens */
   /* Large Devices, Wide Screens */
 }
