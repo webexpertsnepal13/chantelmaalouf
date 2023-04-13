@@ -11197,8 +11197,8 @@ a.btn-book-now,
   position: absolute;
   inset: 0;
   width: 100%;
-  background: #000000;
-  opacity: 0.74;
+  background: #D3A2A2;
+  opacity: 0.5;
   height: 100%;
 }
 .inner-banner-section .bg-image {
@@ -11211,6 +11211,8 @@ a.btn-book-now,
 .inner-banner-section .bg-image img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .inner-banner-section .inner-banner-wrap {
   min-height: 420px;
@@ -11244,7 +11246,7 @@ a.btn-book-now,
   max-width: 564px;
 }
 .inner-banner-section .inner-banner-title h1 {
-  color: #C58383;
+  color: #ffffff;
   margin: 0;
 }
 .inner-banner-section .button-wrap {
