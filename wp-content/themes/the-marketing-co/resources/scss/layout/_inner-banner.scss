@@ -1,11 +1,34 @@
-.inner-banner-section {
-    background-color: rgba($color_tertiary, 0.2);
+.inner-banner-section { 
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        background: $color_tertiary;
+        opacity: 0.5;
+        height: 100%;
+    }
+    .bg-image{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
     .inner-banner-wrap {
         min-height: 420px;
         padding: 60px 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        isolation: isolate;
         @include breakpoint (small){
             min-height: 380px;
             padding: 40px 0;
@@ -18,7 +41,7 @@
     .inner-banner-title{
         max-width: 564px;
         h1{
-            color: $color_primary;
+            color: $white;
             margin: 0;
         }
     }

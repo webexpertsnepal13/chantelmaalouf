@@ -7,6 +7,9 @@ $link = get_sub_field( 'button_text_and_link' ); //appoinment button text
 $heading_text = get_sub_field( 'heading_text' );
 ?>
 <section class="inner-banner-section">
+    <div class="bg-image">
+        <img src="<?php echo get_home_url(); ?>/wp-content/uploads/2023/04/banner-bg-color-palelte.jpg" alt="">
+    </div>
     <div class="container">
         <div class="inner-banner-wrap">
             <div class="inner-banner-title anim-cln fadeinUp">

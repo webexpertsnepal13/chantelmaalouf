@@ -10,13 +10,15 @@
         flex-wrap: wrap;
         align-items: center;
         padding: 28px 0;
+        justify-content: space-between;
 
         @include breakpoint(wide) {
             padding: 18px 0;
+            justify-content: unset;
         }
 
         .site-branding {
-            flex: 0 1 20%;
+            // flex: 0 1 20%;
 
             @include breakpoint(wide) {
                 flex: 0 1 60%;
@@ -37,7 +39,7 @@
         }
 
         .main-navigation {
-            flex: 0 1 55%;
+            // flex: 0 1 55%;
 
             @include breakpoint(wide) {
                 flex: 0 1 100%;
@@ -45,7 +47,7 @@
         }
 
         .header-right {
-            flex: 0 1 25%;
+            // flex: 0 1 25%;
 
             @include breakpoint(wide) {
                 flex: 0 1 40%;
@@ -68,7 +70,7 @@
                 }
 
                 .header-cart {
-                    margin-left: 42px;
+                    margin-left: 30px;
                     display: flex;
                     flex-wrap: wrap;
                     align-items: center;
