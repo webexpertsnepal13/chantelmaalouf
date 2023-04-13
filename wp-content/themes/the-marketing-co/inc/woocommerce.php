@@ -23,7 +23,7 @@ function the_marketing_co_woocommerce_setup()
 		'woocommerce',
 		array(
 			'thumbnail_image_width' => 300,
-			'single_image_width'    => 300,
+			//'single_image_width'    => '',
 			'product_grid'          => array(
 				'default_rows'    => 3,
 				'min_rows'        => 1,
@@ -282,44 +282,38 @@ add_filter('wc_product_sku_enabled', '__return_false');
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
 
 // Remove additional information and review tab from product page
-add_filter('woocommerce_product_tabs', 'remove_product_tabs', 98);
-function remove_product_tabs($tabs)
+add_filter('woocommerce_product_tabs', 'reorder_product_tabs', 98);
+function reorder_product_tabs($tabs)
 {
-	$tabs['textures_tab'] = array(
-		'title'    => __( 'Textures', 'woocommerce' ),
-		'priority' => 20,
-		'callback' => 'textures_tab_content'
-	);
-	 $tabs['features_tab'] = array(
+	$tabs['features_tab'] = array(
 		'title'    => __( 'Features', 'woocommerce' ),
-		'priority' => 30,
+		'priority' => 5, // lower priority than default description
 		'callback' => 'features_tab_content'
 	);
 
-	//$tabs['description']['title'] = __( 'Details', 'woocommerce' );
+	$tabs['textures_tab'] = array(
+		'title'    => __( 'Textures', 'woocommerce' ),
+		'priority' => 5, // lower priority than default description
+		'callback' => 'textures_tab_content'
+	);
+	
+	// default description has priority 30, so it will be last
 	unset($tabs['additional_information']);
 	unset($tabs['reviews']);
 	return $tabs;
 }
-function textures_tab_content() {
-   echo '<h2>Textures</h2>';
-   ?>
-	<ul>
-		<li>Matte, Full Coverage, Longwear, and No Shine</li>
-	</ul>
-   <?php
-}
+
+
 function features_tab_content() {
-   echo '<h2>Features Tab</h2>';
-   ?>
-	<ul>
-		<li>Velvet Creamy Liquid Lipstick</li>
-		<li>Lightweight and Longwear</li>
-		<li>Highly Pigmented</li>
-		<li>Dries to Matte</li>
-		<li>Will not Feather</li>
-	</ul>
-   <?php
+	$product_id = get_the_ID();
+	$features_description = get_field( 'features_description', $product_id );
+	echo $features_description;
+}
+function textures_tab_content() {
+	$product_id = get_the_ID();
+	$textures_description = get_field( 'textures_description', $product_id  );
+	echo $textures_description;
+
 }
 
 
