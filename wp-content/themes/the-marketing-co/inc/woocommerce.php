@@ -285,11 +285,32 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
 add_filter('woocommerce_product_tabs', 'remove_product_tabs', 98);
 function remove_product_tabs($tabs)
 {
+	$tabs['textures_tab'] = array(
+		'title'    => __( 'Textures', 'woocommerce' ),
+		'priority' => 20,
+		'callback' => 'textures_tab_content'
+	);
+	 $tabs['description_tab'] = array(
+		'title'    => __( 'Description', 'woocommerce' ),
+		'priority' => 30,
+		'callback' => 'description_tab_content'
+	);
+
 	$tabs['description']['title'] = __( 'Details', 'woocommerce' );
 	unset($tabs['additional_information']);
 	unset($tabs['reviews']);
 	return $tabs;
 }
+function textures_tab_content() {
+   echo '<h2>Textures Tab</h2>';
+   echo '<p>This is the content of the Textures tab.</p>';
+}
+function description_tab_content() {
+   echo '<h2>Description Tab</h2>';
+   echo '<p>This is the content of the Description tab.</p>';
+}
+
+
 
 // Remove related products from product page
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
