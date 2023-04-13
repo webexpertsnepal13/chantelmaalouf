@@ -253,6 +253,7 @@ add_filter('woocommerce_result_count', '__return_false');
 remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
 
 // Change the "Select Option" text to "View Colors" for variable products on the shop page
+/*
 add_filter('woocommerce_loop_add_to_cart_link', 'custom_variable_product_message', 10, 2);
 function custom_variable_product_message($button, $product)
 {
@@ -262,6 +263,7 @@ function custom_variable_product_message($button, $product)
 	}
 	return $button;
 }
+*/
 
 // Change the text for the add to cart button to "Add to Bag"
 add_filter('woocommerce_product_add_to_cart_text', 'custom_cart_button_text');
