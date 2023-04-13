@@ -200,17 +200,29 @@
                 li {
                     &:not(:first-child) {
                         margin-left: 16px;
+                        @include breakpoint(extrasmall) {
+                            margin-left: 12px;
+                        }
+                        @media screen and (max-width: 330px) {
+                            // margin-left: 10px;
+                        }
                     }
 
                     a {
                         font-size: 18px;
                         line-height: 1.36;
                         font-family: $font_avenir;
-                        font-weight: 900;
+                        font-weight: 400;
                         text-transform: uppercase;
                         color: $black;
                         text-decoration: none;
                         padding: 0 0 11px;
+                        @include breakpoint(extrasmall) {
+                            font-size: 16px;
+                        }
+                        @media screen and (max-width: 330px) {
+                            font-size: 15px;
+                        }
 
                         &:after {
                             content: '';
@@ -227,6 +239,7 @@
 
                     &.active {
                         a {
+                            font-weight: 900;
                             &:after {
                                 opacity: 1;
                             }
@@ -242,7 +255,7 @@
                 line-height: 1.5;
 
                 @include breakpoint(small) {
-                    padding: 20px 15px;
+                    // padding: 20px 15px;
                 }
 
                 h2 {
@@ -271,6 +284,9 @@
                         @include breakpoint(small) {
                             font-size: 15px;
                         }
+                        @include breakpoint(extrasmall) {
+                            padding-left: 18px;
+                        }
 
                         &:before {
                             content: '';
@@ -281,6 +297,9 @@
                             left: 10px;
                             border-radius: 50%;
                             background: $black;
+                            @include breakpoint(extrasmall) {
+                                left: 0;
+                            }
                         }
                     }
                 }

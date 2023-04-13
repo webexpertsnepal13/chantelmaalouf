@@ -13567,16 +13567,33 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
 }
 .section-product-detail .product .wc-tabs-wrapper .wc-tabs li:not(:first-child) {
   margin-left: 16px;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 479px) {
+  .section-product-detail .product .wc-tabs-wrapper .wc-tabs li:not(:first-child) {
+    margin-left: 12px;
+  }
 }
 .section-product-detail .product .wc-tabs-wrapper .wc-tabs li a {
   font-size: 18px;
   line-height: 1.36;
   font-family: "Avenir LT Pro";
-  font-weight: 900;
+  font-weight: 400;
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
   padding: 0 0 11px;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 479px) {
+  .section-product-detail .product .wc-tabs-wrapper .wc-tabs li a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .section-product-detail .product .wc-tabs-wrapper .wc-tabs li a {
+    font-size: 15px;
+  }
 }
 .section-product-detail .product .wc-tabs-wrapper .wc-tabs li a:after {
   content: "";
@@ -13589,6 +13606,9 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
   opacity: 0;
   z-index: 1;
 }
+.section-product-detail .product .wc-tabs-wrapper .wc-tabs li.active a {
+  font-weight: 900;
+}
 .section-product-detail .product .wc-tabs-wrapper .wc-tabs li.active a:after {
   opacity: 1;
 }
@@ -13598,11 +13618,6 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
   font-size: 16px;
   line-height: 1.5;
   /* Large Devices, Wide Screens */
-}
-@media (max-width: 767px) {
-  .section-product-detail .product .wc-tabs-wrapper .wc-tab {
-    padding: 20px 15px;
-  }
 }
 .section-product-detail .product .wc-tabs-wrapper .wc-tab h2 {
   display: none;
@@ -13628,10 +13643,16 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
   position: relative;
   padding-left: 25px;
   /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
 }
 @media (max-width: 767px) {
   .section-product-detail .product .wc-tabs-wrapper .wc-tab ul li {
     font-size: 15px;
+  }
+}
+@media (max-width: 479px) {
+  .section-product-detail .product .wc-tabs-wrapper .wc-tab ul li {
+    padding-left: 18px;
   }
 }
 .section-product-detail .product .wc-tabs-wrapper .wc-tab ul li:before {
@@ -13643,6 +13664,12 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
   left: 10px;
   border-radius: 50%;
   background: #000000;
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 479px) {
+  .section-product-detail .product .wc-tabs-wrapper .wc-tab ul li:before {
+    left: 0;
+  }
 }
 
 .quantity {
