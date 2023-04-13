@@ -7,8 +7,9 @@ $link = get_sub_field( 'button_text_and_link' ); //appoinment button text
 $heading_text = get_sub_field( 'heading_text' );
 $inner_page_banner_image = get_sub_field( 'inner_page_banner_image' );
 $size = 'full';
+$class = $inner_page_banner_image ? "banner-w-image" : "";
 ?>
-<section class="inner-banner-section">
+<section class="inner-banner-section <?php echo $class; ?>">
     <div class="bg-image">
         <?php
         if ( $inner_page_banner_image ) {
