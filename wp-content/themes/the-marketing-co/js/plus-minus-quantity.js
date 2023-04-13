@@ -1,6 +1,4 @@
 jQuery(document).ready(function ($) {
-    //console.log('Quantity box script loaded.');
-
     // Append plus and minus buttons
     $('.quantity').prepend('<span class="minus">-</span>');
     $('.quantity').append('<span class="plus">+</span>');
@@ -17,7 +15,6 @@ jQuery(document).ready(function ($) {
 
     // Handle minus button click
     $(document).on('click', '.minus', function () {
-        //console.log('Minus button clicked.');
         var input = $(this).siblings('input[type="number"]');
         var currentVal = parseFloat(input.val());
         if (!isNaN(currentVal) && currentVal > 1) {
