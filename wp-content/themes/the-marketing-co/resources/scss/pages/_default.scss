@@ -29,7 +29,7 @@
     }
 }
 
-.page-content{
+.page-content {
     padding: 100px 0;
 
     @include breakpoint (small) {
@@ -52,12 +52,13 @@
             @include breakpoint (medium) {
                 margin: 0 0 25px;
             }
+
             a {
                 color: $color-primary;
             }
         }
 
-        p{
+        p {
             a {
                 color: $color-primary;
             }
@@ -97,8 +98,16 @@
     }
 }
 
-.error-404{
-    .page-content{
+.error-404 {
+    .page-content {
         text-align: center;
+    }
+}
+
+.section-instagram,
+.section-google-reviews {
+    padding: 60px 0;
+    .title {
+        margin: 0 0 35px;
     }
 }
