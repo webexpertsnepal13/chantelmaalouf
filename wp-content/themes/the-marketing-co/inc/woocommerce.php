@@ -283,37 +283,46 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
 
 // Remove additional information and review tab from product page
 add_filter('woocommerce_product_tabs', 'reorder_product_tabs', 98);
+
 function reorder_product_tabs($tabs)
 {
-	$tabs['features_tab'] = array(
-		'title'    => __( 'Features', 'woocommerce' ),
-		'priority' => 5, // lower priority than default description
-		'callback' => 'features_tab_content'
-	);
+	$product_id = get_the_ID();
+	$features_description = get_field( 'features_description', $product_id );
+	$textures_description = get_field( 'textures_description', $product_id );
 
-	$tabs['textures_tab'] = array(
-		'title'    => __( 'Textures', 'woocommerce' ),
-		'priority' => 4, // lower priority than default description
-		'callback' => 'textures_tab_content'
-	);
+	if (!empty($features_description)) {
+		$tabs['features_tab'] = array(
+			'title'    => __( 'Features', 'woocommerce' ),
+			'priority' => 5, // lower priority than default description
+			'callback' => 'features_tab_content'
+		);
+	}
+
+	if (!empty($textures_description)) {
+		$tabs['textures_tab'] = array(
+			'title'    => __( 'Textures', 'woocommerce' ),
+			'priority' => 4, // lower priority than default description
+			'callback' => 'textures_tab_content'
+		);
+	}
 	
 	// default description has priority 30, so it will be last
 	unset($tabs['additional_information']);
 	unset($tabs['reviews']);
+
 	return $tabs;
 }
-
 
 function features_tab_content() {
 	$product_id = get_the_ID();
 	$features_description = get_field( 'features_description', $product_id );
 	echo $features_description;
 }
+
 function textures_tab_content() {
 	$product_id = get_the_ID();
-	$textures_description = get_field( 'textures_description', $product_id  );
+	$textures_description = get_field( 'textures_description', $product_id );
 	echo $textures_description;
-
 }
 
 

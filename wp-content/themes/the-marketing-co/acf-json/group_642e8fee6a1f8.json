@@ -505,6 +505,106 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_643cc15c927b7": {
+                    "key": "layout_643cc15c927b7",
+                    "name": "instagram_feed",
+                    "label": "Instagram Feed",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_643cc1de927b9",
+                            "label": "Title",
+                            "name": "follow_us_text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_643cc1ed927ba",
+                            "label": "Shortcode",
+                            "name": "feed_shortcode",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_643cd43d6b6f7": {
+                    "key": "layout_643cd43d6b6f7",
+                    "name": "google_reviews",
+                    "label": "Google Reviews",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_643cd4656b6f9",
+                            "label": "Title",
+                            "name": "google_reviews_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_643cd4756b6fa",
+                            "label": "Shortcode",
+                            "name": "google_reviews_shortcode",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -551,5 +651,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681363050
+    "modified": 1681708538
 }
