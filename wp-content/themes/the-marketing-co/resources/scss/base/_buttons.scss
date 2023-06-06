@@ -76,9 +76,11 @@ a.btn-book-now,
     align-items: center;
     justify-content: center;
     @include transition(0.4s background, 0.4s color);
+    @media screen and (max-width: 1299px) {
+        font-size: 14px;
+    }
 
     @include breakpoint(wide) {
-        font-size: 14px;
         min-height: 44px;
         padding: 6px 20px;
     }

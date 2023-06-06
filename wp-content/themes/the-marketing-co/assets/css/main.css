@@ -10678,10 +10678,15 @@ a.btn-book-now,
     transition: none;
   }
 }
-@media (max-width: 1199px) {
+@media screen and (max-width: 1299px) {
   a.btn-book-now,
   .btn-book-now > a {
     font-size: 14px;
+  }
+}
+@media (max-width: 1199px) {
+  a.btn-book-now,
+  .btn-book-now > a {
     min-height: 44px;
     padding: 6px 20px;
   }
@@ -11594,10 +11599,16 @@ body.woocommerce-shop .woocommerce-result-count {
   }
 }
 .site-header .header-wrap .site-branding .custom-logo-link img {
-  width: 186px;
+  width: 216px;
   height: auto;
   /* Large Devices, Wide Screens */
   /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 1199px) {
+  .site-header .header-wrap .site-branding .custom-logo-link img {
+    width: 186px;
+  }
 }
 @media (max-width: 479px) {
   .site-header .header-wrap .site-branding .custom-logo-link img {
