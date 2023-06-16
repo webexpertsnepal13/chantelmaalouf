@@ -400,3 +400,13 @@ function wrap_product_title_with_anchor_tag() {
 }
 
 //Remove the breadcrumb link of last element
+// update cart count after ajax
+add_filter( 'woocommerce_add_to_cart_fragments', 'chantel_cart_count_fragments', 10, 1 );
+
+function chantel_cart_count_fragments( $fragments ) {
+    
+    $fragments['span.cart_count'] = '<span class="cart_count">' . count( WC()->cart->get_cart() ) . '</span>';
+    
+    return $fragments;
+    
+}
