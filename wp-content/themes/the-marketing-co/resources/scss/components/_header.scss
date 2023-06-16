@@ -100,6 +100,30 @@
                             width: 24px;
                         }
                     }
+                    .header-cart-link {
+                        position: relative;
+                        .cart_count {
+                            position: absolute;
+                            display: flex;
+                            height: 22px;
+                            width: 22px;
+                            background: $black;
+                            border-radius: 50%;
+                            color: $white;
+                            font-size: 10px;
+                            align-items: center;
+                            justify-content: center;
+                            font-weight: normal;
+                            top: -4px;
+                            right: -13px;
+                            @include breakpoint(small) {
+                                right: -10px;
+                                height: 18px;
+                                width: 18px;
+                            }
+                        }
+                    }
+
 
                     img {
                         width: 22px;

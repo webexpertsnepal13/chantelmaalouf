@@ -21,18 +21,18 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'the-marketing-co' ); ?></a>
+	<?php wp_body_open(); ?>
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'the-marketing-co' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="container">
-			<div class="header-wrap">
-				<div class="site-branding">
-					<?php
-					the_custom_logo();
-					if ( is_front_page() && is_home() ) :
-						?>
+		<header id="masthead" class="site-header">
+			<div class="container">
+				<div class="header-wrap">
+					<div class="site-branding">
+						<?php
+						the_custom_logo();
+						if ( is_front_page() && is_home() ) :
+							?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<?php
 					else :
@@ -81,8 +81,8 @@
 							$cart_url = wc_get_cart_url();
 
 							if ( $cart_url ) {
-							?>
-								<a href="<?php echo esc_url( $cart_url ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/shopping-bag.svg" alt=""><?php echo count( WC()->cart->get_cart() ); ?></a>
+								?>
+								<a href="<?php echo esc_url( $cart_url ); ?>" class="header-cart-link"><img src="<?php echo get_template_directory_uri(); ?>/images/shopping-bag.svg" alt=""><span class="cart_count"><?php echo count( WC()->cart->get_cart() ); ?></span></a>
 							<?php } ?>
 						</div><!-- header-cart -->						
 					</div><!-- header-right-inner -->
