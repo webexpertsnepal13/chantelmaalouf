@@ -20,7 +20,7 @@ $home_banner_video = get_sub_field('home_banner_video');
     <?php if ($banner_type == "video"): ?>
         <?php if($home_banner_video): ?>
         <video width="320" height="240" controls>
-            <source src="<?php esc_url($home_banner_video); ?>" type="video/mp4">
+            <source src="<?php echo esc_url($home_banner_video); ?>" type="video/mp4">
         </video>
         <?php endif; ?>
     <?php endif; ?>
