@@ -10735,7 +10735,7 @@ a.btn-book-now,
   height: 100%;
   width: 100%;
 }
-.bg-image img {
+.bg-image img, .bg-image video {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;

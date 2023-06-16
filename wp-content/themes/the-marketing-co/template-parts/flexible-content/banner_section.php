@@ -18,10 +18,12 @@ $home_banner_video = get_sub_field('home_banner_video');
         </div><!-- bg-image -->
     <?php endif; ?>
     <?php if ($banner_type == "video"): ?>
-        <?php if($home_banner_video): ?>
-        <video width="320" height="240" controls>
-            <source src="<?php echo esc_url($home_banner_video); ?>" type="video/mp4">
-        </video>
+        <div class="bg-image anim-cln fadeIn">
+            <?php if($home_banner_video): ?>
+                <video muted loop playsinline autoplay>
+                    <source src="<?php echo esc_url($home_banner_video); ?>" type="video/mp4">
+                    </video>
+                <?php endif; ?>
+            </div><!-- bg-image -->
         <?php endif; ?>
-    <?php endif; ?>
-</section><!-- section-hero-banner -->
+    </section><!-- section-hero-banner -->
