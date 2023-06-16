@@ -302,7 +302,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "tpl-contact.php"
+                "value": "page-templates\/tpl-contact.php"
             }
         ]
     ],
@@ -315,5 +315,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681020581
+    "modified": 1681984501
 }
