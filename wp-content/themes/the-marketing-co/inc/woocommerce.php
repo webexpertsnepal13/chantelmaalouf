@@ -177,7 +177,7 @@ if (!function_exists('the_marketing_co_woocommerce_cart_link_fragment')) {
 		return $fragments;
 	}
 }
-add_filter('woocommerce_add_to_cart_fragments', 'the_marketing_co_woocommerce_cart_link_fragment');
+// add_filter('woocommerce_add_to_cart_fragments', 'the_marketing_co_woocommerce_cart_link_fragment');
 
 if (!function_exists('the_marketing_co_woocommerce_cart_link')) {
 	/**
