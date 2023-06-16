@@ -37,11 +37,14 @@
 
 	// animation initialization
 	var wow = new WOW(
-		{
-			boxClass: 'anim-cln',
-			animateClass: 'animated',
-			offset: 50,
-		}
+	{
+		boxClass: 'anim-cln',
+		animateClass: 'animated',
+		offset: 50,
+		mobile: false,
+		scrollContainer: null,    // optional scroll container selector, otherwise use window,
+		resetAnimation: true,
+	}
 	);
 	wow.init();
 

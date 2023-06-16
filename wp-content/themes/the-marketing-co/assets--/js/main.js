@@ -36,11 +36,7 @@
   var wow = new WOW({
     boxClass: 'anim-cln',
     animateClass: 'animated',
-    offset: 50,
-    mobile: false,
-    scrollContainer: null,
-    // optional scroll container selector, otherwise use window,
-    resetAnimation: true
+    offset: 50
   });
   wow.init();
 
