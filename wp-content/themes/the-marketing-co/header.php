@@ -82,7 +82,7 @@
 
 							if ( $cart_url ) {
 							?>
-								<a href="<?php echo esc_url( $cart_url ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/shopping-bag.svg" alt=""></a>
+								<a href="<?php echo esc_url( $cart_url ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/shopping-bag.svg" alt=""><?php echo count( WC()->cart->get_cart() ); ?></a>
 							<?php } ?>
 						</div><!-- header-cart -->						
 					</div><!-- header-right-inner -->

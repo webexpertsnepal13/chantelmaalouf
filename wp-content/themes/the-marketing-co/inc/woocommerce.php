@@ -271,7 +271,12 @@ add_filter('woocommerce_product_single_add_to_cart_text', 'custom_cart_button_te
 add_filter('woocommerce_product_variation_add_to_cart_text', 'custom_cart_button_text');
 function custom_cart_button_text($text)
 {
-	$text = __('Add to bag', 'woocommerce'); // Update the text for the add to cart button
+	if(is_shop()){
+		$text = __('View the shades', 'woocommerce'); // Update the text for the add to cart button
+	}else{
+
+		$text = __('Add to bag', 'woocommerce'); // Update the text for the add to cart button
+	}
 	return $text;
 }
 
