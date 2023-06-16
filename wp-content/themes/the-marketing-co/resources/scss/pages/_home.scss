@@ -31,3 +31,18 @@
         }
     }
 }
+
+.instagram-wrapper {
+    #sb_instagram {
+        #sbi_images {
+            > p {
+                float: unset;
+                width: 100%;
+                display: inline-block;
+                line-height: 18px;
+                text-align: center;
+                padding-top: 10px;
+            }
+        }
+    }
+}
