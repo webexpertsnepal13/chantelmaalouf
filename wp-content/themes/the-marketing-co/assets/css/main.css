@@ -12913,7 +12913,8 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
 
 .sip-learn-section {
   background-color: #F2DFD2;
-  padding: 15px 0 100px 0; /* Large Devices, Wide Screens */
+  padding: 15px 0 100px 0;
+  /* Large Devices, Wide Screens */
 }
 @media (max-width: 767px) {
   .sip-learn-section {
