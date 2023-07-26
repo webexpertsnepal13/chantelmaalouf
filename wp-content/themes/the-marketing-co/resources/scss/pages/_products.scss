@@ -47,6 +47,17 @@
                             object-fit: unset;
                         }
                     }
+
+                    .woocommerce-product-gallery__image {
+                        &.video {
+                            display: flex !important;
+                        }
+                    }
+
+                    video {
+                        aspect-ratio: 0.75 / 1;
+                        object-fit: cover;
+                    }
                 }
             }
         }
@@ -201,9 +212,11 @@
                 li {
                     &:not(:first-child) {
                         margin-left: 16px;
+
                         @include breakpoint(extrasmall) {
                             margin-left: 12px;
                         }
+
                         @media screen and (max-width: 330px) {
                             // margin-left: 10px;
                         }
@@ -218,9 +231,11 @@
                         color: $black;
                         text-decoration: none;
                         padding: 0 0 11px;
+
                         @include breakpoint(extrasmall) {
                             font-size: 16px;
                         }
+
                         @media screen and (max-width: 330px) {
                             font-size: 15px;
                         }
@@ -241,6 +256,7 @@
                     &.active {
                         a {
                             font-weight: 900;
+
                             &:after {
                                 opacity: 1;
                             }
@@ -265,9 +281,11 @@
 
                 p {
                     margin: 0;
+
                     &:not(:last-child) {
                         margin: 0 0 15px;
                     }
+
                     @include breakpoint(small) {
                         font-size: 15px;
                     }
@@ -285,6 +303,7 @@
                         @include breakpoint(small) {
                             font-size: 15px;
                         }
+
                         @include breakpoint(extrasmall) {
                             padding-left: 18px;
                         }
@@ -298,6 +317,7 @@
                             left: 10px;
                             border-radius: 50%;
                             background: $black;
+
                             @include breakpoint(extrasmall) {
                                 left: 0;
                             }
