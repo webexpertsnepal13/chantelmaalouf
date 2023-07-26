@@ -394,4 +394,40 @@ function wrap_product_title_with_anchor_tag() {
    echo '</a>';
 }
 
-//Remove the breadcrumb link of last element
+//Add the video on gallery
+function append_custom_video_to_product_gallerys($thumbnail_html, $attachment_id) {
+    global $product;
+    $custom_video_url = get_field('product_video_gallery', $product->get_id());
+
+    if ($custom_video_url && $attachment_id === $product->get_image_id()) {
+        // Replace the main thumbnail image with the video thumbnail
+        $thumbnail_html = '<div class="woocommerce-product-gallery__image video">';
+        $thumbnail_html .= '<video controls muted>';
+        $thumbnail_html .= '<source src="' . esc_url($custom_video_url['url']) . '" type="video/mp4">';
+        $thumbnail_html .= '</video>';
+        $thumbnail_html .= '</div>';
+    }
+
+    return $thumbnail_html;
+}
+
+//add_filter('woocommerce_single_product_image_thumbnail_html', 'append_custom_video_to_product_gallery', 10, 2);
+
+
+function append_custom_video_to_product_gallery($thumbnail_html, $attachment_id) {
+    global $product;
+    $custom_video_url = get_field('product_video_gallery', $product->get_id());
+    $product_video_gallery_thumbnail = get_field( 'product_video_gallery_thumbnail' );
+
+    if ($custom_video_url && $attachment_id === $product->get_image_id()) {
+        $thumbnail_html = '<div class="woocommerce-product-gallery__image video">';
+        $thumbnail_html .= '<video controls autoplay muted data-src="'.esc_url($product_video_gallery_thumbnail['url']).'">';
+        $thumbnail_html .= '<source src="' . esc_url($custom_video_url['url']) . '" type="video/mp4">';
+        $thumbnail_html .= '</video>';
+        $thumbnail_html .= '</div>';
+    }
+
+    return $thumbnail_html;
+}
+
+add_filter('woocommerce_single_product_image_thumbnail_html', 'append_custom_video_to_product_gallery', 10, 2);
