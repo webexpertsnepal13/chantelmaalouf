@@ -12831,15 +12831,6 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
 .section-hero-banner .bg-image img {
   /* Large Devices, Wide Screens */
 }
-.instagram-wrapper #sb_instagram #sbi_images > p {
-  float: unset;
-  width: 100%;
-  display: inline-block;
-  line-height: 18px;
-  text-align: center;
-  padding-top: 10px;
-}
-
 .about-section {
   background-color: rgba(211, 162, 162, 0.2);
   padding: 100px 0;
@@ -12913,8 +12904,7 @@ body.single-services .main-navigation .menu > li.service-menu > a:after {
 
 .sip-learn-section {
   background-color: #F2DFD2;
-  padding: 15px 0 100px 0;
-  /* Large Devices, Wide Screens */
+  padding: 15px 0 100px 0; /* Large Devices, Wide Screens */
 }
 @media (max-width: 767px) {
   .sip-learn-section {

@@ -177,7 +177,7 @@ if (!function_exists('the_marketing_co_woocommerce_cart_link_fragment')) {
 		return $fragments;
 	}
 }
-add_filter('woocommerce_add_to_cart_fragments', 'the_marketing_co_woocommerce_cart_link_fragment');
+// add_filter('woocommerce_add_to_cart_fragments', 'the_marketing_co_woocommerce_cart_link_fragment');
 
 if (!function_exists('the_marketing_co_woocommerce_cart_link')) {
 	/**
@@ -271,7 +271,12 @@ add_filter('woocommerce_product_single_add_to_cart_text', 'custom_cart_button_te
 add_filter('woocommerce_product_variation_add_to_cart_text', 'custom_cart_button_text');
 function custom_cart_button_text($text)
 {
-	$text = __('Add to bag', 'woocommerce'); // Update the text for the add to cart button
+	if(is_shop() || is_front_page()){
+		$text = __('View the shades', 'woocommerce'); // Update the text for the add to cart button
+	}else{
+
+		$text = __('Add to bag', 'woocommerce'); // Update the text for the add to cart button
+	}
 	return $text;
 }
 
@@ -394,6 +399,7 @@ function wrap_product_title_with_anchor_tag() {
    echo '</a>';
 }
 
+<<<<<<< HEAD
 //Add the video on gallery
 function append_custom_video_to_product_gallerys($thumbnail_html, $attachment_id) {
     global $product;
@@ -431,3 +437,16 @@ function append_custom_video_to_product_gallery($thumbnail_html, $attachment_id)
 }
 
 add_filter('woocommerce_single_product_image_thumbnail_html', 'append_custom_video_to_product_gallery', 10, 2);
+=======
+//Remove the breadcrumb link of last element
+// update cart count after ajax
+add_filter( 'woocommerce_add_to_cart_fragments', 'chantel_cart_count_fragments', 10, 1 );
+
+function chantel_cart_count_fragments( $fragments ) {
+    
+    $fragments['span.cart_count'] = '<span class="cart_count">' . count( WC()->cart->get_cart() ) . '</span>';
+    
+    return $fragments;
+    
+}
+>>>>>>> 7b64276c993d1ee805c7f9be510abdd059bcd0dd

@@ -24,6 +24,31 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_648befe888180",
+                            "label": "Banner Type",
+                            "name": "banner_type",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "image": "Image",
+                                "video": "Video"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
                             "key": "field_642e9c0a05437",
                             "label": "Home Banner Image",
                             "name": "home_banner_image",
@@ -31,7 +56,15 @@
                             "type": "image",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_648befe888180",
+                                        "operator": "==",
+                                        "value": "image"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -47,6 +80,34 @@
                             "max_size": "",
                             "mime_types": "",
                             "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_648bf03988181",
+                            "label": "Home Banner Video",
+                            "name": "home_banner_video",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_648befe888180",
+                                        "operator": "==",
+                                        "value": "video"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": ""
                         }
                     ],
                     "min": "",
@@ -651,5 +712,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681708538
+    "modified": 1686892722
 }

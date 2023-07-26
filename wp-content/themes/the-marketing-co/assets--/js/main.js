@@ -36,11 +36,7 @@
   var wow = new WOW({
     boxClass: 'anim-cln',
     animateClass: 'animated',
-    offset: 50,
-    mobile: false,
-    scrollContainer: null,
-    // optional scroll container selector, otherwise use window,
-    resetAnimation: true
+    offset: 50
   });
   wow.init();
 
@@ -133,14 +129,5 @@
   // sub-menu open
   $('.dropdown').on('click', function () {
     $(this).parent().toggleClass('menu-opened');
-  });
-  $(document).ready(function () {
-    $('.flex-viewport .woocommerce-product-gallery__image').each(function (i) {
-      var $this = $(this);
-      if (!$this.hasClass('video')) return;
-      var galleryIndex = i;
-      var imageSrc = $this.children('video').attr('data-src');
-      $('.flex-control-thumbs li img')[galleryIndex].setAttribute('src', imageSrc);
-    });
   });
 })(jQuery);
