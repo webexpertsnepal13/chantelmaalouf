@@ -421,7 +421,7 @@ function append_custom_video_to_product_gallery($thumbnail_html, $attachment_id)
 
     if ($custom_video_url && $attachment_id === $product->get_image_id()) {
         $thumbnail_html = '<div class="woocommerce-product-gallery__image video">';
-        $thumbnail_html .= '<video controls autoplay muted data-src="'.esc_url($product_video_gallery_thumbnail['url']).'">';
+        $thumbnail_html .= '<video autoplay loop muted data-src="'.esc_url($product_video_gallery_thumbnail['url']).'">';
         $thumbnail_html .= '<source src="' . esc_url($custom_video_url['url']) . '" type="video/mp4">';
         $thumbnail_html .= '</video>';
         $thumbnail_html .= '</div>';
