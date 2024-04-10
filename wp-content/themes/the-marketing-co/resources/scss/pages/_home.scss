@@ -1,0 +1,48 @@
+.section-hero-banner {
+    position: relative;
+    height: 646px;
+
+    @media screen and (max-width: 1299px) {
+        height: 546px;
+    }
+
+    @include breakpoint(wide) {
+        height: 446px;
+    }
+    @include breakpoint(medium) {
+        height: 346px;
+    }
+    @include breakpoint(small) {
+        height: 286px;
+    }
+    @include breakpoint(extrasmall) {
+        height: 206px;
+    }
+
+    .bg-image {
+        @include breakpoint(wide) {
+            // position: static;
+        }
+
+        img {
+            @include breakpoint(wide) {
+                // height: unset;
+            }
+        }
+    }
+}
+
+.instagram-wrapper {
+    #sb_instagram {
+        #sbi_images {
+            > p {
+                float: unset;
+                width: 100%;
+                display: inline-block;
+                line-height: 18px;
+                text-align: center;
+                padding-top: 10px;
+            }
+        }
+    }
+}

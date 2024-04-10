@@ -1,0 +1,85 @@
+.section-info-w-image {
+    .section-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        .info-block-left {
+            flex: 0 1 43%;
+            background: $color_primary;
+
+            @include breakpoint(medium) {
+                flex: 0 1 100%;
+            }
+
+            .info-block {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                position: relative;
+
+                @include breakpoint(medium) {
+                    min-height: 400px;
+                    padding: 110px 0px;
+                }
+
+                h1 {
+                    color: $white;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0 0 30px;
+
+                    span {
+                        color: $color_secondary;
+                    }
+                }
+
+                .bg-logo {
+                    position: absolute;
+                    bottom: 50px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    pointer-events: none;
+                    z-index: 1;
+
+                    @include breakpoint(wide) {
+                        bottom: 30px;
+                    }
+                    @include breakpoint(medium) {
+                        bottom: 15px;
+                    }
+
+                    img {
+                        width: 186px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        .image-right {
+            flex: 0 1 57%;
+
+            @include breakpoint(medium) {
+                flex: 0 1 100%;
+            }
+
+            img {
+                width: 100%;
+                min-height: 720px;
+                height: 100%;
+                object-fit: cover;
+
+                @include breakpoint(wide) {
+                    min-height: 570px;
+                }
+
+                @include breakpoint(medium) {
+                    min-height: unset;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

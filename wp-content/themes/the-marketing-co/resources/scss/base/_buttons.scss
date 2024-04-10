@@ -1,0 +1,94 @@
+.btn-cm {
+    font-size: 14px;
+    line-height: 1;
+    font-family: $font_poppins;
+    font-weight: 400;
+    color: $black;
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 42px;
+    text-decoration: none !important;
+    @include transition(0.4s background, 0.4s color);
+    background: $white;
+
+    &.btn-outline {
+        border: 2px solid $color_primary;
+        border-radius: 50px;
+        padding: 6px 20px;
+        padding-right: 80px;
+        word-break: break-word;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            background: $color_tertiary;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:before {
+            height: 2px;
+            width: 33px;
+            left: calc(100% - 13px);
+        }
+
+        &:after {
+            left: calc(100% + 12px);
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+        }
+
+        &.btn-fill-white {
+            background: $white;
+        }
+
+        &:hover {
+            @include breakpoint(wide) {
+                color: $black;
+            }
+            @media (hover: hover) {
+                background: $color_primary;
+                color: $white;
+            }
+        }
+    }
+}
+
+a.btn-book-now,
+.btn-book-now>a {
+    font-size: 15px;
+    line-height: 1.43;
+    font-family: $font_jost;
+    padding: 10px 24px;
+    min-height: 50px;
+    border-radius: 5px;
+    border: 2px solid $color_primary;
+    color: $white;
+    background: $color_primary;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include transition(0.4s background, 0.4s color);
+    @media screen and (max-width: 1299px) {
+        font-size: 14px;
+    }
+
+    @include breakpoint(wide) {
+        min-height: 44px;
+        padding: 6px 20px;
+    }
+
+    &:hover {
+        @media (hover: hover) {
+            background: transparent;
+            color: $color_primary;
+        }
+    }
+}

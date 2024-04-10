@@ -1,4 +1,5 @@
 <?php
+
 /**
  * WooCommerce Compatibility File
  *
@@ -20,8 +21,8 @@ function the_marketing_co_woocommerce_setup() {
 	add_theme_support(
 		'woocommerce',
 		array(
-			'thumbnail_image_width' => 150,
-			'single_image_width'    => 300,
+			'thumbnail_image_width' => 300,
+			// 'single_image_width'    => '',
 			'product_grid'          => array(
 				'default_rows'    => 3,
 				'min_rows'        => 1,
@@ -31,8 +32,8 @@ function the_marketing_co_woocommerce_setup() {
 			),
 		)
 	);
-	add_theme_support( 'wc-product-gallery-zoom' );
-	add_theme_support( 'wc-product-gallery-lightbox' );
+	// add_theme_support('wc-product-gallery-zoom');
+	// add_theme_support('wc-product-gallery-lightbox');
 	add_theme_support( 'wc-product-gallery-slider' );
 }
 add_action( 'after_setup_theme', 'the_marketing_co_woocommerce_setup' );
@@ -116,9 +117,8 @@ if ( ! function_exists( 'the_marketing_co_woocommerce_wrapper_before' ) ) {
 	 *
 	 * @return void
 	 */
-	function the_marketing_co_woocommerce_wrapper_before() {
-		?>
-			<main id="primary" class="site-main">
+	function the_marketing_co_woocommerce_wrapper_before() {        ?>
+		<main id="primary" class="site-main">
 		<?php
 	}
 }
@@ -134,7 +134,7 @@ if ( ! function_exists( 'the_marketing_co_woocommerce_wrapper_after' ) ) {
 	 */
 	function the_marketing_co_woocommerce_wrapper_after() {
 		?>
-			</main><!-- #main -->
+		</main><!-- #main -->
 		<?php
 	}
 }
@@ -225,3 +225,219 @@ if ( ! function_exists( 'the_marketing_co_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+
+/**
+ * Move the short description below the cart
+ */
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 30 );
+
+
+// Remove shop page title
+add_filter( 'woocommerce_show_page_title', '__return_false' );
+
+// Remove showing the single result text
+add_filter( 'woocommerce_result_count', '__return_false' );
+
+// Remove sorting
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+// Change the "Select Option" text to "View Colors" for variable products on the shop page
+/*
+add_filter('woocommerce_loop_add_to_cart_link', 'custom_variable_product_message', 10, 2);
+function custom_variable_product_message($button, $product)
+{
+	if ($product->is_type('variable')) {
+		$button_text = __("View colours", "woocommerce");
+		$button = '<a class="button" href="' . esc_url($product->get_permalink()) . '">' . $button_text . '</a>';
+	}
+	return $button;
+}
+*/
+
+// Change the text for the add to cart button to "Add to Bag"
+add_filter( 'woocommerce_product_add_to_cart_text', 'custom_cart_button_text' );
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'custom_cart_button_text' );
+add_filter( 'woocommerce_product_variation_add_to_cart_text', 'custom_cart_button_text' );
+function custom_cart_button_text( $text ) {
+	 $text = __( 'Add to bag', 'woocommerce' ); // Update the text for the add to cart button
+	return $text;
+}
+
+// Remove SKU from product page
+add_filter( 'wc_product_sku_enabled', '__return_false' );
+
+// Remove product categories from product page
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+// Remove additional information and review tab from product page
+add_filter( 'woocommerce_product_tabs', 'reorder_product_tabs', 98 );
+
+function reorder_product_tabs( $tabs ) {
+	$product_id           = get_the_ID();
+	$features_description = get_field( 'features_description', $product_id );
+	$textures_description = get_field( 'textures_description', $product_id );
+
+	if ( ! empty( $features_description ) ) {
+		$tabs['features_tab'] = array(
+			'title'    => __( 'Features', 'woocommerce' ),
+			'priority' => 5, // lower priority than default description
+			'callback' => 'features_tab_content',
+		);
+	}
+
+	if ( ! empty( $textures_description ) ) {
+		$tabs['textures_tab'] = array(
+			'title'    => __( 'Textures', 'woocommerce' ),
+			'priority' => 4, // lower priority than default description
+			'callback' => 'textures_tab_content',
+		);
+	}
+
+	// default description has priority 30, so it will be last
+	unset( $tabs['additional_information'] );
+	unset( $tabs['reviews'] );
+
+	return $tabs;
+}
+
+function features_tab_content() {
+	$product_id           = get_the_ID();
+	$features_description = get_field( 'features_description', $product_id );
+	echo $features_description;
+}
+
+function textures_tab_content() {
+	$product_id           = get_the_ID();
+	$textures_description = get_field( 'textures_description', $product_id );
+	echo $textures_description;
+}
+
+
+
+// Remove related products from product page
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+add_filter( 'woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_home_text' );
+function wcc_change_breadcrumb_home_text( $defaults ) {
+	// Change the breadcrumb home text from 'Home' to 'Apartment'
+	$defaults['delimiter']   = '';
+	$defaults['wrap_before'] = '<div class="custom-breadcrumb"><nav class="woocommerce-breadcrumb"><ul>';
+	$defaults['wrap_after']  = '</ul></nav></div>';
+	$defaults['before']      = '<li>';
+	$defaults['after']       = '</li>';
+	return $defaults;
+}
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+
+add_action( 'woocommerce_before_single_product', 'woocommerce_breadcrumb', 10 );
+
+
+add_action( 'woocommerce_before_main_content', 'add_custom_wrapper_open_to_main_content', 10 );
+function add_custom_wrapper_open_to_main_content() {
+	echo '<section class="section-products-list">';
+}
+
+add_action( 'woocommerce_after_main_content', 'add_custom_wrapper_close_to_main_content', 15 );
+function add_custom_wrapper_close_to_main_content() {
+	echo '</section>';
+}
+
+// remove woocommerce breadcrum
+function remove_uncategorized_breadcrumb( $breadcrumb ) {
+	foreach ( $breadcrumb as $key => $value ) {
+		if ( $value[0] === 'Uncategorized' ) {
+			unset( $breadcrumb[ $key ] );
+		}
+	}
+	return $breadcrumb;
+}
+add_filter( 'woocommerce_get_breadcrumb', 'remove_uncategorized_breadcrumb', 10, 1 );
+
+// wrap the custom anchor for woocommerce product page Image, title and price
+
+// wrap image
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+add_action( 'woocommerce_before_shop_loop_item_title', 'wrap_product_image_with_anchor_tag', 10 );
+
+function wrap_product_image_with_anchor_tag() {
+	global $product;
+	$url = get_permalink( $product->get_id() );
+	echo '<a href="' . $url . '">';
+	echo get_the_post_thumbnail( $product->get_id(), 'woocommerce_thumbnail' );
+	echo '</a>';
+}
+
+
+// wrap title
+remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
+add_action( 'woocommerce_shop_loop_item_title', 'wrap_product_title_with_anchor_tag', 10 );
+
+function wrap_product_title_with_anchor_tag() {
+	global $product;
+	$url = get_permalink( $product->get_id() );
+	echo '<a href="' . $url . '">';
+	the_title( '<h2 class="woocommerce-loop-product__title">', '</h2>' );
+	echo '</a>';
+}
+
+// Add the video on gallery
+/*
+function append_custom_video_to_product_gallerys($thumbnail_html, $attachment_id) {
+	global $product;
+	$custom_video_url = get_field('product_video_gallery', $product->get_id());
+
+	if ($custom_video_url && $attachment_id === $product->get_image_id()) {
+		// Replace the main thumbnail image with the video thumbnail
+		$thumbnail_html = '<div class="woocommerce-product-gallery__image video">';
+		$thumbnail_html .= '<video controls muted>';
+		$thumbnail_html .= '<source src="' . esc_url($custom_video_url['url']) . '" type="video/mp4">';
+		$thumbnail_html .= '</video>';
+		$thumbnail_html .= '</div>';
+	}
+
+	return $thumbnail_html;
+}
+
+// add_filter('woocommerce_single_product_image_thumbnail_html', 'append_custom_video_to_product_gallery', 10, 2);
+
+
+function append_custom_video_to_product_gallery($thumbnail_html, $attachment_id) {
+	global $product;
+	$custom_video_url = get_field('product_video_gallery', $product->get_id());
+	$product_video_gallery_thumbnail = get_field( 'product_video_gallery_thumbnail' );
+
+	if ($custom_video_url && $attachment_id === $product->get_image_id()) {
+		$thumbnail_html = '<div class="woocommerce-product-gallery__image video">';
+		$thumbnail_html .= '<video autoplay loop muted data-src="'.esc_url($product_video_gallery_thumbnail['url']).'">';
+		$thumbnail_html .= '<source src="' . esc_url($custom_video_url['url']) . '" type="video/mp4">';
+		$thumbnail_html .= '</video>';
+		$thumbnail_html .= '</div>';
+	}
+
+	return $thumbnail_html;
+}
+
+add_filter('woocommerce_single_product_image_thumbnail_html', 'append_custom_video_to_product_gallery', 10, 2);
+*/
+/**
+ * Add the video at the end of the single product gallery
+ */
+function append_custom_video_to_product_gallery() {
+	global $product;
+
+	$custom_video_url                = get_field( 'product_video_gallery', $product->get_id() );
+	$product_video_gallery_thumbnail = get_field( 'product_video_gallery_thumbnail', $product->get_id() );
+
+	if ( $custom_video_url ) {
+		// Append the video at the end of the gallery.
+		echo '<div class="woocommerce-product-gallery__image video">';
+		echo '<video autoplay loop muted data-src="' . esc_url( $product_video_gallery_thumbnail['url'] ) . '">';
+		echo '<source src="' . esc_url( $custom_video_url['url'] ) . '" type="video/mp4">';
+		echo '</video>';
+		echo '</div>';
+	}
+}
+
+add_action( 'woocommerce_product_thumbnails', 'append_custom_video_to_product_gallery', 100 );

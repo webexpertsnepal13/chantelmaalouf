@@ -50,6 +50,8 @@ function the_marketing_co_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'the-marketing-co' ),
+			'menu-2' => esc_html__( 'Footer Menu-1', 'the-marketing-co' ),
+			'menu-3' => esc_html__( 'Footer Menu-2', 'the-marketing-co' ),
 		)
 	);
 
@@ -121,7 +123,7 @@ add_action( 'after_setup_theme', 'the_marketing_co_content_width', 0 );
  */
 function the_marketing_co_widgets_init() {
 	register_sidebar(
-		array(
+		array( 
 			'name'          => esc_html__( 'Sidebar', 'the-marketing-co' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'the-marketing-co' ),
@@ -131,6 +133,55 @@ function the_marketing_co_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Footer Menu 1', 'the-marketing-co'),
+			'id'            => 'footer-sidebar-2',
+			'before_widget'	=> '<div class="widget widget_text" id="%1$s">',
+			'after_widget'	=> '</div>',
+			'before_title'	=> '<h5 class="widget-title">',
+			'after_title' 	=> '</h5>',
+			'description'   => esc_html__('Add footer menu-1 here.', 'the-marketing-co'),			
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Social Media Icons', 'the-marketing-co'),
+			'id'            => 'footer-sidebar-3',
+			'before_widget'	=> '<div class="widget widget_text" id="%1$s">',
+			'after_widget'	=> '</div>',
+			'before_title'	=> '<h5 class="widget-title">',
+			'after_title' 	=> '</h5>',
+			'description'   => esc_html__('Add Social Media Icons & links here.', 'the-marketing-co'),			
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Footer Menu 2', 'the-marketing-co'),
+			'id'            => 'footer-sidebar-4',
+			'before_widget'	=> '<div class="widget widget_text" id="%1$s">',
+			'after_widget'	=> '</div>',
+			'before_title'	=> '<h5 class="widget-title">',
+			'after_title' 	=> '</h5>',
+			'description'   => esc_html__('Add footer menu-2 here.', 'the-marketing-co'),			
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Payments Icons', 'the-marketing-co'),
+			'id'            => 'footer-sidebar-5',
+			'before_widget'	=> '<div class="widget widget_text" id="%1$s">',
+			'after_widget'	=> '</div>',
+			'before_title'	=> '<h5 class="widget-title">',
+			'after_title' 	=> '</h5>',
+			'description'   => esc_html__('Add Social payment Icons & links here.', 'the-marketing-co'),			
+		)
+	);
+	
 }
 add_action( 'widgets_init', 'the_marketing_co_widgets_init' );
 
@@ -138,6 +189,32 @@ add_action( 'widgets_init', 'the_marketing_co_widgets_init' );
  * Enqueue scripts and styles.
  */
 function the_marketing_co_scripts() {
+
+	$min = ( SCRIPT_DEBUG === false )  ?  ''  :  '.min';
+	$ver = wp_get_theme()->get( 'Version' );
+
+	$main_css  = 'assets/css/main' . $min . '.css';
+	$main_js   = 'assets/js/main' . $min . '.js';
+	$vendor_js = 'assets/js/vendor' . $min . '.js';
+
+
+   //Google Fonts
+	
+   	wp_enqueue_style( 'the-marketing-co-style', get_stylesheet_uri(), array(), $ver );
+	wp_style_add_data( 'the-marketing-co-style', 'rtl', 'replace' );
+
+	// the-marketing-co Main Style
+	wp_register_style( 'the-marketing-co-main-style', get_template_directory_uri() . '/' . $main_css, '', $ver );
+	wp_enqueue_style( 'the-marketing-co-main-style' );
+
+	/* Vendor JS */
+	wp_register_script( 'the-marketing-co-vendor-script', get_template_directory_uri() . '/' . $vendor_js, array( 'jquery' ), $ver, true );
+	wp_enqueue_script( 'the-marketing-co-vendor-script' );
+
+	// the-marketing-co Main JS
+	wp_register_script( 'the-marketing-co-main-js', get_template_directory_uri() . '/' . $main_js, array( 'jquery' ), $ver, true );
+	wp_enqueue_script( 'the-marketing-co-main-js' );
+
 	wp_enqueue_style( 'the-marketing-co-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'the-marketing-co-style', 'rtl', 'replace' );
 
@@ -182,3 +259,28 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Custom post type for the theme
+ */
+require get_template_directory() . '/inc/custom-post-type.php';
+
+/**
+ * ACF options page
+ */
+require get_template_directory() . '/inc/acf-options-page.php';
+
+/**
+ * Custom Walker Nav
+ */
+require get_template_directory() . '/inc/class-chantelmaalouf-nav-walker.php';
+
+/**
+ * Custom gravity form validation
+ */
+require get_template_directory() . '/inc/gravity-form-validation.php';
+
+/**
+ * Custom functions
+ */
+require get_template_directory() . '/inc/custom-functions.php';

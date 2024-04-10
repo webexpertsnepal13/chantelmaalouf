@@ -1,0 +1,431 @@
+.required {
+    text-decoration: none !important;
+}
+
+.section-product-detail {
+    padding-top: 65px;
+    padding-bottom: 97px;
+
+    .custom-breadcrumb {
+        padding: 0;
+    }
+
+    .product {
+        display: flex;
+        flex-wrap: wrap;
+
+        .product-detail-gallery {
+            flex: 0 1 522px;
+            width: 100%;
+
+            @media screen and (max-width: 1385px) {
+                flex: 0 1 50%;
+            }
+
+            @include breakpoint(wide) {}
+
+            @include breakpoint(medium) {
+                flex: 0 1 100%;
+            }
+
+            .woocommerce-product-gallery {
+                float: none;
+
+                .flex-viewport {
+                    box-shadow: 0px 0px 10px 5px rgba($black, 0.05);
+                }
+
+                .woocommerce-product-gallery__wrapper {
+                    img {
+                        width: 100%;
+                        height: auto;
+                        // height: 459px;
+                        // object-fit: cover;
+
+                        @include breakpoint(medium) {
+                            height: unset;
+                            object-fit: unset;
+                        }
+                    }
+
+                    .woocommerce-product-gallery__image {
+                        &.video {
+                            display: flex !important;
+                        }
+                    }
+
+                    video {
+                        aspect-ratio: 0.75 / 1;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        .product-detail-content {
+            flex: 0 1 calc(100% - 522px);
+            padding-left: 81px;
+
+            @media screen and (max-width: 1385px) {
+                flex: 0 1 50%;
+            }
+
+            @include breakpoint(wide) {
+                padding-left: 30px;
+            }
+
+            @include breakpoint(medium) {
+                flex: 0 1 100%;
+                padding: 30px 0 0;
+            }
+
+            .entry-summary {
+                .product_title {
+                    font-size: 36px;
+                    line-height: 1.5;
+                    font-family: $font_poppins;
+                    margin: 0 0 10px;
+
+                    @include breakpoint(wide) {
+                        font-size: 38px;
+                    }
+
+                    @include breakpoint(small) {
+                        font-size: 32px;
+                    }
+                }
+
+                .price {
+                    font-size: 24px;
+                    line-height: 1.36;
+                    font-family: $font_avenir;
+                    font-weight: 900;
+                    padding-bottom: 23px;
+                    border-bottom: 1px solid $color_grey;
+                }
+
+                .variations {
+                    tr {
+                        th {
+
+                            label,
+                            .woo-selected-variation-item-name {
+                                text-transform: uppercase;
+                                font-size: 16px;
+                                line-height: 1.5;
+                            }
+
+                            label {
+                                margin: 0 0 16px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+
+                    .woo-variation-items-wrapper {
+                        position: relative;
+
+                        .variable-items-wrapper {
+                            display: inline-flex;
+
+                            .variable-item {
+                                margin: 0 10px 0 0;
+                                padding: 4px;
+                                border-radius: 5px;
+
+                                &:not(.selected) {
+                                    box-shadow: 0 0 0 1px $color_grey;
+                                }
+
+                                .variable-item-contents {}
+                            }
+                        }
+
+                    }
+
+                    .reset_variations {
+                        position: relative;
+                        top: -5px;
+                        color: $black;
+                        margin-left: 10px;
+                        font-size: 16px;
+                        visibility: hidden;
+                    }
+                }
+
+                .cart {
+                    &:not(.variations_form) {
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding-top: 20px;
+                    }
+
+                    .quantity {
+                        margin-right: 30px;
+                    }
+
+                    .single_add_to_cart_button {
+                        background: $black;
+                        color: $white;
+                        max-width: 271px;
+                        width: 100%;
+                        padding: 7px 30px;
+                        line-height: 1;
+                        font-family: $font_avenir;
+                        font-weight: 500;
+
+                        @include breakpoint(extrasmall) {
+                            padding: 15px 30px;
+                            width: 100%;
+                            margin-top: 15px;
+                        }
+
+                        &:hover {
+                            border-color: $color_primary;
+                            background: $color_primary;
+                        }
+                    }
+                }
+
+                .single_variation_wrap {
+                    padding-top: 23px;
+
+                    .woocommerce-variation-add-to-cart {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+
+                .woocommerce-product-details__short-description {
+                    padding-top: 46px;
+                }
+            }
+        }
+
+        .wc-tabs-wrapper {
+            padding-top: 46px;
+
+            .wc-tabs {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    &:not(:first-child) {
+                        margin-left: 16px;
+
+                        @include breakpoint(extrasmall) {
+                            margin-left: 12px;
+                        }
+
+                        @media screen and (max-width: 330px) {
+                            // margin-left: 10px;
+                        }
+                    }
+
+                    a {
+                        font-size: 18px;
+                        line-height: 1.36;
+                        font-family: $font_avenir;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        color: $black;
+                        text-decoration: none;
+                        padding: 0 0 11px;
+
+                        @include breakpoint(extrasmall) {
+                            font-size: 16px;
+                        }
+
+                        @media screen and (max-width: 330px) {
+                            font-size: 15px;
+                        }
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            bottom: -1px;
+                            left: 0;
+                            height: 2px;
+                            width: 100%;
+                            background-color: $black;
+                            opacity: 0;
+                            z-index: 1;
+                        }
+                    }
+
+                    &.active {
+                        a {
+                            font-weight: 900;
+
+                            &:after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .wc-tab {
+                padding: 20px;
+                border: 1px solid $color_grey;
+                font-size: 16px;
+                line-height: 1.5;
+
+                @include breakpoint(small) {
+                    // padding: 20px 15px;
+                }
+
+                h2 {
+                    display: none;
+                }
+
+                p {
+                    margin: 0;
+
+                    &:not(:last-child) {
+                        margin: 0 0 15px;
+                    }
+
+                    @include breakpoint(small) {
+                        font-size: 15px;
+                    }
+                }
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        list-style: none;
+                        position: relative;
+                        padding-left: 25px;
+
+                        @include breakpoint(small) {
+                            font-size: 15px;
+                        }
+
+                        @include breakpoint(extrasmall) {
+                            padding-left: 18px;
+                        }
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            height: 4px;
+                            width: 4px;
+                            top: 10px;
+                            left: 10px;
+                            border-radius: 50%;
+                            background: $black;
+
+                            @include breakpoint(extrasmall) {
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.quantity {
+    position: relative;
+    width: 101px;
+
+    @include breakpoint(wide) {
+        width: 121px;
+    }
+
+    .plus,
+    .minus {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        cursor: pointer;
+        z-index: 1;
+
+        @include breakpoint(wide) {
+            font-size: 24px;
+            width: 30px;
+            text-align: center;
+        }
+    }
+
+    .minus {
+        left: 10px;
+
+        @include breakpoint(wide) {
+            left: 0;
+        }
+    }
+
+    .plus {
+        right: 10px;
+
+        @include breakpoint(wide) {
+            right: 0;
+        }
+    }
+
+    input {
+        height: 42px;
+        width: 100%;
+        border-radius: 5px;
+        border: 2px solid $color_grey;
+        padding: 7px 20px;
+        appearance: none;
+        -moz-appearance: textfield;
+        text-align: center;
+
+        @include breakpoint(wide) {
+            padding: 7px 32px;
+            height: 46px;
+        }
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+}
+
+.single-product {
+    div.product {
+        .woocommerce-product-gallery {
+            .flex-control-thumbs {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                li {
+                    width: 92px !important;
+                    height: 78px;
+                    padding: 0 7px;
+                    float: none !important;
+                    margin: 0 0 12px;
+
+                    @include breakpoint(extrasmall) {
+                        width: 70px !important;
+                        height: 60px;
+                        padding: 0 5px;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 5px;
+                        border: 1px solid $color_grey;
+
+                        &.flex-active {
+                            border-color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

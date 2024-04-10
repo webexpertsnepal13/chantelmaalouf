@@ -1,0 +1,102 @@
+.section-about-cm {
+    background: $color_secondary;
+    position: relative;
+    padding-top: 100px;
+    @include breakpoint(wide) {
+        padding-top: 80px;
+    }
+    @include breakpoint(medium) {
+        padding-bottom: 80px;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 119px;
+        width: 100%;
+        background: $white;
+        pointer-events: none;
+        z-index: 0;
+        @include breakpoint(medium) {
+            content: none;
+        }
+    }
+    .bg-logo {
+        position: absolute;
+        bottom: 85px;
+        right: -5px;
+        z-index: 1;
+        pointer-events: none;
+        transform: rotate(-40deg);
+        @include breakpoint(medium) {
+            display: none;
+        }
+        img {
+            width: 297px;
+            height: auto;
+            @include breakpoint(wide) {
+                width: 205px;
+            }
+        }
+    }
+    .section-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1126px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        .image-left {
+            flex: 0 1 416px;
+            @include breakpoint(medium) {
+                flex: 0 1 100%;
+                order: 2;
+            }
+            img {
+                @include breakpoint(smaller) {
+                    width: 100%;
+                }
+            }
+        }
+        .content-right {
+            flex: 0 1 calc(100% - 416px);
+            padding-left: 93px;
+            padding-bottom: calc(119px + 30px);
+            @include breakpoint(wide) {
+                padding-left: 50px;
+                padding-bottom: calc(119px + 10px);
+            }
+            @include breakpoint(medium) {
+                flex: 0 1 100%;
+                padding-left: 0;
+                padding-bottom: 50px;
+                order: 1;
+            }
+            .content-inner {
+                padding-top: 13px;
+                h2 {
+                    margin: 0 0 42px;
+                    font-size: 36px;
+                    line-height: 1.11;
+                    color: $color_primary;
+                    @include breakpoint(small) {
+                        margin: 0 0 30px;
+                    }
+                }
+                p {
+                    font-family: $font_nantes;
+                    font-size: 18px;
+                    line-height: 2.22;
+                    max-width: 606px;
+                    @include breakpoint(small) {
+                        font-size: 16px;
+                    }
+                }
+                .button-wrap {
+                    padding-top: 26px;
+                }
+            }
+        }
+    }
+}

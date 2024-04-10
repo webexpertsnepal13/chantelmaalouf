@@ -1,0 +1,162 @@
+.gform_wrapper {
+
+    .gfield_validation_message,
+    .validation_message {
+        padding: 9px 10px !important;
+        line-height: 1.5 !important;
+    }
+
+    .gform_validation_errors{
+        margin-bottom: 28px !important;
+        > h2{
+            font-family: $font_poppins;
+            font-size: 15px !important;
+        }
+    }
+
+    &.gravity-theme {
+
+        .gform-body {
+            margin: 0 0 34px;
+        }
+
+        .gform_required_legend {
+            display: none;
+        }
+
+
+        #field_1_9,
+        #field_1_10 {
+            @include breakpoint (wide) {
+                grid-column: span 12;
+            }
+        }
+
+        //postcode field to have full width
+        .ginput_container_address{
+            span{
+                flex: 0 0 100% !important;
+                width: 100%;
+            }
+        } 
+
+        input[type=color],
+        input[type=date],
+        input[type=datetime-local],
+        input[type=datetime],
+        input[type=email],
+        input[type=month],
+        input[type=number],
+        input[type=password],
+        input[type=search],
+        input[type=tel],
+        input[type=text],
+        input[type=time],
+        input[type=url],
+        input[type=week],
+        select,
+        textarea {
+            border: 0 !important;
+            padding: 0 0 12px !important;
+            background-color: inherit;
+            outline: transparent;
+            outline-color: $color-accent;
+            color: $color-accent;
+            line-height: 1.8;
+            font-size: 16px !important;
+            border-bottom: 1px solid $color-accent !important;
+            border-radius: 0 !important;
+
+            &::placeholder{
+                color: $color-accent;
+            }
+        }
+
+        textarea {
+            height: 80px !important;
+        }
+
+        select {
+            appearance: none;
+            background: url("../../images/arrow-down-primary.svg") no-repeat 100% calc(100% - 24px)/16px;
+            padding-right: 22px !important;
+        }
+
+        .gform_fields {
+            gap: 32px 24px !important;
+
+            @media (max-width: 640px) {
+                gap: 32px 0px !important;
+            }
+        }
+
+        .gfield {
+            position: relative;
+
+            // input,
+            // select,
+            // textarea {
+            //     border: 0;
+            // }
+
+            &.is-focused {
+                .gfield_label {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+
+            &.floated-label {
+                .gfield_label {
+                    position: absolute;
+                    top: 7px;
+                    pointer-events: none;
+                    margin-bottom: 0;
+                    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+                }
+            }
+
+            &.select-label-hidden {
+                .gfield_label {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+
+        .gfield_label {
+            color: $color-accent;
+            font-weight: 400 !important;
+            line-height: 1;
+
+            .gfield_required{
+                color: $color-accent;
+            }
+        }
+
+        .gform_button {
+            margin-left: auto;
+
+            @include breakpoint (medium) {
+                margin: 0 auto;
+            }
+        }
+
+        .gform_footer {
+            justify-content: flex-end;
+            padding-right: 20px !important;
+
+            @include breakpoint (medium) {
+                justify-content: center;
+                padding-right: 0 !important;
+            }
+
+            .btn-cm {
+                -webkit-appearance: button;
+            }
+        }
+
+
+
+    }
+}

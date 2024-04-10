@@ -1,0 +1,139 @@
+.site-header {
+    background: $color_secondary;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    .header-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 28px 0;
+        justify-content: space-between;
+
+        @include breakpoint(wide) {
+            padding: 18px 0;
+            justify-content: unset;
+        }
+
+        .site-branding {
+            // flex: 0 1 20%;
+
+            @include breakpoint(wide) {
+                flex: 0 1 60%;
+            }
+
+            .custom-logo-link {
+                img {
+                    width: 216px;
+                    height: auto;
+                    @include breakpoint(wide) {
+                        width: 186px;
+                    }
+                    @include breakpoint(extrasmall) {
+                        width: 160px;
+                    }
+                    @include breakpoint(iPhone5) {
+                        width: 140px;
+                    }
+                }
+            }
+        }
+
+        .main-navigation {
+            // flex: 0 1 55%;
+
+            @include breakpoint(wide) {
+                flex: 0 1 100%;
+            }
+        }
+
+        .header-right {
+            // flex: 0 1 25%;
+
+            @include breakpoint(wide) {
+                flex: 0 1 40%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            .header-right-inner {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: flex-end;
+
+                .button-wrap {
+                    @include breakpoint(wide) {
+                        display: none;
+                    }
+                }
+
+                .header-cart {
+                    margin-left: 30px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+
+                    @media screen and (max-width: 1368px) {
+                        margin-left: 30px;
+                    }
+
+                    @include breakpoint(wide) {
+                        margin: 0 35px 0 0;
+                    }
+                    @include breakpoint(small) {
+                        margin: 0 25px 0 0;
+                    }
+                    @include breakpoint(extrasmall) {
+                        margin: 0 20px 0 0;
+                    }
+                    .my-account {
+                        margin-right: 15px;
+                        @include breakpoint(iPhone5) {
+                            margin-right: 10px;
+                        }
+                        img {
+                            width: 24px;
+                        }
+                    }
+                    .header-cart-link {
+                        position: relative;
+                        .cart_count {
+                            position: absolute;
+                            display: flex;
+                            height: 22px;
+                            width: 22px;
+                            background: $black;
+                            border-radius: 50%;
+                            color: $white;
+                            font-size: 10px;
+                            align-items: center;
+                            justify-content: center;
+                            font-weight: normal;
+                            top: -4px;
+                            right: -13px;
+                            @include breakpoint(small) {
+                                right: -10px;
+                                height: 18px;
+                                width: 18px;
+                            }
+                        }
+                    }
+
+
+                    img {
+                        width: 22px;
+                        height: auto;
+                        @include breakpoint(extrasmall) {
+                            width: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

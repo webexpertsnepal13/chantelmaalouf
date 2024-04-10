@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Jost';
+    src: url('../../fonts/Jost-SemiBold.woff2') format('woff2'),
+        url('../../fonts/Jost-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/Inter-Regular.woff2') format('woff2'),
+        url('../../fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../../fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../../fonts/AvenirLTPro-Black.woff2') format('woff2'),
+        url('../../fonts/AvenirLTPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../../fonts/AvenirLTPro-Medium.woff2') format('woff2'),
+        url('../../fonts/AvenirLTPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
